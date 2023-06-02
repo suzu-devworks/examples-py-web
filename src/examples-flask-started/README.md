@@ -49,6 +49,20 @@ Create database:
 flask --app flaskr init-db
 ```
 
+Configure the Secret Key:
+
+You should change SECRET_KEY to random bytes in your environment.
+
+```shell
+python -c 'import secrets; print(secrets.token_hex())'
+```
+
+_&#x2710; `.venv/var/flaskr-instance/config.py`_
+
+```py
+SECRET_KEY = '192b9bdd22ab9ed4d12e236c78afcb9a393ec15f71bbf5dc987d54727823bcbf'
+```
+
 ## Create project
 
 This project was generated with the command:
