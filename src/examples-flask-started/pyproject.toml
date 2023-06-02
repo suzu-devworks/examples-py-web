@@ -1,0 +1,51 @@
+
+[project]
+authors = [
+  {name = "A.suzuki", email = "suzu.devworks@gmail.com"},
+]
+dependencies = [
+  "flask>=2.3.2",
+]
+description = ""
+dynamic = ["version"]
+license = {text = "MIT"}
+name = "examples-flask-started"
+readme = "README.md"
+requires-python = ">=3.11"
+
+[tool.pdm]
+version = {source = "file", path = "src/examples/__version__.py"}
+
+[tool.pdm.build]
+includes = ["src/examples/", "src/flaskr"]
+
+[build-system]
+build-backend = "pdm.backend"
+requires = ["pdm-backend"]
+
+[tool.pdm.dev-dependencies]
+dev = [
+  "flake8>=6.0.0",
+  "mypy>=1.3.0",
+  "black>=23.3.0",
+  "isort>=5.12.0",
+  "pytest-cov>=4.1.0",
+  "pyclean>=2.7.3",
+]
+
+[tool.black]
+line-length = 119
+
+[tool.isort]
+line_length = 119
+profile = "black"
+
+[tool.coverage.run]
+branch = true
+source = ["src/"]
+
+[tool.pdm.scripts]
+cleanx = {shell = "find . | grep -E \"(/__pycache__$|\\.pyc$|\\.pyo$|/build$|/dist$|\\.mypy_cache$)\" | xargs rm -rf"}
+dev = "flask --app flaskr run --debug"
+lint = {composite = ["flake8", "mypy src/ "]}
+test = "pytest --cov=src --cov-branch --cov-report xml"
