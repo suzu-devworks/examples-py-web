@@ -27,19 +27,19 @@ def hello() -> str:
 
 
 @app.route("/user/<username>")
-def show_user_profile(username):
+def show_user_profile(username: str) -> str:
     # show the user profile for that user
     return f"User {escape(username)}"
 
 
 @app.route("/post/<int:post_id>")
-def show_post(post_id):
+def show_post(post_id: int) -> str:
     # show the post with the given id, the id is an integer
     return f"Post {post_id}"
 
 
 @app.route("/path/<path:subpath>")
-def show_subpath(subpath):
+def show_subpath(subpath: str) -> str:
     # show the subpath after /path/
     return f"Subpath {escape(subpath)}"
 
@@ -50,7 +50,7 @@ Unique URLs/Redirection Behavior
 
 
 @app.route("/projects/")
-def projects():
+def projects() -> str:
     """
     - /projects/  -> OK.
     - /projects   -> redirect /projects/ in browser.
@@ -59,7 +59,7 @@ def projects():
 
 
 @app.route("/about")
-def about():
+def about() -> str:
     """
     - /about    -> OK.
     - /about/   -> 404 “Not Found” error.
@@ -78,12 +78,12 @@ def about():
 
 
 @app.get("/login")
-def login_get():
+def login_get() -> str:
     return show_the_login_form()
 
 
 @app.post("/login")
-def login_post():
+def login_post() -> str:
     return do_the_login()
 
 

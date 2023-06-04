@@ -11,7 +11,7 @@ client:
 test request context:
 > python src.quickstart/_07_accessing_request_data.py
 """
-from flask import Flask, make_response, render_template, request
+from flask import Flask, Response, make_response, render_template, request
 from werkzeug.utils import secure_filename
 
 app = Flask(__name__)
@@ -34,7 +34,7 @@ if __name__ == "__main__":
 
 
 @app.route("/login", methods=["POST", "GET"])
-def login():
+def login() -> str:
     error = None
     if request.method == "POST":
         if valid_login(request.form["username"], request.form["password"]):
@@ -46,11 +46,11 @@ def login():
     return render_template("login.html", error=error)
 
 
-def valid_login(username, password) -> bool:
+def valid_login(username: str, password: str) -> bool:
     return True
 
 
-def log_the_user_in(username) -> str:
+def log_the_user_in(username: str) -> str:
     return f"{username} is login."
 
 
@@ -60,11 +60,12 @@ def log_the_user_in(username) -> str:
 
 
 @app.route("/upload", methods=["GET", "POST"])
-def upload_file():
+def upload_file() -> str:
     if request.method == "POST":
         file = request.files["the_file"]
-        file_name = secure_filename(file.filename)
-        print(f"save file to: uploads/{file_name}")
+        if file.filename:
+            file_name = secure_filename(file.filename)
+            print(f"save file to: uploads/{file_name}")
         # file.save(f"uploads/{file_name}")
     return f"OK: {file_name}, ({file.content_type})"
 
@@ -75,7 +76,7 @@ def upload_file():
 
 
 @app.route("/")
-def index():
+def index() -> Response:
     username = request.cookies.get("username")
     # use cookies.get(key) instead of cookies[key] to not get a
     # KeyError if the cookie is missing.

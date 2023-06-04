@@ -14,5 +14,5 @@ app = Flask(__name__)
 
 
 @app.route("/<name>")
-def hello_by(name):
+def hello_by(name: str) -> str:
     return f"Hello, {escape(name)}!"

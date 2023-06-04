@@ -1,14 +1,16 @@
 import functools
+from typing import Any, Callable
 
 from flask import Blueprint, flash, g, redirect, render_template, request, session, url_for
 from flaskr.db import get_db
 from werkzeug.security import check_password_hash, generate_password_hash
+from werkzeug.wrappers.response import Response as Redirect
 
 bp = Blueprint("auth", __name__, url_prefix="/auth")
 
 
 @bp.route("/register", methods=("GET", "POST"))
-def register():
+def register() -> str | Redirect:
     if request.method == "POST":
         username = request.form["username"]
         password = request.form["password"]
@@ -38,7 +40,7 @@ def register():
 
 
 @bp.route("/login", methods=("GET", "POST"))
-def login():
+def login() -> str | Redirect:
     if request.method == "POST":
         username = request.form["username"]
         password = request.form["password"]
@@ -62,7 +64,7 @@ def login():
 
 
 @bp.before_app_request
-def load_logged_in_user():
+def load_logged_in_user() -> None:
     user_id = session.get("user_id")
 
     if user_id is None:
@@ -72,14 +74,14 @@ def load_logged_in_user():
 
 
 @bp.route("/logout")
-def logout():
+def logout() -> Redirect:
     session.clear()
     return redirect(url_for("index"))
 
 
-def login_required(view):
+def login_required(view: Callable[..., Any]) -> Callable[..., Any]:
     @functools.wraps(view)
-    def wrapped_view(**kwargs):
+    def wrapped_view(**kwargs: Any) -> Any:
         if g.user is None:
             return redirect(url_for("auth.login"))
 

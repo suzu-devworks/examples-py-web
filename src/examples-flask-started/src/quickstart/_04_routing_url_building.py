@@ -14,17 +14,17 @@ app = Flask(__name__)
 
 
 @app.route("/")
-def index():
+def index() -> str:
     return "index"
 
 
 @app.route("/login")
-def login():
+def login() -> str:
     return "login"
 
 
 @app.route("/user/<username>")
-def profile(username):
+def profile(username: str) -> str:
     return f"{username}'s profile"
 
 
