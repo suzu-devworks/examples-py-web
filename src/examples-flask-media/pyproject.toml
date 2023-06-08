@@ -8,11 +8,14 @@ dependencies = [
   "opencv-python>=4.7.0.72",
 ]
 description = ""
+dynamic = ["version"]
 license = {text = "MIT"}
 name = "examples-flask-media"
 readme = "README.md"
 requires-python = ">=3.11"
-version = "0.1.0"
+
+[tool.pdm]
+version = {source = "file", path = "examples/__version__.py"}
 
 [build-system]
 build-backend = "pdm.backend"
@@ -41,6 +44,6 @@ source = [""]
 
 [tool.pdm.scripts]
 cleanx = {shell = "find . | grep -E \"(/__pycache__$|\\.pyc$|\\.pyo$|/build$|/dist$|\\.mypy_cache$)\" | xargs rm -rf"}
-dev = "flask --app flaskr run --debug"
+dev = "flask run --debug"
 lint = {composite = ["flake8", "mypy . "]}
-test = "pytest --cov=src --cov-branch --cov-report xml"
+test = "pytest --cov=. --cov-branch --cov-report xml"
