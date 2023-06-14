@@ -19,3 +19,11 @@ pdm add -d flake8 mypy black isort pytest-cov pyclean
 pdm add flask
 pdm add opencv-python
 ```
+
+## troubleshooting
+
+### ImportError: libGL.so.1: cannot open shared object file: No such file or directory
+
+```shell
+apt install -y libgl1-mesa-dev
+```

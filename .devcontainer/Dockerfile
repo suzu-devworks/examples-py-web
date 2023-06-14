@@ -6,7 +6,7 @@ FROM mcr.microsoft.com/devcontainers/python:${VARIANT} as develop-stage
 ## Configure apt and install packages
 RUN set -x \
     && apt update \
-    && apt sqlite3 \
+    && apt install -y netcat sqlite3 libgl1-mesa-dev \
     ;
 
 # Clean up

@@ -2,7 +2,24 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "name": "examples_flask DEBUG",
+      "name": "DEBUG app.py",
+      "type": "python",
+      "request": "launch",
+      "module": "flask",
+      "env": {
+        "FLASK_APP": "app.py",
+        "FLASK_DEBUG": "1"
+      },
+      "args": [
+        "run",
+        "--no-debugger",
+        "--no-reload"
+      ],
+      "jinja": true,
+      "justMyCode": true
+    },
+    {
+      "name": "DEBUG examples-flask ",
       "type": "python",
       "request": "launch",
       "module": "flask",
