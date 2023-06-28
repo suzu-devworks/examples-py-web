@@ -4,7 +4,7 @@ import socket
 UDP_IP = "0.0.0.0"
 
 
-def main():
+def main() -> None:
     UDP_PORT = int(os.environ["UDPPORT"])
     print(f"Listening on UDP port {UDP_PORT}")
 

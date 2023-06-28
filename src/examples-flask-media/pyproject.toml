@@ -43,6 +43,7 @@ branch = true
 source = [""]
 
 [tool.pdm.scripts]
+clean = "pyclean ."
 cleanx = {shell = "find . | grep -E \"(/__pycache__$|\\.pyc$|\\.pyo$|/build$|/dist$|\\.mypy_cache$)\" | xargs rm -rf"}
 dev = "flask run --debug"
 lint = {composite = ["flake8", "mypy . "]}
