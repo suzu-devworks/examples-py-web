@@ -166,3 +166,5 @@ cython_debug/
 ##> Add
 [Tt]emp/
 .DS_Store
+*.mp4
+*.webm
