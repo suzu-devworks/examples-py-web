@@ -11,27 +11,32 @@ logger = getLogger(__name__)
 
 
 class VideoCamera(object):
+    source: str
+    framerate: int
     video: Any
     running: bool
-    framerate: int
     thread: threading.Thread
     has_image: Any
     image: Any
 
-    def __init__(self, source: str):
-        self.video = cv2.VideoCapture(source)
-        if self.video.isOpened():
-            logger.info(f"Open! {source}")
-
+    def __init__(self, source: str, framerate: int = 30):
+        self.source = source
+        self.framerate = framerate
         self.has_image = False
         self.running = False
 
     def __del__(self) -> None:
         self.stop()
-        self.video.release()
+        if self.video is not None:
+            self.video.release()
 
-    def start(self, framerate: int = 30) -> None:
-        self.framerate = framerate
+    def start(self) -> None:
+        if self.running:
+            return
+
+        self.video = cv2.VideoCapture(self.source)
+        if self.video.isOpened():
+            logger.info(f"Open! {self.source}")
 
         self.thread = threading.Thread(target=self.read_frame)
         self.thread.start()
@@ -43,7 +48,7 @@ class VideoCamera(object):
         if self.thread is not None:
             self.thread.join()
         self.running = False
-        logger.info("sttoped.")
+        logger.info("stoped.")
 
     def read_frame(self) -> None:
         while self.running:
