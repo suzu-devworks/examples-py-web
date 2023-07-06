@@ -1,5 +1,4 @@
 import os
-from pathlib import Path
 
 from flask import Blueprint, Response, current_app, render_template, request
 
@@ -9,7 +8,7 @@ from .video_chunks import get_chunk
 bp = Blueprint("video_chunks", __name__, static_folder="static", template_folder="templates")
 bp.add_url_rule("/", endpoint="index")
 
-source_path = os.getenv("CHUNK_SRC", default=str(Path.cwd() / "temp/input.mp4"))
+source_path = os.getenv("CHUNK_SRC", default="/workspaces/examples-py-web/temp/input.mp4")
 chunk_size = int(os.getenv("CHUNK_SIZE", str(65535 * 2)))
 
 

@@ -166,4 +166,7 @@ cython_debug/
 .cov/
 .DS_Store
 .pdm-python
-trace.zip
+.venv.*
+*.mp4
+*.webm
+*.zip
