@@ -9,7 +9,7 @@ from .video_camera import VideoCamera
 bp = Blueprint("webcam_mjpeg", __name__, static_folder="static", template_folder="templates")
 bp.add_url_rule("/", endpoint="index")
 
-# export MJPEG_SRC="/workspaces/examples-py/temp/input.mp4"
+# export MJPEG_SRC="/workspaces/examples-py-web/temp/input.mp4"
 # export MJPEG_SRC="srt://0.0.0.0:5501?mode=listener"
 source_url = os.getenv("MJPEG_SRC", default="udp://0.0.0.0:5501?overrun_nonfatal=1&fifo_size=50000000")
 mimetype_multipart = "multipart/x-mixed-replace; boundary=frame"

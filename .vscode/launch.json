@@ -13,7 +13,9 @@
       "args": [
         "run",
         "--debugger",
-        "--reload"
+        "--reload",
+        "--port",
+        "5001"
       ],
       "jinja": true,
       "autoStartBrowser": false
@@ -49,7 +51,9 @@
         "run",
         "--port=5002",
         "--debugger",
-        "--reload"
+        "--reload",
+        "--port",
+        "5002"
       ],
       "jinja": true,
       "autoStartBrowser": false

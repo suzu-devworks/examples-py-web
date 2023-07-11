@@ -5,6 +5,7 @@ authors = [
 dependencies = [
   "flask>=3.0.3",
   "opencv-python>=4.9.0.80",
+  "flask-cors>=4.0.1",
 ]
 description = "Default template for PDM package"
 dynamic = ["version"]
@@ -34,7 +35,7 @@ dev = [
 [tool.pdm.scripts]
 _clean_dirs = {shell = "find . | grep -E \"(/__pycache__$|\\.pyc$|\\.pyo$|/build$|/dist$|\\.mypy_cache$)\" | xargs rm -rf"}
 clean = {composite = ["pyclean .", "_clean_dirs"]}
-dev = "flask run --debug"
+dev = "flask --app src/app run --debug"
 format = {composite = ["isort .", "black ."]}
 lint = {composite = ["flake8", "mypy"]}
 test = "pytest --durations=0 --cov-branch --cov-report xml:.cov/coverage.xml --cov=src/ tests/"
