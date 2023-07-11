@@ -15,7 +15,7 @@ class VideoCamera(object):
     framerate: int
     video: Any
     running: bool
-    thread: threading.Thread
+    thread: threading.Thread | None
     has_image: Any
     image: Any
 
