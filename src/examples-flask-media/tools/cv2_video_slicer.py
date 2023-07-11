@@ -22,7 +22,7 @@ def main() -> None:
     size = (w, h)
     print(f"> size = {w}x{h}")
 
-    fourcc = cv2.VideoWriter_fourcc(*"vp90")
+    fourcc = cv2.VideoWriter_fourcc(*"vp90")  # type: ignore
 
     split_count = 0
     success = True

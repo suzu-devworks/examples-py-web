@@ -6,6 +6,7 @@ from flask import Flask, render_template
 
 def create_app(test_config: Mapping[str, Any] | None = None) -> Flask:
     from examples.livecv import blueprint as livecv
+    from examples.livestreaming import blueprint as livestreaming
     from examples.videochunks import blueprint as videochunks
 
     basicConfig(level=DEBUG)
@@ -15,6 +16,7 @@ def create_app(test_config: Mapping[str, Any] | None = None) -> Flask:
 
     # add blueprints
     app.register_blueprint(livecv)
+    app.register_blueprint(livestreaming)
     app.register_blueprint(videochunks)
 
     @app.route("/")

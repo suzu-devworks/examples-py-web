@@ -75,7 +75,7 @@ async def read_frames(queue: asyncio.Queue[Any]) -> None:
 
 
 async def record_frames(queue: asyncio.Queue[Any]) -> None:
-    fourcc = cv2.VideoWriter_fourcc(*"vp90")
+    fourcc = cv2.VideoWriter_fourcc(*"vp90")  # type: ignore
     split_count = 0
 
     while True:
