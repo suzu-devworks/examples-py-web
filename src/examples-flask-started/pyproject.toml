@@ -33,6 +33,14 @@ dev = [
   "pyclean>=2.7.3",
 ]
 
+[tool.pdm.scripts]
+clean = {composite = ["pyclean . ", "clean_dirs"]}
+clean_dirs = {shell = "find . | grep -E \"(/__pycache__$|\\.pyc$|\\.pyo$|/build$|/dist$|\\..+_cache$)\" | xargs rm -rf"}
+dev = "flask --app flaskr run --debug"
+format = {composite = ["isort src/ ", "black src/ "]}
+lint = {composite = ["flake8", "mypy src/ "]}
+test = "pytest --cov=. --cov-branch --cov-report xml"
+
 [tool.black]
 line-length = 119
 
@@ -43,9 +51,3 @@ profile = "black"
 [tool.coverage.run]
 branch = true
 source = ["src/"]
-
-[tool.pdm.scripts]
-cleanx = {shell = "find . | grep -E \"(/__pycache__$|\\.pyc$|\\.pyo$|/build$|/dist$|\\.mypy_cache$)\" | xargs rm -rf"}
-dev = "flask --app flaskr run --debug"
-lint = {composite = ["flake8", "mypy src/ "]}
-test = "pytest --cov=src --cov-branch --cov-report xml"

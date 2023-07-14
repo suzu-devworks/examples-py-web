@@ -1,0 +1,30 @@
+[project]
+dependencies = []
+requires-python = ">=3.11"
+
+[tool.pdm.dev-dependencies]
+dev = [
+  "flake8>=6.0.0",
+  "mypy>=1.3.0",
+  "black>=23.3.0",
+  "isort>=5.12.0",
+  "pytest-cov>=4.1.0",
+  "pyclean>=2.7.3",
+]
+packages = [
+  "-e file:///${PROJECT_ROOT}/src/examples-flask-media#egg=examples-flask-media",
+  "-e file:///${PROJECT_ROOT}/src/examples-flask-started#egg=examples-flask-started",
+]
+
+[tool.pdm.scripts]
+build = {shell = "for proj in src/*/pyproject.toml; do (pdm build -p \"$(dirname $proj)\" ); done"}
+clean = {shell = "for proj in src/*/pyproject.toml; do (cd \"$(dirname $proj)\"; pdm run clean ); done"}
+format = {shell = "for proj in src/*/pyproject.toml; do (cd \"$(dirname $proj)\"; pdm run format ); done"}
+lint = {shell = "for proj in src/*/pyproject.toml; do (cd \"$(dirname $proj)\"; pdm run lint ); done"}
+
+[tool.black]
+line-length = 119
+
+[tool.isort]
+line_length = 119
+profile = "black"
