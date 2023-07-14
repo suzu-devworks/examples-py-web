@@ -1,7 +1,8 @@
 from typing import Any, Callable, Generator
 
-from examples.livecv.video_camera import VideoCamera
 from flask import Blueprint, Response, render_template
+
+from examples.livecv.video_camera import VideoCamera
 
 bp = Blueprint("livecv", __name__, url_prefix="/livecv")
 bp.add_url_rule("/", endpoint="index")

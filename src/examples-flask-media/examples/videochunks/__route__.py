@@ -1,8 +1,9 @@
 import os
 from logging import getLogger
 
-from examples.videochunks.utility import parse_range_header
 from flask import Blueprint, Response, render_template, request
+
+from examples.videochunks.utility import parse_range_header
 
 logger = getLogger(__name__)
 
