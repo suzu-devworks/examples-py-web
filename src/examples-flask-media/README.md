@@ -4,13 +4,48 @@ Flask Web video audio media programming examples.
 
 [![pdm-managed](https://img.shields.io/badge/pdm-managed-blueviolet)](https://pdm.fming.dev)
 
+## Setup
+
+Clone the repository:
+
+```shell
+clone https://github.com/suzu-devworks/examples-py-web.git
+
+cd examples-py-web
+
+```
+
+Create a virtualenv in advance:
+
+```shell
+python -m venv .venv
+. .venv/bin/activate
+
+python -m pip install --upgrade pip
+pip install pdm
+
+```
+
+Here's how this project is setup:
+
+```shell
+cd src/examples-flask-media
+
+# select interpreter
+pdm use
+
+# install dependencies and self.
+pdm install
+
+```
+
 ## Create project
 
 This project was generated with the command:
 
 ```shell
-mkdir -p src/examples-flask-started
-cd src/examples-flask-started
+mkdir -p src/examples-flask-media
+cd src/examples-flask-media
 
 # create new pyproject.toml
 pdm init
