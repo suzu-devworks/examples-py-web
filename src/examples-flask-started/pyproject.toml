@@ -34,7 +34,7 @@ dev = [
 ]
 
 [tool.pdm.scripts]
-_clean_dirs = {shell = "find . | grep -E \"(/__pycache__$|\\.pyc$|\\.pyo$|/build$|/dist$|\\.mypy_cache$)\" | xargs rm -rf"}
+_clean_dirs = {shell = "find . | grep -E \"(/__pycache__$|\\.pyc$|\\.pyo$|/build$|/dist$|\\.pdm-build$|\\.(mypi|pytest)_cache$)\" | xargs rm -rf"}
 clean = {composite = ["pyclean .", "_clean_dirs"]}
 format = {composite = ["isort .", "black ."]}
 lint = {composite = ["flake8", "mypy"]}
@@ -45,10 +45,10 @@ line-length = 119
 
 [tool.isort]
 profile = "black"
-src_paths = ["src/"]
+src_paths = ["src/", "tests/"]
 
 [tool.mypy]
-files = ["src/"]
+files = ["src/", "tests/"]
 pretty = true
 python_version = 3.12
 show_error_context = true
@@ -57,6 +57,10 @@ strict = true
 [[tool.mypy.overrides]]
 ignore_missing_imports = true
 module = []
+
+[tool.pytest.ini_options]
+pythonpath = "src"
+testpaths = ["tests"]
 
 [tool.coverage.run]
 branch = true
