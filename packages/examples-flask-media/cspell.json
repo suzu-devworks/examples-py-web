@@ -1,0 +1,18 @@
+{
+  "version": "0.2",
+  "ignorePaths": [],
+  "dictionaryDefinitions": [],
+  "dictionaries": [],
+  "words": [
+    "DGRAM",
+    "imencode",
+    "imshow",
+    "mjpeg",
+    "opencv",
+    "tobytes"
+  ],
+  "ignoreWords": [],
+  "import": [
+    "../../.vscode/cspell.json"
+  ]
+}

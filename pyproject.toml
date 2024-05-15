@@ -26,6 +26,9 @@ profile = "black"
 src_paths = ["packages/"]
 known_first_party = ["examples", "flaskr"]
 
+[tool.setuptools.packages.find]
+exclude = ["packages"]
+
 [tool.pdm.dev-dependencies]
 dev = [
     "-e file:///${PROJECT_ROOT}/packages/examples-flask-quickstart#egg=examples-flask-quickstart",
