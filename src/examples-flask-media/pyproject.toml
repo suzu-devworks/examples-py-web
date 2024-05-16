@@ -11,11 +11,15 @@ dynamic = ["version"]
 license = {text = "MIT"}
 name = "examples-flask-media"
 readme = "README.md"
-requires-python = "==3.12.*"
+requires-python = ">=3.12"
+
+[build-system]
+build-backend = "pdm.backend"
+requires = ["pdm-backend"]
 
 [tool.pdm]
 distribution = false
-version = {source = "file", path = "examples/__version__.py"}
+version = {source = "file", path = "src/examples/__version__.py"}
 
 [tool.pdm.dev-dependencies]
 dev = [

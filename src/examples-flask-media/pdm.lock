@@ -5,7 +5,7 @@
 groups = ["default", "dev"]
 strategy = ["cross_platform", "inherit_metadata"]
 lock_version = "4.4.1"
-content_hash = "sha256:6cb85e4294a0cc32c927e048d9bf132cfa670c2a280f675e952063339ae4e5c7"
+content_hash = "sha256:19028a66a2c04f6532517973b4c76b83bb131dbfc8c54f1c83793fc105dd5991"
 
 [[package]]
 name = "black"
