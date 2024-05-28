@@ -20,6 +20,10 @@ pdm install
 
 - [Webcam streaming example for MJPEG](./src/examples/webcam/mjpeg/README.md)
 
+### Video streaming
+
+- [Chunked streaming of video files](./src/examples/video/chunks/README.md)
+
 
 ## How the project was initialized
 
