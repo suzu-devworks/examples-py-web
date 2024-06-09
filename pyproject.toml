@@ -1,0 +1,25 @@
+[project]
+requires-python = ">=3.12"
+
+[dependency-groups]
+dev = [
+    "flake8>=7.3.0",
+    "mypy>=1.18.2",
+    "black>=25.11.0",
+    "isort>=7.0.0",
+    "pytest-cov>=7.0.0",
+    "pyclean>=3.4.0",
+]
+
+[tool.black]
+line-length = 119
+
+[tool.isort]
+profile = "black"
+src_paths = ["packages/"]
+
+[tool.pdm.scripts]
+clean = "pyclean ."
+clean_all_dirs_ = {shell = "find . | grep -E \"(/__pycache__$|\\.pyc$|\\.pyo$|/build$|/dist$)\" | xargs rm -rf"}
+lint = "flake8"
+format = "black packages/"
