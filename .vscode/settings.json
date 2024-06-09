@@ -1,0 +1,27 @@
+{
+  "[python]": {
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": "explicit",
+      "source.fixAll": "explicit"
+    },
+    "editor.defaultFormatter": "ms-python.black-formatter",
+    "editor.formatOnSave": true
+  },
+  "black-formatter.args": [
+    "--line-length=119",
+    "--max-complexity=10"
+  ],
+  "editor.formatOnPaste": true,
+  "editor.formatOnSave": true,
+  "isort.args": [
+    "--profile",
+    "black"
+  ],
+  "mypy-type-checker.args": [],
+  "python.analysis.autoFormatStrings": false,
+  "python.terminal.activateEnvInCurrentTerminal": true,
+  "python.terminal.activateEnvironment": true,
+  "python.testing.autoTestDiscoverOnSaveEnabled": false,
+  "python.testing.pytestEnabled": true,
+  "terminal.integrated.environmentChangesRelaunch": true
+}
