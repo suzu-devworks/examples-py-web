@@ -36,7 +36,6 @@ dev = [
 [tool.pdm.scripts]
 _clean_dirs = {shell = "find . | grep -E \"(/__pycache__$|\\.pyc$|\\.pyo$|/build$|/dist$|\\.pdm-build$|\\.(mypi|pytest)_cache$)\" | xargs rm -rf"}
 clean = {composite = ["pyclean .", "_clean_dirs"]}
-dev = "flask --app flaskr run --debug"
 format = {composite = ["isort .", "black ."]}
 lint = {composite = ["flake8", "mypy"]}
 test = "pytest --durations=0 --cov-branch --cov-report xml:.cov/coverage.xml --cov=src/ tests/"
