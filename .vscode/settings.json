@@ -8,8 +8,7 @@
     "editor.formatOnSave": true
   },
   "black-formatter.args": [
-    "--line-length=119",
-    "--max-complexity=10"
+    "--line-length=119"
   ],
   "editor.formatOnPaste": true,
   "editor.formatOnSave": true,
