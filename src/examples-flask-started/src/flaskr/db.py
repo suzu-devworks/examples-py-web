@@ -25,9 +25,9 @@ def close_db(e: Any | None = None) -> None:
 def init_db() -> None:
     db = get_db()
 
-    with current_app.open_resource("schema.sql", "r") as f:
-        data = f.read()
-        script = data.encode("utf-8") if isinstance(data, bytes) else str(data)
+    with current_app.open_resource("schema.sql") as f:
+        data: Any = f.read()
+        script = bytes(data).decode("utf-8")
         # spell-checker:words executescript
         db.executescript(script)
 

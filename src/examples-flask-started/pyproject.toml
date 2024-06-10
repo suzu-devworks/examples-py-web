@@ -36,6 +36,7 @@ dev = [
 [tool.pdm.scripts]
 _clean_dirs = {shell = "find . | grep -E \"(/__pycache__$|\\.pyc$|\\.pyo$|/build$|/dist$|\\.pdm-build$|\\.(mypi|pytest)_cache$)\" | xargs rm -rf"}
 clean = {composite = ["pyclean .", "_clean_dirs"]}
+dev = "flask --app flaskr run --debug"
 format = {composite = ["isort .", "black ."]}
 lint = {composite = ["flake8", "mypy"]}
 test = "pytest --durations=0 --cov-branch --cov-report xml:.cov/coverage.xml --cov=src/ tests/"
@@ -49,10 +50,16 @@ src_paths = ["src/", "tests/"]
 
 [tool.mypy]
 files = ["src/", "tests/"]
-pretty = true
+#
+allow_redefinition = true
+local_partial_types = true
 python_version = 3.12
-show_error_context = true
 strict = true
+strict_optional = true
+warn_unreachable = true
+#
+pretty = true
+show_error_context = true
 
 [[tool.mypy.overrides]]
 ignore_missing_imports = true
