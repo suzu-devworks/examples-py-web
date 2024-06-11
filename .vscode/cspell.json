@@ -1,0 +1,28 @@
+{
+  "version": "0.2",
+  "ignorePaths": [
+    ".git",
+    ".devcontainer",
+    ".config",
+    ".github",
+    ".vscode",
+    "*.lock",
+    ".*"
+  ],
+  "dictionaryDefinitions": [],
+  "dictionaries": [],
+  "words": [
+    "flaskr",
+    "isort",
+    "markupsafe",
+    "mypy",
+    "pyclean",
+    "pyproject",
+    "pytest",
+    "pytz",
+    "venv",
+    "werkzeug"
+  ],
+  "ignoreWords": [],
+  "import": []
+}
