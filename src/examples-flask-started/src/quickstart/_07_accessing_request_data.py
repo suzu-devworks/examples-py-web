@@ -21,6 +21,7 @@ Examples:
 """
 
 from flask import Flask, Response, make_response, render_template, request
+from markupsafe import escape
 from werkzeug.utils import secure_filename
 
 app = Flask(__name__)
@@ -60,7 +61,7 @@ def valid_login(username: str, password: str) -> bool:
 
 
 def log_the_user_in(username: str) -> str:
-    return f"{username} is login."
+    return f"{escape(username)} is login."
 
 
 """
@@ -75,7 +76,7 @@ def upload_file() -> str:
         file_name = secure_filename(str(file.filename))
         print(f"save file to: uploads/{file_name}")
         # file.save(f"uploads/{file_name}")
-    return f"OK: {file_name}, ({file.content_type})"
+    return f"OK: {escape(file_name)}, ({escape(file.content_type)})"
 
 
 """
