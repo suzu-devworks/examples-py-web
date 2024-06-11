@@ -3,6 +3,7 @@
 Workspace for studying Python web programming.
 
 [![pdm-managed](https://img.shields.io/badge/pdm-managed-blueviolet)](https://pdm.fming.dev)
+[![CodeQL](https://github.com/suzu-devworks/examples-py-web/actions/workflows/github-code-scanning/codeql/badge.svg)](https://github.com/suzu-devworks/examples-py-web/actions/workflows/github-code-scanning/codeql)
 
 
 # What is this repository for?
