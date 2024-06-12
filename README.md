@@ -18,6 +18,7 @@ may contain many inaccuracies.
 ## Projects
 
 - [examples-flask-started](./src/examples-flask-started/README.md)
+- [examples-flask-media](./src/examples-flask-media/README.md)
 
 
 ## More Information
