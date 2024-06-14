@@ -1,17 +1,19 @@
-
 [project]
 authors = [
   {name = "A.suzuki", email = "suzu.devworks@gmail.com"},
 ]
 dependencies = [
   "flask>=3.0.3",
+  "opencv-python>=4.9.0.80",
+  "flask-cors>=4.0.1",
+  "types-flask-cors>=4.0.0.20240523",
 ]
-description = ""
+description = "Default template for PDM package"
 dynamic = ["version"]
 license = {text = "MIT"}
-name = "examples-flask-started"
+name = "examples-flask-media"
 readme = "README.md"
-requires-python = ">=3.11"
+requires-python = ">=3.12"
 
 [build-system]
 build-backend = "pdm.backend"
@@ -20,9 +22,6 @@ requires = ["pdm-backend"]
 [tool.pdm]
 distribution = false
 version = {source = "file", path = "src/examples/__version__.py"}
-
-[tool.pdm.build]
-includes = ["src/examples/", "src/flaskr"]
 
 [tool.pdm.dev-dependencies]
 dev = [
@@ -35,8 +34,9 @@ dev = [
 ]
 
 [tool.pdm.scripts]
-_clean_dirs = {shell = "find . | grep -E \"(/__pycache__$|\\.pyc$|\\.pyo$|/build$|/dist$|\\.pdm-build$|\\.(mypi|pytest)_cache$)\" | xargs rm -rf"}
+_clean_dirs = {shell = "find . | grep -E \"(/__pycache__$|\\.pyc$|\\.pyo$|/build$|/dist$|\\.mypy_cache$)\" | xargs rm -rf"}
 clean = {composite = ["pyclean .", "_clean_dirs"]}
+dev = "flask --app src/app run --debug"
 format = {composite = ["isort .", "black ."]}
 lint = {composite = ["flake8", "mypy"]}
 test = "pytest --durations=0 --cov-branch --cov-report xml:.cov/coverage.xml --cov=src/ tests/"
@@ -63,7 +63,7 @@ show_error_context = true
 
 [[tool.mypy.overrides]]
 ignore_missing_imports = true
-module = []
+module = ["cv2"]
 
 [tool.pytest.ini_options]
 pythonpath = "src"

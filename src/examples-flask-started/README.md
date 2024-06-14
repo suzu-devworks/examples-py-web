@@ -16,11 +16,10 @@ Move to this folder and install the dependencies.
 
 ```shell
 cd examples-flask-started
-pdm use
 pdm install
 ```
 
-### Quickstart 
+## Quickstart 
 <!-- // spell-checker:words Quickstart -->
 
 - [Quickstart - Flask](https://flask.palletsprojects.com/en/3.0.x/quickstart/)
@@ -34,7 +33,7 @@ Run the quickstart, for example:
 See [the code header](./src/quickstart/) for more examples:
 
 
-### flaskr - Tutorial
+## flaskr - Tutorial
 
 - [Tutorial - Flask](https://flask.palletsprojects.com/en/3.0.x/tutorial/)
 
@@ -55,7 +54,7 @@ It will be hosted at the following URL:
 - http://127.0.0.1:5000/
 
 
-### Blueprint example
+## Blueprint example
 
 Let's see how it changes depending on the Blueprint's `static_folder` and `template_folder`.
 

@@ -2,19 +2,20 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "name": "Flask - flaskr",
+      "name": "Flask - media",
       "type": "debugpy",
       "request": "launch",
       "module": "flask",
       "env": {
-        "FLASK_APP": "${workspaceFolder}/src/web/examples-flask-started/src/flaskr/__init__.py",
+        "FLASK_APP": "${workspaceFolder}/src/examples-flask-media/src/app.py",
         "FLASK_DEBUG": "1"
       },
       "args": [
         "run",
-        "--port=5002",
         "--debugger",
-        "--reload"
+        "--reload",
+        "--port",
+        "5001"
       ],
       "jinja": true,
       "autoStartBrowser": false
@@ -25,7 +26,7 @@
       "request": "launch",
       "module": "flask",
       "env": {
-        "FLASK_APP": "${workspaceFolder}/src/web/examples-flask-started/src/blueprints/__init__.py",
+        "FLASK_APP": "${workspaceFolder}/src/examples-flask-started/src/blueprints/__init__.py",
         "FLASK_DEBUG": "1"
       },
       "args": [
@@ -33,6 +34,26 @@
         "--port=5004",
         "--debugger",
         "--reload"
+      ],
+      "jinja": true,
+      "autoStartBrowser": false
+    },
+    {
+      "name": "Flask - flaskr",
+      "type": "debugpy",
+      "request": "launch",
+      "module": "flask",
+      "env": {
+        "FLASK_APP": "${workspaceFolder}/src/examples-flask-started/src/flaskr/__init__.py",
+        "FLASK_DEBUG": "1"
+      },
+      "args": [
+        "run",
+        "--port=5002",
+        "--debugger",
+        "--reload",
+        "--port",
+        "5002"
       ],
       "jinja": true,
       "autoStartBrowser": false
