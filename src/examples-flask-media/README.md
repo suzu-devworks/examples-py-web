@@ -19,6 +19,7 @@ pdm install
 ### Live streaming webcam 
 
 - [Webcam streaming example for MJPEG](./src/examples/webcam/mjpeg/README.md)
+- [Webcam streaming example using HLS](./src/examples/webcam/hls/README.md)
 
 ### Video streaming
 
@@ -35,8 +36,7 @@ pdm add -d flake8 mypy black isort pytest-cov pyclean
 pdm add flask
 pdm add flask-cors
 pdm add opencv-python
-
-pdm add -d types-flask-cors
+pdm add types-flask-cors
 ```
 
 
