@@ -2,7 +2,7 @@ from pathlib import Path
 
 import cv2
 
-FILE_PATH = "/workspaces/examples-py/temp/input.mp4"
+FILE_PATH = "/workspaces/examples-py-web/temp/input.mp4"
 
 
 def main() -> None:
