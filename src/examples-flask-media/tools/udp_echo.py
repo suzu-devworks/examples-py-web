@@ -1,12 +1,11 @@
 import os
 import socket
 
-UDP_IP = "0.0.0.0"
-
 
 def main() -> None:
+    UDP_IP = os.getenv("UDP_IP", "127.0.0.1")
     UDP_PORT = int(os.getenv("UDP_PORT", 5501))
-    print(f"Listening on UDP port {UDP_PORT}")
+    print(f"Listening on UDP {UDP_IP}:{UDP_PORT}")
 
     # spell-checker:words SOCK_DGRAM
     sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)  # Internet  # UDP
