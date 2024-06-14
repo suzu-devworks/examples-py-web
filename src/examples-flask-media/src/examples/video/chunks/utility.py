@@ -4,7 +4,7 @@ import re
 def parse_range_header(range_header: str | None) -> tuple[int, int | None]:
     byte1, byte2 = 0, None
     if range_header:
-        match = re.search(r"(\d+)-(\d*)", range_header)
+        match = re.search(r"^\w+=(\d+)-(\d*)$", range_header)
         if match:
             groups = match.groups()
 
