@@ -3,7 +3,7 @@ authors = [
   {name = "A.suzuki", email = "suzu.devworks@gmail.com"},
 ]
 dependencies = [
-    "playwright>=1.44.0",
+  "playwright>=1.44.0",
 ]
 description = "Default template for PDM package"
 license = {text = "MIT"}
@@ -60,6 +60,8 @@ ignore_missing_imports = true
 module = []
 
 [tool.pytest.ini_options]
+addopts = "-m \"not use_other_env\""
+markers = ["use_other_env"]
 pythonpath = "src"
 testpaths = ["tests"]
 
