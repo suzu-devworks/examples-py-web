@@ -5,7 +5,7 @@
 groups = ["default", "dev"]
 strategy = ["cross_platform", "inherit_metadata"]
 lock_version = "4.4.1"
-content_hash = "sha256:3297a60d56eafa87c119e2f36e910b67fbf86a1095d432b60ed7a64ace6650d3"
+content_hash = "sha256:874851147c1d585831e1c2b95ae4ee1da59d2ab23d6afd05e5ea152dbcf27f2c"
 
 [[package]]
 name = "blinker"
@@ -56,6 +56,7 @@ dependencies = [
     "flask-cors>=4.0.1",
     "flask>=3.0.3",
     "opencv-python>=4.9.0.80",
+    "types-flask-cors>=4.0.0.20240523",
 ]
 
 [[package]]
@@ -69,6 +70,15 @@ groups = ["dev"]
 dependencies = [
     "flask>=3.0.3",
 ]
+
+[[package]]
+name = "examples-playwright-started"
+version = "0.1.0"
+requires_python = ">=3.12.*"
+editable = true
+path = "./src/examples-playwright-started"
+summary = "Default template for PDM package"
+groups = ["dev"]
 
 [[package]]
 name = "flask"
@@ -192,6 +202,20 @@ files = [
     {file = "opencv_python-4.10.0.82-cp37-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:955c5ce8ac90c9e4636ad7f5c0d9c75b80abbe347182cfd09b0e3eec6e50472c"},
     {file = "opencv_python-4.10.0.82-cp37-abi3-win32.whl", hash = "sha256:ff54adc9e4daaf438e669664af08bec4a268c7b7356079338b8e4fae03810f2c"},
     {file = "opencv_python-4.10.0.82-cp37-abi3-win_amd64.whl", hash = "sha256:2e3c2557b176f1e528417520a52c0600a92c1bb1c359f3df8e6411ab4293f065"},
+]
+
+[[package]]
+name = "types-flask-cors"
+version = "4.0.0.20240523"
+requires_python = ">=3.8"
+summary = "Typing stubs for Flask-Cors"
+groups = ["dev"]
+dependencies = [
+    "Flask>=2.0.0",
+]
+files = [
+    {file = "types-Flask-Cors-4.0.0.20240523.tar.gz", hash = "sha256:be57da07b6fd398eef2a79d4d43436fb72cfc3dd23a29a141627cd12576b8b1b"},
+    {file = "types_Flask_Cors-4.0.0.20240523-py3-none-any.whl", hash = "sha256:010c03c4f4f17ee1fb4eea6072f86c90bac03692b8ec09d2f7078bc72a6b1694"},
 ]
 
 [[package]]
