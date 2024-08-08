@@ -19,7 +19,7 @@ Move to this folder and install the dependencies.
 cd examples-playwright-started
 pdm install
 playwright install
-playwright install-deps
+sudo ../../.venv/bin/playwright install-deps
 ```
 
 ## Playwright for Python
