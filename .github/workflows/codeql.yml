@@ -21,7 +21,7 @@ on:
     paths:
       - "src/**"
   schedule:
-    - cron: '24 6 * * 6'
+    - cron: '24 6 * 2 6'
   workflow_dispatch:
 
 jobs:
