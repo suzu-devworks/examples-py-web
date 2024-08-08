@@ -1,4 +1,4 @@
-ARG VARIANT="1-3.12-bookworm"
+ARG VARIANT="1-3-bookworm"
 FROM mcr.microsoft.com/devcontainers/python:${VARIANT} as dev-stage
 
 ## Configure apt and install packages
