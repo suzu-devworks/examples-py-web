@@ -5,7 +5,7 @@
 groups = ["default", "dev"]
 strategy = ["inherit_metadata"]
 lock_version = "4.5.0"
-content_hash = "sha256:57127861d5249cdef815b75a9e0426554300bcce98324e230934f77667fc41b4"
+content_hash = "sha256:8fd88bc6ff5d30a4f888f3871be5805124dce428b1d98510a69e8a7130eebf0e"
 
 [[metadata.targets]]
 requires_python = ">=3.12"
@@ -74,6 +74,15 @@ groups = ["dev"]
 dependencies = [
     "flask>=3.0.3",
 ]
+
+[[package]]
+name = "examples-google-workspace"
+version = "0.1.0"
+requires_python = ">=3.12"
+editable = true
+path = "./src/examples-google-workspace"
+summary = "Default template for PDM package"
+groups = ["dev"]
 
 [[package]]
 name = "examples-playwright-started"

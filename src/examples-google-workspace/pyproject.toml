@@ -1,0 +1,18 @@
+[build-system]
+build-backend = "pdm.backend"
+requires = ["pdm-backend"]
+
+[project]
+authors = [
+  {name = "A.suzuki", email = "suzu.devworks@gmail.com"},
+]
+dependencies = []
+description = "Default template for PDM package"
+license = {text = "MIT"}
+name = "examples-google-workspace"
+readme = "README.md"
+requires-python = ">=3.12"
+version = "0.1.0"
+
+[tool.pdm]
+distribution = true
