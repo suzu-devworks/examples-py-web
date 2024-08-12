@@ -17,6 +17,11 @@ def _parse_arguments() -> Namespace:
     )
     configure_arguments(parser)
 
+    # auth
+    from examples_google_workspace.auth import configure_arguments as configure_auth
+
+    configure_auth(parser)
+
     subparsers = parser.add_subparsers()
 
     # drive
