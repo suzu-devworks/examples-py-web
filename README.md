@@ -19,6 +19,8 @@ may contain many inaccuracies.
 
 - [examples-flask-started](./src/examples-flask-started/README.md)
 - [examples-flask-media](./src/examples-flask-media/README.md)
+- [examples-playwright-started](./src/examples-playwright-started/README.md)
+- [examples-google-workspace](./src/examples-google-workspace/README.md)
 
 
 ## More Information

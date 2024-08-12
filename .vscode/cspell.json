@@ -15,6 +15,7 @@
     "asyncio",
     "flaskr",
     "fourcc",
+    "googleapiclient",
     "isort",
     "markupsafe",
     "mjpeg",
