@@ -37,6 +37,14 @@ def _parse_arguments() -> Namespace:
     sheets_parser = subparsers.add_parser("sheets", help="Google Sheets API example")
     configure_sheets(sheets_parser)
 
+    # calendar
+    from examples_google_workspace.calendar import (
+        configure_arguments as configure_calendar,
+    )
+
+    calendar_parser = subparsers.add_parser("calendar", help="Google Calendar API example")
+    configure_calendar(calendar_parser)
+
     return parser.parse_args()
 
 

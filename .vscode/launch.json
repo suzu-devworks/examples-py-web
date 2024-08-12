@@ -8,7 +8,7 @@
       "program": "${workspaceFolder}/src/examples-google-workspace/src/examples_google_workspace/__main__.py",
       "cwd": "${workspaceFolder}/src/examples-google-workspace",
       "console": "integratedTerminal",
-      "args": "drive"
+      "args": "${command:pickArgs}"
     },
     {
       "name": "Flask - media",
