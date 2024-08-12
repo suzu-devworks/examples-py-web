@@ -17,6 +17,18 @@ def _parse_arguments() -> Namespace:
     )
     configure_arguments(parser)
 
+    subparsers = parser.add_subparsers()
+
+    # drive
+    from examples_google_workspace.drive import configure_arguments as configure_drive
+
+    drive_parser = subparsers.add_parser(
+        "drive",
+        help="drive api example",
+        description="google drive api example",
+    )
+    configure_drive(drive_parser)
+
     return parser.parse_args()
 
 
