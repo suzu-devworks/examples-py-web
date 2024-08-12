@@ -45,6 +45,12 @@ def _parse_arguments() -> Namespace:
     calendar_parser = subparsers.add_parser("calendar", help="Google Calendar API example")
     configure_calendar(calendar_parser)
 
+    # chat
+    from examples_google_workspace.chat import configure_arguments as configure_chat
+
+    chat_parser = subparsers.add_parser("chat", help="Google Chat API example")
+    configure_chat(chat_parser)
+
     return parser.parse_args()
 
 
