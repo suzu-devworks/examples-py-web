@@ -1,4 +1,4 @@
-# see also https://github.com/googleworkspace/python-samples/tree/main/drive/quickstart
+# see also : https://github.com/googleworkspace/python-samples/tree/main/docs/quickstart
 
 # Copyright 2018 Google LLC
 #
@@ -14,7 +14,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-# [START drive_quickstart]
+# [START docs_quickstart]
 import os.path
 
 from google.auth.transport.requests import Request
@@ -24,15 +24,18 @@ from googleapiclient.discovery import build
 from googleapiclient.errors import HttpError
 
 # If modifying these scopes, delete the file token.json.
-SCOPES = ["https://www.googleapis.com/auth/drive.metadata.readonly"]
+SCOPES = ["https://www.googleapis.com/auth/documents.readonly"]
+
+# The ID of a sample document.
+DOCUMENT_ID = "195j9eDD3ccgjQRttHhJPymLJUCOUjs-jmwTrekvdjFE"
 
 
 def main() -> None:
-    """Shows basic usage of the Drive v3 API.
-    Prints the names and ids of the first 10 files the user has access to.
+    """Shows basic usage of the Docs API.
+    Prints the title of a sample document.
     """
     # Because tokens with different scopes are cached.
-    token_cache = "token.drive.json"
+    token_cache = "token.docs.json"
     # spell-checker:words creds
     creds = None
     # The file token.json stores the user's access and refresh tokens, and is
@@ -53,24 +56,17 @@ def main() -> None:
 
     try:
         # suppress `file_cache is only supported with oauth2client<4.0.0`
-        # service = build("drive", "v3", credentials=creds)
-        service = build("drive", "v3", credentials=creds, cache_discovery=False)
+        # service = build("docs", "v3", credentials=creds)
+        service = build("docs", "v1", credentials=creds, cache_discovery=False)
 
-        # Call the Drive v3 API
-        results = service.files().list(pageSize=10, fields="nextPageToken, files(id, name)").execute()
-        items = results.get("files", [])
+        # Retrieve the documents contents from the Docs service.
+        document = service.documents().get(documentId=DOCUMENT_ID).execute()
 
-        if not items:
-            print("No files found.")
-            return
-        print("Files:")
-        for item in items:
-            print(f" {item['name']} ({item['id']})")
-    except HttpError as error:
-        # TODO(developer) - Handle errors from drive API.
-        print(f"An error occurred: {error}")
+        print(f"The title of the document is: {document.get('title')}")
+    except HttpError as err:
+        print(err)
 
 
 # if __name__ == "__main__":
 #     main()
-# [END drive_quickstart]
+# [END docs_quickstart]

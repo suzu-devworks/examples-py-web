@@ -161,7 +161,8 @@ cython_debug/
 #  option (not recommended) you can uncomment the following to ignore the entire idea folder.
 #.idea/
 
-## add project
+## add data files
 credentials.json
 client_secret.json
 token.json
+token.*.json
