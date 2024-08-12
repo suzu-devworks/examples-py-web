@@ -31,6 +31,12 @@ def _parse_arguments() -> Namespace:
     docs_parser = subparsers.add_parser("docs", help="Google Docs API example")
     configure_docs(docs_parser)
 
+    # sheets
+    from examples_google_workspace.sheets import configure_arguments as configure_sheets
+
+    sheets_parser = subparsers.add_parser("sheets", help="Google Sheets API example")
+    configure_sheets(sheets_parser)
+
     return parser.parse_args()
 
 
