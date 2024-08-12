@@ -51,6 +51,12 @@ def _parse_arguments() -> Namespace:
     chat_parser = subparsers.add_parser("chat", help="Google Chat API example")
     configure_chat(chat_parser)
 
+    # gmail
+    from examples_google_workspace.gmail import configure_arguments as configure_gmail
+
+    gmail_parser = subparsers.add_parser("gmail", help="Google Gmail API example")
+    configure_gmail(gmail_parser)
+
     return parser.parse_args()
 
 
