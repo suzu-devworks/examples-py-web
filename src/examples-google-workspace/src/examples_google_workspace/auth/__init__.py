@@ -1,11 +1,13 @@
 from argparse import ArgumentParser
 from logging import getLogger
+from typing import TypeAlias
 
 import google.auth
-from google.oauth2 import credentials, service_account
 
 from . import service_account_credentials, user_account_credentials
 from .account_types import AccountTypes
+
+Credentials: TypeAlias = google.oauth2.credentials.Credentials | google.oauth2.service_account.Credentials
 
 # use credentials to create a client to interact with the Google Drive API.
 # see also: https://developers.google.com/identity/protocols/oauth2/scopes?hl=ja
@@ -21,12 +23,12 @@ _logger = getLogger(__name__)
 def get_credentials(
     auth_type: AccountTypes,
     file_name: str,
-) -> credentials.Credentials | service_account.Credentials:
+) -> Credentials:
     _logger.info("auth_type: %s", auth_type)
     _logger.info("file_name: %s", file_name)
 
     # spell-checker:words creds
-    creds: credentials.Credentials | service_account.Credentials
+    creds: Credentials
     match auth_type:
         case AccountTypes.user:
             creds = user_account_credentials.get_credentials(file_name, SCOPES)
@@ -35,7 +37,7 @@ def get_credentials(
             creds = service_account_credentials.get_credentials(file_name, SCOPES)
 
         case _:
-            creds, _ = google.auth.default(scopes=SCOPES)  # type: ignore[no-untyped-call]
+            creds, _ = google.auth.default()  # type: ignore[no-untyped-call]
 
     return creds
 
