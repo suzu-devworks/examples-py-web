@@ -38,6 +38,9 @@ dev = [
   "types-PyYAML>=6.0.12.20240311",
 ]
 
+[tool.pdm.build]
+source-includes = ["**/*.md", "tests/"]
+
 [tool.black]
 line-length = 119
 
