@@ -1,5 +1,3 @@
-# see also : https://github.com/googleworkspace/python-samples/tree/main/chat/quickstart
-
 # Copyright 2024 Google LLC
 #
 # Licensed under the Apache License, Version 2.0 (the "License");

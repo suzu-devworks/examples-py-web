@@ -8,3 +8,6 @@ dev = [
   "-e file:///${PROJECT_ROOT}/src/examples-playwright-started#egg=examples-playwright-started",
   "-e file:///${PROJECT_ROOT}/src/examples-google-workspace#egg=examples-google-workspace",
 ]
+
+[tool.isort]
+known_first_party = ["examples_google_workspace"]

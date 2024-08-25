@@ -170,3 +170,6 @@ cython_debug/
 *.mp4
 *.webm
 *.zip
+credentials.json
+token.json
+token.*.json

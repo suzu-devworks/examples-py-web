@@ -12,6 +12,7 @@ dependencies = [
   "google-auth-httplib2>=0.2.0",
   "google-auth-oauthlib>=1.2.1",
   "google-apps-chat>=0.1.9",
+  "gspread>=6.1.2",
 ]
 description = "Default template for PDM package"
 dynamic = ["version"]
@@ -37,6 +38,9 @@ dev = [
   "pyclean>=3.0.0",
   "types-PyYAML>=6.0.12.20240311",
 ]
+
+[tool.pdm.build]
+source-includes = ["**/*.md", "tests/"]
 
 [tool.black]
 line-length = 119

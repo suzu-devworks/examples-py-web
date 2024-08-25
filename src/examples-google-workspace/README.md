@@ -4,46 +4,58 @@
 
 Although it is not a web site, it is an example of a client that operates Google Workspace.
 
-## More document
 
-- https://developers.google.com/workspace?hl=ja
-- https://googleapis.dev/python/google-auth/latest/index.html
-- https://docs.gspread.org/en/latest/index.html
+## Table of Contents <!-- omit in toc -->
+
+- [examples-google-workspace](#examples-google-workspace)
+  - [Getting started](#getting-started)
+  - [Index](#index)
+  - [Configure Google Cloud API](#configure-google-cloud-api)
+    - [Enable APIs](#enable-apis)
+    - [When use service account (silent login).](#when-use-service-account-silent-login)
+    - [When use user account (OAuth login).](#when-use-user-account-oauth-login)
+  - [User credentials provided by using the gcloud CLI(OPTIONAL)](#user-credentials-provided-by-using-the-gcloud-clioptional)
+  - [More document](#more-document)
+  - [How the project was initialized](#how-the-project-was-initialized)
 
 
 ## Getting started
 
-Move to this folder:
-
-```shell
-cd examples-google-workspace
-```
-
-Install dependency packages and install myself locally as editable:
+Install dependency packages:
 
 ```shell
 pdm install
 ```
 
-Run the command:
+Show help command:
 
 ```shell
 examples-google-cli -h
 ```
 
+## Index
+
+- [`auth` - Google Auth](./src/examples_google_workspace/auth/README.md)
+- [`drive` - Google Drive API example](./src/examples_google_workspace//drive/README.md)
+- [`docs` - Google Docs API example](./src/examples_google_workspace/docs/README.md)
+- [`sheets` - Google Sheets API example](./src/examples_google_workspace/sheets/README.md)
+- [`calendar` - Google Calendar API example](./src/examples_google_workspace/calendar/README.md)
+- [`chat` - Google Chat API example](./src/examples_google_workspace/chat/README.md)
+- [`gmail` - Google Gmail API example](./src/examples_google_workspace/gmail/README.md)
+
 
 ## Configure Google Cloud API
 
-Goto google cloud platforms site:
+Goto google cloud console:
 
-- https://console.cloud.google.com/welcome
+- <https://console.cloud.google.com/welcome>
 
 ### Enable APIs
 
 1. APIs & Services > Library
 2. Enable [Google Drive API] and [Google Sheets API]
 
-### When use service account (silent login).
+### When use service account (silent login)
 
 1. IAM and Admin > Service Accounts > CREATE SERVICE ACCOUNT
    > - Service account details:  
@@ -58,7 +70,7 @@ Goto google cloud platforms site:
 5. Rename the file to `service_account.json` and add it to your project
 6. _Grant permissions for Google services to service accounts_
 
-### When use user account (OAUTH login).
+### When use user account (OAuth login)
 
 1. APIs & Services > OAuth consent screen
    > - User type: External > create
@@ -73,6 +85,33 @@ Goto google cloud platforms site:
    > - CREATE
 3. Download json file.
 4. Rename the file to `credentials.json` and add it to your project
+
+
+## User credentials provided by using the gcloud CLI(OPTIONAL)
+
+<!--  spell-checker:words gcloud -->
+
+Download gcloud CLI:
+
+- <https://cloud.google.com/sdk/docs/install?hl=ja>
+
+Initialize the CLI:
+
+```shell
+gcloud init
+```
+
+Select the project you created in the Google Cloud Console.
+
+Provides authentication information to the Application Default Credentials (ADC):
+
+```shell
+gcloud auth application-default login --scopes=https://www.googleapis.com/auth/drive.readonly --client-id-file=/workspaces/examples-py-web/src/examples-google-workspace/credentials.json
+```
+
+## More document
+
+- <https://developers.google.com/workspace?hl=ja>
 
 
 ## How the project was initialized
@@ -91,7 +130,6 @@ pdm add google-apps-chat
 pdm add -d types-PyYAML
 
 ```
-# spell-checker:words pyyaml
-# spell-checker:words httplib
-# spell-checker:words oauthlib
-
+<!-- spell-checker:words pyyaml -->
+<!--  spell-checker:words httplib -->
+<!--  spell-checker:words oauthlib -->
