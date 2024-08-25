@@ -106,7 +106,7 @@ ipython_config.py
 #pdm.lock
 #   pdm stores project-wide configurations in .pdm.toml, but it is recommended to not include it
 #   in version control.
-#   https://pdm.fming.dev/latest/usage/project/#working-with-version-control
+#   https://pdm-project.org/#use-with-ide
 .pdm.toml
 .pdm-python
 .pdm-build/
@@ -161,15 +161,9 @@ cython_debug/
 #  option (not recommended) you can uncomment the following to ignore the entire idea folder.
 #.idea/
 
-##> Add
-[Tt]emp/
-.cov/
-.DS_Store
-.pdm-python
-.venv.*
-*.mp4
-*.webm
-*.zip
+## add data files
 credentials.json
+client_secret.json
+service_account.json
 token.json
 token.*.json
