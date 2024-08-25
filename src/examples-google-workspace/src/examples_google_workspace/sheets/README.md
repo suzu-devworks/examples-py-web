@@ -5,6 +5,8 @@
 - [`sheets` - Google Sheets API example](#sheets---google-sheets-api-example)
   - [examples](#examples)
     - [`quickstart`](#quickstart)
+    - [`simple`](#simple)
+    - [`gspread`](#gspread)
 
 ## examples
 
@@ -64,5 +66,55 @@ examples-google-cli -A user sheets simple delete {file id}
 `--force` will permanently delete the file from the trash.
 
 ```shell
-examples-google-cli -A user sheets simple delete {file id} --force
+examples-google-cli -A user sheets simple delete {file id} -f
+```
+
+### `gspread`
+
+<!-- spell-checker:words gspread -->
+
+CRUD example using the gspread library.
+
+- [gspread](https://docs.gspread.org/en/v6.0.0/index.html)
+
+This command requires these scopes:
+
+- <https://www.googleapis.com/auth/drive>
+- <https://www.googleapis.com/auth/spreadsheets>
+
+
+Create a new spreadsheet file in Drive:  
+
+```shell
+examples-google-cli -A user sheets gspread create -t gspreadで作成したスプレッドシート -d {directory id}
+```
+
+Appends a new sheet to the specified file:
+
+```shell
+ examples-google-cli -A user sheets gspread add -n シート2 {file id}
+```
+
+Write some data to the sheet:
+
+```shell
+examples-google-cli -A user sheets gspread write {file id}
+```
+
+Read some data from a sheet:
+
+```shell
+examples-google-cli -A user sheets gspread read {file id}
+```
+
+Finally, delete the file.
+
+```shell
+examples-google-cli -A user sheets gspread delete {file id}
+```
+
+`--force` will permanently delete the file from the trash.
+
+```shell
+examples-google-cli -A user sheets gspread delete {file id} -f
 ```

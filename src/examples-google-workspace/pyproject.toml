@@ -12,6 +12,7 @@ dependencies = [
   "google-auth-httplib2>=0.2.0",
   "google-auth-oauthlib>=1.2.1",
   "google-apps-chat>=0.1.9",
+  "gspread>=6.1.2",
 ]
 description = "Default template for PDM package"
 dynamic = ["version"]
