@@ -3,9 +3,10 @@ from datetime import datetime
 from logging import getLogger
 from typing import Any
 
-from examples_google_workspace.auth import Credentials, get_credentials
 from googleapiclient.discovery import Resource, build
 from googleapiclient.errors import HttpError
+
+from examples_google_workspace.auth import Credentials, get_credentials
 
 logger = getLogger(__name__)
 

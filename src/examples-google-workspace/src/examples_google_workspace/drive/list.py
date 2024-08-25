@@ -1,8 +1,9 @@
 from logging import getLogger
 
-from examples_google_workspace.auth import Credentials
 from googleapiclient.discovery import Resource, build
 from googleapiclient.errors import HttpError
+
+from examples_google_workspace.auth import Credentials
 
 logger = getLogger(__name__)
 
