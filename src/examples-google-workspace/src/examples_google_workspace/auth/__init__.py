@@ -12,9 +12,8 @@ Credentials: TypeAlias = google.oauth2.credentials.Credentials | google.oauth2.s
 # use credentials to create a client to interact with the Google Drive API.
 # see also: https://developers.google.com/identity/protocols/oauth2/scopes?hl=ja
 SCOPES = [
-    "https://www.googleapis.com/auth/drive",
+    "https://www.googleapis.com/auth/drive.file",
     "https://www.googleapis.com/auth/spreadsheets",
-    "https://www.googleapis.com/auth/gmail.compose",
 ]
 
 _logger = getLogger(__name__)

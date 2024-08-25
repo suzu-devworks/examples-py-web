@@ -33,5 +33,5 @@ examples-google-cli drive list
 When specifying the parent directory:
 
 ```shell
-examples-google-cli drive list -d 1240lF7QaAe5FONKYJ-h5ITjh2tTzESs3
+examples-google-cli drive list -d {directory id}
 ```
