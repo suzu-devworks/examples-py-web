@@ -125,7 +125,7 @@ dependencies = [
 
 [[package]]
 name = "examples-google-workspace"
-version = "0.1.0.dev1"
+version = "0.1.1"
 requires_python = ">=3.12"
 editable = true
 path = "./src/examples-google-workspace"
@@ -136,6 +136,7 @@ dependencies = [
     "google-apps-chat>=0.1.9",
     "google-auth-httplib2>=0.2.0",
     "google-auth-oauthlib>=1.2.1",
+    "gspread>=6.1.2",
     "pyyaml>=6.0.2",
 ]
 
@@ -387,6 +388,21 @@ files = [
 ]
 
 [[package]]
+name = "gspread"
+version = "6.1.2"
+requires_python = ">=3.8"
+summary = "Google Spreadsheets Python API"
+groups = ["dev"]
+dependencies = [
+    "google-auth-oauthlib>=0.4.1",
+    "google-auth>=1.12.0",
+]
+files = [
+    {file = "gspread-6.1.2-py3-none-any.whl", hash = "sha256:345996fbb74051ee574e3d330a375ac625774f289459f73cb1f8b6fb3cf4cac5"},
+    {file = "gspread-6.1.2.tar.gz", hash = "sha256:b147688b8c7a18c9835d5f998997ec17c97c0470babcab17f65ac2b3a32402b7"},
+]
+
+[[package]]
 name = "httplib2"
 version = "0.22.0"
 requires_python = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
@@ -463,7 +479,7 @@ version = "2.0.1"
 requires_python = ">=3.9"
 summary = "Fundamental package for array computing in Python"
 groups = ["dev"]
-marker = "platform_system == \"Linux\" and platform_machine == \"aarch64\""
+marker = "python_version >= \"3.6\" and platform_system == \"Linux\" and platform_machine == \"aarch64\" or python_version >= \"3.7\""
 files = [
     {file = "numpy-2.0.1-cp312-cp312-macosx_10_9_x86_64.whl", hash = "sha256:6bf4e6f4a2a2e26655717a1983ef6324f2664d7011f6ef7482e8c0b3d51e82ac"},
     {file = "numpy-2.0.1-cp312-cp312-macosx_11_0_arm64.whl", hash = "sha256:7d6fddc5fe258d3328cd8e3d7d3e02234c5d70e01ebe377a6ab92adb14039cb4"},
