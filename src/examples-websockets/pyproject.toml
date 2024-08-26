@@ -1,0 +1,19 @@
+[project]
+authors = [
+  {name = "A.suzuki", email = "suzu.devworks@gmail.com"},
+]
+dependencies = [
+  "websockets>=13.0",
+]
+description = "Default template for PDM package"
+license = {text = "MIT"}
+name = "examples-websockets"
+readme = "README.md"
+requires-python = ">=3.12"
+version = "0.1.0"
+
+[tool.pdm]
+distribution = false
+
+[tool.pdm.scripts]
+dev = "python -m http.server 8000"
