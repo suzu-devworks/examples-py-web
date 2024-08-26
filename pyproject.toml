@@ -3,10 +3,11 @@ requires-python = ">=3.12"
 
 [tool.pdm.dev-dependencies]
 dev = [
-  "-e file:///${PROJECT_ROOT}/src/examples-flask-started#egg=examples-flask-started",
-  "-e file:///${PROJECT_ROOT}/src/examples-flask-media#egg=examples-flask-media",
-  "-e file:///${PROJECT_ROOT}/src/examples-playwright-started#egg=examples-playwright-started",
-  "-e file:///${PROJECT_ROOT}/src/examples-google-workspace#egg=examples-google-workspace",
+    "-e file:///${PROJECT_ROOT}/src/examples-flask-started#egg=examples-flask-started",
+    "-e file:///${PROJECT_ROOT}/src/examples-flask-media#egg=examples-flask-media",
+    "-e file:///${PROJECT_ROOT}/src/examples-playwright-started#egg=examples-playwright-started",
+    "-e file:///${PROJECT_ROOT}/src/examples-google-workspace#egg=examples-google-workspace",
+    "-e file:///${PROJECT_ROOT}/src/examples-websockets#egg=examples-websockets",
 ]
 
 [tool.isort]
