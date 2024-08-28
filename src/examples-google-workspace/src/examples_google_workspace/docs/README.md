@@ -10,8 +10,6 @@
 
 ### `quickstart`
 
-<!-- spell-checker:words quickstart -->
-
 - [Python quickstart - Google](https://developers.google.com/drive/api/quickstart/python?hl=ja)
 - [quickstart - Github](https://github.com/googleworkspace/python-samples/tree/main/drive/quickstart)
 

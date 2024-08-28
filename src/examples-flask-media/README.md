@@ -4,19 +4,28 @@
 
 This project is an example of web media and streaming using Flask.
 
+## Table of Contents <!-- omit in toc -->
 
-## Getting started
+- [examples-flask-media](#examples-flask-media)
+  - [Setup](#setup)
+  - [Flask media apps](#flask-media-apps)
+    - [Live streaming webcam](#live-streaming-webcam)
+    - [Video streaming](#video-streaming)
+  - [How the project was initialized](#how-the-project-was-initialized)
+  - [Troubleshooting](#troubleshooting)
+    - [ImportError: libGL.so.1](#importerror-libglso1)
 
-Move to this folder and install the dependencies.
+## Setup
+
+Install the dependencies.
 
 ```shell
-cd examples-flask-media
 pdm install
 ```
 
-## Index
+## Flask media apps
 
-### Live streaming webcam 
+### Live streaming webcam
 
 - [Webcam streaming example for MJPEG](./src/examples/webcam/mjpeg/README.md)
 - [Webcam streaming example using HLS](./src/examples/webcam/hls/README.md)
@@ -53,4 +62,3 @@ For debian based systems:
 ```shell
 apt install -y libgl1-mesa-dev
 ```
-<!-- // spell-checker:words libgl1 -->

@@ -5,19 +5,32 @@
 This project is an example of Headless browser testing using Playwright.
 
 
-## More document
+## Table of Contents <!-- omit in toc -->
 
-- https://playwright.dev/python/
-- https://github.com/microsoft/playwright-python
+- [examples-playwright-started](#examples-playwright-started)
+  - [See also](#see-also)
+  - [Setup](#setup)
+  - [Playwright for Python](#playwright-for-python)
+  - [How the project was initialized](#how-the-project-was-initialized)
 
 
-## Getting started
+## See also
 
-Move to this folder and install the dependencies.
+- <https://playwright.dev/python/>
+- <https://github.com/microsoft/playwright-python>
+
+
+## Setup
+
+Install the dependencies:
 
 ```shell
-cd examples-playwright-started
 pdm install
+```
+
+Install the required browsers:
+
+```shell
 playwright install
 sudo ../../.venv/bin/playwright install-deps
 ```
@@ -26,13 +39,7 @@ sudo ../../.venv/bin/playwright install-deps
 
 - [Getting Started - Playwright for Python](https://playwright.dev/python/docs/intro)
 
-Run tests:
-
-```shell
-pdm run test
-```
-
-See [these tests](./tests/) for more examples:
+See [these tests](./tests/) for more examples.
 
 
 ## How the project was initialized
@@ -40,8 +47,11 @@ See [these tests](./tests/) for more examples:
 This project was initialized with the following command:
 
 ```shell
-pdm init
-pdm add -d flake8 mypy black isort pytest-cov pytest-asyncio pyclean
+pdm init -p src/examples-playwright-started -n
+cd src/examples-playwright-started
+
+pdm add -d flake8 mypy black isort pyclean
+pdm add -d pytest-cov pytest-asyncio
 
 pdm add playwright
 pdm add -d pytest-playwright

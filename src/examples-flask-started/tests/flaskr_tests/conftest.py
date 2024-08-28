@@ -5,10 +5,9 @@ from typing import Any, Generator
 import pytest
 from flask import Flask
 from flask.testing import FlaskClient, FlaskCliRunner
-from werkzeug import Response
-
 from flaskr import create_app
 from flaskr.db import get_db, init_db
+from werkzeug import Response
 
 with open(os.path.join(os.path.dirname(__file__), "data.sql"), "rb") as f:
     _data_sql = f.read().decode("utf8")
@@ -27,7 +26,6 @@ def app() -> Generator[Flask, Any, None]:
 
     with app.app_context():
         init_db()
-        # spell-checker:words executescript
         get_db().executescript(_data_sql)
 
     yield app

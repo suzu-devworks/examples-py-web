@@ -5,22 +5,34 @@
 Flask web programming examples. The very basics.
 
 
-## These became textbooks 
+## Table of Contents <!-- omit in toc -->
 
-- https://flask.palletsprojects.com/
+- [examples-flask-started](#examples-flask-started)
+  - [See also](#see-also)
+  - [Setup](#setup)
+  - [Flask web apps](#flask-web-apps)
+    - [Quickstart](#quickstart)
+    - [Tutorial (flaskr)](#tutorial-flaskr)
+    - [Blueprint example](#blueprint-example)
+  - [How the project was initialized](#how-the-project-was-initialized)
 
 
-## Getting started
+## See also
 
-Move to this folder and install the dependencies.
+- [Flask’s documentation](https://flask.palletsprojects.com/)
+
+
+## Setup
+
+Install the dependencies.
 
 ```shell
-cd examples-flask-started
 pdm install
 ```
 
-## Quickstart 
-<!-- // spell-checker:words Quickstart -->
+## Flask web apps
+
+### Quickstart
 
 - [Quickstart - Flask](https://flask.palletsprojects.com/en/3.0.x/quickstart/)
 
@@ -30,10 +42,10 @@ Run the quickstart, for example:
  flask --app src.quickstart._01_hello run --debug
 ```
 
-See [the code header](./src/quickstart/) for more examples:
+See [the code header](./src/quickstart/) for more examples.
 
 
-## flaskr - Tutorial
+### Tutorial (flaskr)
 
 - [Tutorial - Flask](https://flask.palletsprojects.com/en/3.0.x/tutorial/)
 
@@ -51,10 +63,12 @@ flask --app flaskr run --debug
 
 It will be hosted at the following URL:
 
-- http://127.0.0.1:5000/
+- <http://127.0.0.1:5000/>
+
+See [the code header](./src/flaskr/) for more examples.
 
 
-## Blueprint example
+### Blueprint example
 
 Let's see how it changes depending on the Blueprint's `static_folder` and `template_folder`.
 
@@ -68,7 +82,9 @@ flask --app blueprints run --debug
 
 It will be hosted at the following URL:
 
-- http://127.0.0.1:5000/
+- <http://127.0.0.1:5000/>
+
+See [the code header](./src/blueprints/) for more examples.
 
 
 ## How the project was initialized
@@ -77,6 +93,7 @@ This project was initialized with the following command:
 
 ```shell
 pdm init
-pdm add -d flake8 mypy black isort pytest-cov pyclean
+pdm add -d flake8 mypy black isort pyclean
+pdm add -d pytest-cov
 pdm add flask
 ```

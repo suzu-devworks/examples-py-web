@@ -57,7 +57,7 @@ brew install ffmpeg
 Change the current directory of the script that launches ffmpeg.
 The script creates a file for streaming in the current directory.
 
-Check the destination with video_dir in __route__.py, or specify 
+Check the destination with video_dir in __route__.py, or specify  
 it with the environment variable `HLS_DIR_SRC`.
 
 ```shell
@@ -84,29 +84,30 @@ flask run --debug
 
 It will be hosted at the following URL:
 
-- http://127.0.0.1:5000/
+- <http://127.0.0.1:5000/>
 
 or
 
 You can check it out on this website.
+
 - [HLS.js site](https://hlsjs.video-dev.org/demo/)
 
 Enter `http://127.0.0.1:5000/webcam/hls/video/playlist.m3u8` into the URL.
-
 
 
 ## Knowledge
 
 ### FFmpeg options
 
-- [HLS - Formats ](https://ffmpeg.org/ffmpeg-formats.html#hls-2)
+- [HLS - Formats](https://ffmpeg.org/ffmpeg-formats.html#hls-2)
 
 
 ### Content-Type
 
 [RFC 8216 - HTTP Live Streaming](https://tex2e.github.io/rfc-translater/html/rfc8216.html#4--Playlists):
+
 - `application/vnd.apple.mpegurl` or `audio/mpegurl`
 
 Microsoft?
 
-- `applica:tion/x-mpegURL`
+- `application/x-mpegURL`

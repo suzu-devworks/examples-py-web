@@ -13,6 +13,5 @@ def configure_arguments(parser: ArgumentParser) -> None:
     simple = sub.add_parser("simple", help="Simple CURD example with Google Sheets API.")
     simple_curd.configure_parser(simple)
 
-    #  spell-checker:words gspread
     gspread = sub.add_parser("gspread", help="CRUD example using the gspread library.")
     gspread_crud.configure_parser(gspread)

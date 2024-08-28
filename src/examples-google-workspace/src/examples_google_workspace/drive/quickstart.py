@@ -31,7 +31,6 @@ def main() -> None:
     """
     # Because tokens with different scopes are cached.
     token_cache = "token.drive.json"
-    # spell-checker:words creds
     creds = None
     # The file token.json stores the user's access and refresh tokens, and is
     # created automatically when the authorization flow completes for the first

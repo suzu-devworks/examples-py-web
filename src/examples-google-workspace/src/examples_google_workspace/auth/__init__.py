@@ -26,7 +26,6 @@ def get_credentials(
     _logger.info("auth_type: %s", auth_type)
     _logger.info("file_name: %s", file_name)
 
-    # spell-checker:words creds
     creds: Credentials
     match auth_type:
         case AccountTypes.user:

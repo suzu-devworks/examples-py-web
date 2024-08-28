@@ -12,8 +12,6 @@
 
 ### `quickstart`
 
-<!-- spell-checker:words quickstart -->
-
 - [Python quickstart - Google](https://developers.google.com/sheets/api/quickstart/python?hl=ja)
 - [quickstart - Github](https://github.com/googleworkspace/python-samples/tree/main/sheets/quickstart)
 
@@ -70,8 +68,6 @@ examples-google-cli -A user sheets simple delete {file id} -f
 ```
 
 ### `gspread`
-
-<!-- spell-checker:words gspread -->
 
 CRUD example using the gspread library.
 

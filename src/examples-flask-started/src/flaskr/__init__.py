@@ -16,7 +16,6 @@ def create_app(test_config: Mapping[str, Any] | None = None) -> Flask:
 
     if test_config is None:
         # load the instance config, if it exists, when not testing
-        # spell-checker:words pyfile
         app.config.from_pyfile("config.py", silent=True)
     else:
         # load the test config if passed in

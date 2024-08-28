@@ -4,7 +4,6 @@ from logging import getLogger
 
 import gspread
 
-#  spell-checker:words gspread
 from examples_google_workspace.auth.account_types import AccountTypes
 
 _logger = getLogger(__name__)
@@ -17,7 +16,6 @@ def _create_client(
     _logger.info("auth_type: %s", auth_type)
     _logger.info("file_name: %s", file_name)
 
-    # spell-checker:words creds
     client: gspread.client.Client
     match auth_type:
         case AccountTypes.user:

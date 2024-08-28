@@ -7,7 +7,6 @@ def main() -> None:
     UDP_PORT = int(os.getenv("UDP_PORT", 5501))
     print(f"Listening on UDP {UDP_IP}:{UDP_PORT}")
 
-    # spell-checker:words SOCK_DGRAM
     sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)  # Internet  # UDP
     sock.bind((UDP_IP, UDP_PORT))
 
