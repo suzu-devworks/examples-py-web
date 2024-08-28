@@ -7,7 +7,6 @@ def _exec_list(args: Namespace) -> None:
     from examples_google_workspace.auth import get_credentials
     from examples_google_workspace.drive.list import list_items
 
-    # spell-checker:words creds
     creds = get_credentials(args.auth_type, args.credential_file)
     list_items(creds, args.parent_id)
     pass

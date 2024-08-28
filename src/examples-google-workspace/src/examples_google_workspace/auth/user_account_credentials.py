@@ -12,7 +12,6 @@ def get_credentials(file_name: str, scopes: list[str]) -> credentials.Credential
     # Because tokens with different scopes are cached.
     token_cache = "token.json"
 
-    # spell-checker:words creds
     creds: credentials.Credentials | None = None
 
     # The file token.json stores the user's access and refresh tokens, and is

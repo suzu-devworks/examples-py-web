@@ -13,7 +13,6 @@ def list_items(
     parent_id: str | None,
 ) -> None:
     try:
-        # spell-checker:words creds
         service: Resource = build("drive", "v3", credentials=creds, cache_discovery=False)
 
         # fmt: off

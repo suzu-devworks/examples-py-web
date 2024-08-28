@@ -25,7 +25,9 @@ from googleapiclient.errors import HttpError
 SCOPES = ["https://www.googleapis.com/auth/documents.readonly"]
 
 # The ID of a sample document.
+# spell-checker:disable
 DOCUMENT_ID = "195j9eDD3ccgjQRttHhJPymLJUCOUjs-jmwTrekvdjFE"
+# spell-checker:enable
 
 
 def main() -> None:
@@ -34,7 +36,6 @@ def main() -> None:
     """
     # Because tokens with different scopes are cached.
     token_cache = "token.docs.json"
-    # spell-checker:words creds
     creds = None
     # The file token.json stores the user's access and refresh tokens, and is
     # created automatically when the authorization flow completes for the first

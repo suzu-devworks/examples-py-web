@@ -61,7 +61,7 @@ flask run --debug
 
 It will be hosted at the following URL:
 
-- http://127.0.0.1:5000/
+- <http://127.0.0.1:5000/>
 
 
 ## Knowledge
@@ -76,7 +76,7 @@ Returning JPEG over HTTP using `multipart/x-mixed-replace` and rendering it as v
 
 ### Multipart responses
 
-```
+```html
 Content-Type: multipart/x-mixed-replace: boundary=frame
 ```
 

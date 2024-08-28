@@ -78,8 +78,6 @@ class VideoCamera:
         if self.timestamp is not None:
             self._set_datetime(image, f"{(self.timestamp.strftime("%H:%M:%S"))}")
 
-        # spell-checker:words imencode
-        # spell-checker:words tobytes
         _, jpeg = cv2.imencode(".jpg", image)
         return jpeg.tobytes()
 

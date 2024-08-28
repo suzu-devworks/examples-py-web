@@ -8,7 +8,6 @@ from flask import Flask, current_app, g
 
 def get_db() -> sqlite3.Connection | Any:
     if "db" not in g:
-        # spell-checker:words PARSE_DECLTYPES
         g.db = sqlite3.connect(current_app.config["DATABASE"], detect_types=sqlite3.PARSE_DECLTYPES)
         g.db.row_factory = sqlite3.Row
 
@@ -28,7 +27,6 @@ def init_db() -> None:
     with current_app.open_resource("schema.sql") as f:
         data: Any = f.read()
         script = bytes(data).decode("utf-8")
-        # spell-checker:words executescript
         db.executescript(script)
 
 
@@ -40,7 +38,6 @@ def init_db_command() -> None:
 
 
 def init_app(app: Flask) -> None:
-    # spell-checker:words teardown_appcontext
     app.teardown_appcontext(close_db)
     app.cli.add_command(init_db_command)
 

@@ -15,14 +15,15 @@ However, please note that the code described here is based on my personal opinio
 may contain many inaccuracies.
 
 
-## Projects
+## Examples projects
 
 - [examples-flask-started](./src/examples-flask-started/README.md)
 - [examples-flask-media](./src/examples-flask-media/README.md)
 - [examples-playwright-started](./src/examples-playwright-started/README.md)
 - [examples-google-workspace](./src/examples-google-workspace/README.md)
+- [examples-websockets](./src/examples-websockets/README.md)
 
 
-## More Information
+## More documentation
 
-- [Documentation](./docs/README.md)
+- [docs ...](./docs/README.md)

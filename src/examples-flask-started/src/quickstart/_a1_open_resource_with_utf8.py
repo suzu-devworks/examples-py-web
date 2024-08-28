@@ -64,7 +64,6 @@ def decode_resource() -> str:
     return f"<code>{data}</code>"
 
 
-# spell-checker:words executescript
 def executescript(sql_script: str, /) -> None:
     app.logger.info(sql_script)
     pass

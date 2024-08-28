@@ -3,10 +3,9 @@
   "ignorePaths": [],
   "dictionaryDefinitions": [],
   "dictionaries": [],
-  "words": [
-    "quickstart",
-    "websockets"
-  ],
+  "words": [],
   "ignoreWords": [],
-  "import": []
+  "import": [
+    "../../.vscode/cspell.json"
+  ]
 }

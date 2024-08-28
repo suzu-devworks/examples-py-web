@@ -1,17 +1,28 @@
 # Quick start
 
+Tried the code from the quick start.
+
+
 ## Table of Contents <!-- omit in toc -->
 
 - [Quick start](#quick-start)
-  - [Say “Hello world!”](#say-hello-world)
-  - [Encrypt connections](#encrypt-connections)
-  - [Connect from a browser](#connect-from-a-browser)
-  - [Broadcast messages](#broadcast-messages)
-  - [Manage application state](#manage-application-state)
-  - [More documents](#more-documents)
+  - [See also](#see-also)
+  - [Usage](#usage)
+    - [Say “Hello world!”](#say-hello-world)
+    - [Encrypt connections](#encrypt-connections)
+    - [Connect from a browser](#connect-from-a-browser)
+    - [Broadcast messages](#broadcast-messages)
+    - [Manage application state](#manage-application-state)
 
 
-## Say “Hello world!”
+## See also
+
+- [Quick start - websockets](https://websockets.readthedocs.io/en/stable/howto/quickstart.html)
+
+
+## Usage
+
+### Say “Hello world!”
 
 Start the server:
 
@@ -26,7 +37,7 @@ python scripts/quickstart/client.py
 ```
 
 
-## Encrypt connections
+### Encrypt connections
 
 The connection is encrypted with TLS (Transport Layer Security),
 wss requires certificates like https.
@@ -46,7 +57,7 @@ python scripts/quickstart/client_secure.py
 ```
 
 
-## Connect from a browser
+### Connect from a browser
 
 Start the server:
 
@@ -69,7 +80,7 @@ Access to url:
 - <http://localhost:8000/scripts/quickstart/show_time.html>
 
 
-## Broadcast messages
+### Broadcast messages
 
 Start the server:
 
@@ -88,7 +99,7 @@ Accessing a URL using multiple browsers:
 - <http://localhost:8000/scripts/quickstart/show_time.html>
 
 
-## Manage application state
+### Manage application state
 
 Start the server:
 
@@ -105,8 +116,3 @@ pdm run dev
 Accessing a URL using multiple browsers:
 
 - <http://localhost:8000/scripts/quickstart/counter.html>
-
-
-## More documents
-
-- <https://websockets.readthedocs.io/en/stable/howto/quickstart.html>

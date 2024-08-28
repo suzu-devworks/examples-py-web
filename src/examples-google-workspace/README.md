@@ -9,11 +9,11 @@ Although it is not a web site, it is an example of a client that operates Google
 
 - [examples-google-workspace](#examples-google-workspace)
   - [Getting started](#getting-started)
-  - [Index](#index)
+  - [Google Workspace apps for Python](#google-workspace-apps-for-python)
   - [Configure Google Cloud API](#configure-google-cloud-api)
     - [Enable APIs](#enable-apis)
-    - [When use service account (silent login).](#when-use-service-account-silent-login)
-    - [When use user account (OAuth login).](#when-use-user-account-oauth-login)
+    - [When use service account (silent login)](#when-use-service-account-silent-login)
+    - [When use user account (OAuth login)](#when-use-user-account-oauth-login)
   - [User credentials provided by using the gcloud CLI(OPTIONAL)](#user-credentials-provided-by-using-the-gcloud-clioptional)
   - [More document](#more-document)
   - [How the project was initialized](#how-the-project-was-initialized)
@@ -33,7 +33,7 @@ Show help command:
 examples-google-cli -h
 ```
 
-## Index
+## Google Workspace apps for Python
 
 - [`auth` - Google Auth](./src/examples_google_workspace/auth/README.md)
 - [`drive` - Google Drive API example](./src/examples_google_workspace//drive/README.md)
@@ -89,8 +89,6 @@ Goto google cloud console:
 
 ## User credentials provided by using the gcloud CLI(OPTIONAL)
 
-<!--  spell-checker:words gcloud -->
-
 Download gcloud CLI:
 
 - <https://cloud.google.com/sdk/docs/install?hl=ja>
@@ -121,15 +119,13 @@ This project was initialized with the following command:
 ```shell
 pdm init -p src/examples-google-workspace --dist -n
 cd src/examples-google-workspace
-pdm add -d flake8 mypy black isort pytest-cov pyclean
+
+pdm add -d flake8 mypy black isort pyclean
+pdm add -d pytest-cov
 
 pdm add pyyaml
 pdm add google-api-python-client google-auth-httplib2 google-auth-oauthlib
 pdm add google-apps-chat
+pdm add gspread
 
 pdm add -d types-PyYAML
-
-```
-<!-- spell-checker:words pyyaml -->
-<!--  spell-checker:words httplib -->
-<!--  spell-checker:words oauthlib -->

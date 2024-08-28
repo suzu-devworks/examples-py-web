@@ -23,7 +23,6 @@ def _create_file(args: Namespace) -> str:
     title: str = args.title.strip()
     parent_id: str = args.parent_id.strip() if args.parent_id else None
 
-    # spell-checker:words creds
     creds = get_credentials(args.auth_type, args.credential_file)
 
     try:

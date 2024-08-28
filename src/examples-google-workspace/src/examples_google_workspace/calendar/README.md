@@ -10,7 +10,6 @@
 
 ### `quickstart`
 
-<!-- spell-checker:words quickstart -->
 
 - [Python quickstart - Google](https://developers.google.com/calendar/api/quickstart/python?hl=ja)
 - [quickstart - Github](https://github.com/googleworkspace/python-samples/tree/main/calendar/quickstart)

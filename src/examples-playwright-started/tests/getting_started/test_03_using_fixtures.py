@@ -16,7 +16,6 @@ import pytest
 from playwright.sync_api import Page, expect
 
 
-# spell-checker:words autouse
 @pytest.fixture(scope="function", autouse=True)
 def before_each_after_each(page: Page) -> Generator[None, Any, None]:
 
