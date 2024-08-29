@@ -47,9 +47,7 @@ See [these tests](./tests/) for more examples.
 This project was initialized with the following command:
 
 ```shell
-pdm init -p src/examples-playwright-started -n
-cd src/examples-playwright-started
-
+pdm init -n
 pdm add -d flake8 mypy black isort pyclean
 pdm add -d pytest-cov pytest-asyncio
 

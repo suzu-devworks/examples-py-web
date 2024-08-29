@@ -40,8 +40,9 @@ pdm install
 This project was initialized with the following command:
 
 ```shell
-pdm init
-pdm add -d flake8 mypy black isort pytest-cov pyclean
+pdm init --dist -n
+pdm add -d flake8 mypy black isort pyclean
+pdm add -d pytest-cov
 pdm add flask
 pdm add flask-cors
 pdm add opencv-python
