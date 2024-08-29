@@ -92,7 +92,7 @@ See [the code header](./src/blueprints/) for more examples.
 This project was initialized with the following command:
 
 ```shell
-pdm init
+pdm init --dist -n
 pdm add -d flake8 mypy black isort pyclean
 pdm add -d pytest-cov
 pdm add flask

@@ -23,8 +23,6 @@ pdm install
 This project was initialized with the following command:
 
 ```shell
-pdm init -p src/examples-websockets -n
-cd src/examples-websockets
-
+pdm init -n
 pdm add websockets
 ```

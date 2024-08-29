@@ -117,9 +117,7 @@ gcloud auth application-default login --scopes=https://www.googleapis.com/auth/d
 This project was initialized with the following command:
 
 ```shell
-pdm init -p src/examples-google-workspace --dist -n
-cd src/examples-google-workspace
-
+pdm init --dist -n
 pdm add -d flake8 mypy black isort pyclean
 pdm add -d pytest-cov
 
