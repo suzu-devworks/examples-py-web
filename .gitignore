@@ -165,7 +165,7 @@ cython_debug/
 [Tt]emp/
 .cov/
 .DS_Store
-.pdm-python
+.python-version
 .venv.*
 *.mp4
 *.webm
