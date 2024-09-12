@@ -5,7 +5,7 @@
 groups = ["default", "dev"]
 strategy = ["inherit_metadata"]
 lock_version = "4.5.0"
-content_hash = "sha256:d6d90fd05d13f9dfdf91f31b13e19e3bc2cda703bcca3ecea8f74623f8c1381b"
+content_hash = "sha256:57779f3e24b849363846df74f014d3d8b590ed6545d538c44261c3cf1f70dd03"
 
 [[metadata.targets]]
 requires_python = ">=3.12"
@@ -101,7 +101,7 @@ name = "examples-flask-media"
 version = "0.1.0"
 requires_python = ">=3.12"
 editable = true
-path = "./src/examples-flask-media"
+path = "./apps/examples-flask-media"
 summary = "Default template for PDM package"
 groups = ["dev"]
 dependencies = [
@@ -116,7 +116,7 @@ name = "examples-flask-started"
 version = "0.1.0"
 requires_python = ">=3.11"
 editable = true
-path = "./src/examples-flask-started"
+path = "./apps/examples-flask-started"
 summary = ""
 groups = ["dev"]
 dependencies = [
@@ -128,7 +128,7 @@ name = "examples-google-workspace"
 version = "0.1.1"
 requires_python = ">=3.12"
 editable = true
-path = "./src/examples-google-workspace"
+path = "./apps/examples-google-workspace"
 summary = "Default template for PDM package"
 groups = ["dev"]
 dependencies = [
@@ -145,7 +145,7 @@ name = "examples-playwright-started"
 version = "0.1.0"
 requires_python = ">=3.12"
 editable = true
-path = "./src/examples-playwright-started"
+path = "./apps/examples-playwright-started"
 summary = "Default template for PDM package"
 groups = ["dev"]
 dependencies = [
@@ -157,7 +157,7 @@ name = "examples-websockets"
 version = "0.1.0"
 requires_python = ">=3.12"
 editable = true
-path = "./src/examples-websockets"
+path = "./apps/examples-websockets"
 summary = "Default template for PDM package"
 groups = ["dev"]
 dependencies = [
