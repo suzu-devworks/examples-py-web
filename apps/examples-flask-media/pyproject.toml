@@ -1,72 +1,43 @@
 [project]
+name = "examples-flask-media"
+description = "Add your description here"
 authors = [
-  {name = "A.suzuki", email = "suzu.devworks@gmail.com"},
+    { name = "A.suzuki", email = "suzu.devworks@gmail.com" },
 ]
 dependencies = [
-  "flask>=3.0.3",
-  "opencv-python>=4.9.0.80",
-  "flask-cors>=4.0.1",
-  "types-flask-cors>=4.0.0.20240523",
+    "flask>=3.0.3",
+    "opencv-python>=4.10.0.84",
+    "flask-cors>=5.0.0",
 ]
-description = "Default template for PDM package"
-dynamic = ["version"]
-license = {text = "MIT"}
-name = "examples-flask-media"
 readme = "README.md"
-requires-python = ">=3.12"
+requires-python = ">= 3.12"
+dynamic = ["version"]
 
 [build-system]
-build-backend = "pdm.backend"
-requires = ["pdm-backend"]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
 
-[tool.pdm]
-distribution = false
-version = {source = "file", path = "src/examples/__version__.py"}
-
-[tool.pdm.dev-dependencies]
-dev = [
-  "flake8>=7.0.0",
-  "mypy>=1.10.0",
-  "black>=24.4.2",
-  "isort>=5.13.2",
-  "pytest-cov>=5.0.0",
-  "pyclean>=3.0.0",
+[tool.rye]
+managed = true
+dev-dependencies = [
+    "pytest-cov>=5.0.0",
+    "types-flask-cors>=5.0.0.20240902",
 ]
 
-[tool.pdm.scripts]
-_clean_dirs = {shell = "find . | grep -E \"(/__pycache__$|\\.pyc$|\\.pyo$|/build$|/dist$|\\.mypy_cache$)\" | xargs rm -rf"}
-clean = {composite = ["pyclean .", "_clean_dirs"]}
+[tool.rye.scripts]
 dev = "flask --app src/app run --debug"
-format = {composite = ["isort .", "black ."]}
-lint = {composite = ["flake8", "mypy"]}
-test = "pytest --durations=0 --cov-branch --cov-report xml:.cov/coverage.xml --cov=src/ tests/"
 
-[tool.black]
-line-length = 119
+[tool.hatch.version]
+path = "src/examples_flask_media/__version__.py"
 
-[tool.isort]
-profile = "black"
-src_paths = ["src/", "tests/"]
+[tool.hatch.metadata]
+allow-direct-references = true
 
-[tool.mypy]
-files = ["src/", "tests/"]
-#
-allow_redefinition = true
-local_partial_types = true
-python_version = 3.12
-strict = true
-strict_optional = true
-warn_unreachable = true
-#
-pretty = true
-show_error_context = true
-
-[[tool.mypy.overrides]]
-ignore_missing_imports = true
-module = ["cv2"]
+[tool.hatch.build.targets.wheel]
+packages = ["src/examples_flask_media"]
 
 [tool.pytest.ini_options]
-pythonpath = "src"
+addopts = "--durations=0 --cov-branch --cov-report xml:.cov/coverage.xml --cov=src/"
 testpaths = ["tests"]
 
 [tool.coverage.run]

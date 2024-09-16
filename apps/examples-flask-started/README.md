@@ -1,7 +1,5 @@
 # examples-flask-started
 
-[![pdm-managed](https://img.shields.io/badge/pdm-managed-blueviolet)](https://pdm.fming.dev)
-
 Flask web programming examples. The very basics.
 
 
@@ -9,12 +7,12 @@ Flask web programming examples. The very basics.
 
 - [examples-flask-started](#examples-flask-started)
   - [See also](#see-also)
-  - [Setup](#setup)
-  - [Flask web apps](#flask-web-apps)
+  - [Examples](#examples)
     - [Quickstart](#quickstart)
     - [Tutorial (flaskr)](#tutorial-flaskr)
     - [Blueprint example](#blueprint-example)
-  - [How the project was initialized](#how-the-project-was-initialized)
+  - [Development](#development)
+    - [How the project was initialized](#how-the-project-was-initialized)
 
 
 ## See also
@@ -22,15 +20,7 @@ Flask web programming examples. The very basics.
 - [Flask’s documentation](https://flask.palletsprojects.com/)
 
 
-## Setup
-
-Install the dependencies.
-
-```shell
-pdm install
-```
-
-## Flask web apps
+## Examples
 
 ### Quickstart
 
@@ -87,13 +77,16 @@ It will be hosted at the following URL:
 See [the code header](./src/blueprints/) for more examples.
 
 
-## How the project was initialized
+## Development
+
+### How the project was initialized
 
 This project was initialized with the following command:
 
 ```shell
-pdm init --dist -n
-pdm add -d flake8 mypy black isort pyclean
-pdm add -d pytest-cov
-pdm add flask
+rye init
+rye add --dev pytest-cov
+rye add flask
+
+rye sync
 ```

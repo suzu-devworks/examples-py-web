@@ -18,7 +18,6 @@ from playwright.sync_api import Page, expect
 
 @pytest.fixture(scope="function", autouse=True)
 def before_each_after_each(page: Page) -> Generator[None, Any, None]:
-
     print("beforeEach")
 
     # Go to the starting url before each test.

@@ -1,6 +1,5 @@
 #!/usr/bin/env python3
-"""Simple https server for testing.
-"""
+"""Simple https server for testing."""
 
 import http.server
 import socketserver

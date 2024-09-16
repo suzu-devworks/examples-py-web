@@ -41,7 +41,6 @@ def get_credentials(
 
 
 def configure_arguments(parser: ArgumentParser) -> None:
-
     parser.add_argument(
         "-A",
         "--auth",

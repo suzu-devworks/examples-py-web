@@ -1,31 +1,26 @@
 # examples-google-workspace
 
-[![pdm-managed](https://img.shields.io/badge/pdm-managed-blueviolet)](https://pdm.fming.dev)
-
 Although it is not a web site, it is an example of a client that operates Google Workspace.
 
 
 ## Table of Contents <!-- omit in toc -->
 
 - [examples-google-workspace](#examples-google-workspace)
-  - [Getting started](#getting-started)
-  - [Google Workspace apps for Python](#google-workspace-apps-for-python)
+  - [Examples](#examples)
+    - [Getting started](#getting-started)
+    - [Google Workspace apps for Python](#google-workspace-apps-for-python)
+  - [Learn more](#learn-more)
   - [Configure Google Cloud API](#configure-google-cloud-api)
     - [Enable APIs](#enable-apis)
     - [When use service account (silent login)](#when-use-service-account-silent-login)
     - [When use user account (OAuth login)](#when-use-user-account-oauth-login)
   - [User credentials provided by using the gcloud CLI(OPTIONAL)](#user-credentials-provided-by-using-the-gcloud-clioptional)
-  - [More document](#more-document)
-  - [How the project was initialized](#how-the-project-was-initialized)
+  - [Development](#development)
+    - [How the project was initialized](#how-the-project-was-initialized)
 
+## Examples
 
-## Getting started
-
-Install dependency packages:
-
-```shell
-pdm install
-```
+### Getting started
 
 Show help command:
 
@@ -33,7 +28,7 @@ Show help command:
 examples-google-cli -h
 ```
 
-## Google Workspace apps for Python
+### Google Workspace apps for Python
 
 - [`auth` - Google Auth](./src/examples_google_workspace/auth/README.md)
 - [`drive` - Google Drive API example](./src/examples_google_workspace//drive/README.md)
@@ -42,6 +37,11 @@ examples-google-cli -h
 - [`calendar` - Google Calendar API example](./src/examples_google_workspace/calendar/README.md)
 - [`chat` - Google Chat API example](./src/examples_google_workspace/chat/README.md)
 - [`gmail` - Google Gmail API example](./src/examples_google_workspace/gmail/README.md)
+
+
+## Learn more
+
+- [Enhance Google Workspace apps](https://developers.google.com/workspace?hl=ja)
 
 
 ## Configure Google Cloud API
@@ -107,23 +107,23 @@ Provides authentication information to the Application Default Credentials (ADC)
 gcloud auth application-default login --scopes=https://www.googleapis.com/auth/drive.readonly --client-id-file=/workspaces/examples-py-web/src/examples-google-workspace/credentials.json
 ```
 
-## More document
 
-- <https://developers.google.com/workspace?hl=ja>
+## Development
 
-
-## How the project was initialized
+### How the project was initialized
 
 This project was initialized with the following command:
 
 ```shell
-pdm init --dist -n
-pdm add -d flake8 mypy black isort pyclean
-pdm add -d pytest-cov
+rye init --script
+rye add --dev pytest-cov
 
-pdm add pyyaml
-pdm add google-api-python-client google-auth-httplib2 google-auth-oauthlib
-pdm add google-apps-chat
-pdm add gspread
+rye add pyyaml
+rye add --dev types-PyYAML
 
-pdm add -d types-PyYAML
+rye add google-api-python-client google-auth-httplib2 google-auth-oauthlib
+rye add google-apps-chat
+rye add gspread
+
+rye sync
+```

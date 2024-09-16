@@ -2,7 +2,8 @@
 
 Workspace for studying Python web programming.
 
-[![pdm-managed](https://img.shields.io/badge/pdm-managed-blueviolet)](https://pdm.fming.dev)
+[![Rye](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/rye/main/artwork/badge.json)](https://rye.astral.sh)
+[![Ruff](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/ruff/main/assets/badge/v2.json)](https://github.com/astral-sh/ruff)
 [![CodeQL](https://github.com/suzu-devworks/examples-py-web/actions/workflows/codeql.yml/badge.svg)](https://github.com/suzu-devworks/examples-py-web/actions/workflows/codeql.yml)
 
 ## What is this repository for?
@@ -17,11 +18,11 @@ may contain many inaccuracies.
 
 ## Examples projects
 
-- [examples-flask-started](./src/examples-flask-started/README.md)
-- [examples-flask-media](./src/examples-flask-media/README.md)
-- [examples-playwright-started](./src/examples-playwright-started/README.md)
-- [examples-google-workspace](./src/examples-google-workspace/README.md)
-- [examples-websockets](./src/examples-websockets/README.md)
+- [examples-flask-started](./apps/examples-flask-started/README.md)
+- [examples-flask-media](./apps/examples-flask-media/README.md)
+- [examples-playwright-started](./apps/examples-playwright-started/README.md)
+- [examples-google-workspace](./apps/examples-google-workspace/README.md)
+- [examples-websockets](./apps/examples-websockets/README.md)
 
 
 ## More documentation

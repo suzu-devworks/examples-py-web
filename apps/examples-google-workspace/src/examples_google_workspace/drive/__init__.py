@@ -13,7 +13,6 @@ def _exec_list(args: Namespace) -> None:
 
 
 def configure_arguments(parser: ArgumentParser) -> None:
-
     sub = parser.add_subparsers()
 
     quick_parser = sub.add_parser("quickstart", help="Drive V3 Python Quickstart.")

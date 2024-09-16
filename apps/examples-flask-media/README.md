@@ -1,29 +1,18 @@
 # examples-flask-media
 
-[![pdm-managed](https://img.shields.io/badge/pdm-managed-blueviolet)](https://pdm.fming.dev)
-
 This project is an example of web media and streaming using Flask.
 
 ## Table of Contents <!-- omit in toc -->
 
 - [examples-flask-media](#examples-flask-media)
-  - [Setup](#setup)
-  - [Flask media apps](#flask-media-apps)
+  - [Examples](#examples)
     - [Live streaming webcam](#live-streaming-webcam)
     - [Video streaming](#video-streaming)
-  - [How the project was initialized](#how-the-project-was-initialized)
-  - [Troubleshooting](#troubleshooting)
+  - [Development](#development)
+    - [How the project was initialized](#how-the-project-was-initialized)
     - [ImportError: libGL.so.1](#importerror-libglso1)
 
-## Setup
-
-Install the dependencies.
-
-```shell
-pdm install
-```
-
-## Flask media apps
+## Examples
 
 ### Live streaming webcam
 
@@ -35,22 +24,21 @@ pdm install
 - [Chunked streaming of video files](./src/examples/video/chunks/README.md)
 
 
-## How the project was initialized
+## Development
+
+### How the project was initialized
 
 This project was initialized with the following command:
 
 ```shell
-pdm init --dist -n
-pdm add -d flake8 mypy black isort pyclean
-pdm add -d pytest-cov
-pdm add flask
-pdm add flask-cors
-pdm add opencv-python
-pdm add types-flask-cors
+rye init -p
+rye add --dev pytest-cov
+rye add flask flask-cors
+rye add opencv-python
+rye add --dev types-flask-cors
+
+rye sync
 ```
-
-
-## Troubleshooting
 
 ### ImportError: libGL.so.1
 

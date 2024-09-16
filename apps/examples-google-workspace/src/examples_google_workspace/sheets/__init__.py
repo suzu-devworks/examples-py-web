@@ -4,7 +4,6 @@ from . import gspread_crud, quickstart, simple_curd
 
 
 def configure_arguments(parser: ArgumentParser) -> None:
-
     sub = parser.add_subparsers()
 
     quick_parser = sub.add_parser("quickstart", help="Google Sheets Python Quickstart.")

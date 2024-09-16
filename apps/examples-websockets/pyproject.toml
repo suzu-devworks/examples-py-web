@@ -1,19 +1,29 @@
 [project]
+name = "examples-websockets"
+version = "0.2.0"
+description = "Add your description here"
 authors = [
-  {name = "A.suzuki", email = "suzu.devworks@gmail.com"},
+    { name = "A.suzuki", email = "suzu.devworks@gmail.com" },
 ]
 dependencies = [
-  "websockets>=13.0",
+    "websockets>=13.0.1",
 ]
-description = "Default template for PDM package"
-license = {text = "MIT"}
-name = "examples-websockets"
 readme = "README.md"
-requires-python = ">=3.12"
-version = "0.1.0"
+requires-python = ">= 3.8"
 
-[tool.pdm]
-distribution = false
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
 
-[tool.pdm.scripts]
+[tool.rye]
+managed = true
+dev-dependencies = []
+
+[tool.rye.scripts]
 dev = "python -m http.server 8000"
+
+[tool.hatch.metadata]
+allow-direct-references = true
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/examples_websockets"]
