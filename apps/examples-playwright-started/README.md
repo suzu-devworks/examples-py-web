@@ -6,18 +6,12 @@ This project is an example of Headless browser testing using Playwright.
 ## Table of Contents <!-- omit in toc -->
 
 - [examples-playwright-started](#examples-playwright-started)
-  - [See also](#see-also)
   - [Setup](#setup)
   - [Examples](#examples)
-    - [Playwright for Python](#playwright-for-python)
+    - [Getting Started](#getting-started)
+  - [Learn more](#learn-more)
   - [Development](#development)
     - [How the project was initialized](#how-the-project-was-initialized)
-
-
-## See also
-
-- <https://playwright.dev/python/>
-- <https://github.com/microsoft/playwright-python>
 
 
 ## Setup
@@ -31,11 +25,17 @@ sudo ../../.venv/bin/playwright install-deps
 
 ## Examples
 
-### Playwright for Python
+### Getting Started
 
 - [Getting Started - Playwright for Python](https://playwright.dev/python/docs/intro)
 
-See [these tests](./tests/) for more examples.
+See [these tests](./tests/).
+
+
+## Learn more
+
+- <https://playwright.dev/python/>
+- <https://github.com/microsoft/playwright-python>
 
 
 ## Development

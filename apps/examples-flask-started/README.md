@@ -6,18 +6,13 @@ Flask web programming examples. The very basics.
 ## Table of Contents <!-- omit in toc -->
 
 - [examples-flask-started](#examples-flask-started)
-  - [See also](#see-also)
   - [Examples](#examples)
     - [Quickstart](#quickstart)
     - [Tutorial (flaskr)](#tutorial-flaskr)
     - [Blueprint example](#blueprint-example)
+  - [Learn more](#learn-more)
   - [Development](#development)
     - [How the project was initialized](#how-the-project-was-initialized)
-
-
-## See also
-
-- [Flask’s documentation](https://flask.palletsprojects.com/)
 
 
 ## Examples
@@ -75,6 +70,11 @@ It will be hosted at the following URL:
 - <http://127.0.0.1:5000/>
 
 See [the code header](./src/blueprints/) for more examples.
+
+
+## Learn more
+
+- [Flask’s documentation](https://flask.palletsprojects.com/)
 
 
 ## Development
