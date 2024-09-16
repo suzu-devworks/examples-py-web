@@ -8,6 +8,6 @@
   "remoteEnv": {
     "LOCAL_WORKSPACE_FOLDER": "${localWorkspaceFolder}"
   },
-  "postCreateCommand": "curl -sSL https://pdm-project.org/install-pdm.py | python3 -",
+  "postCreateCommand": "/bin/sh ./.devcontainer/postCreateCommand.sh",
   "remoteUser": "vscode"
 }

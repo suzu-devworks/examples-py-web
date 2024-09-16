@@ -1,26 +1,32 @@
 {
   "[python]": {
     "editor.codeActionsOnSave": {
-      "source.organizeImports": "explicit",
-      "source.fixAll": "explicit"
+      "source.fixAll": "explicit",
+      "source.organizeImports": "explicit"
     },
-    "editor.defaultFormatter": "ms-python.black-formatter",
+    "editor.defaultFormatter": "charliermarsh.ruff",
     "editor.formatOnSave": true
   },
-  "black-formatter.args": [
-    "--line-length=119"
-  ],
+  "[toml]": {
+    "editor.defaultFormatter": "tamasfe.even-better-toml"
+  },
   "editor.formatOnPaste": true,
   "editor.formatOnSave": true,
-  "isort.args": [
-    "--profile",
-    "black"
-  ],
+  "evenBetterToml.formatter.allowedBlankLines": 80,
+  "evenBetterToml.formatter.arrayAutoCollapse": false,
+  "evenBetterToml.formatter.arrayAutoExpand": true,
+  "evenBetterToml.formatter.columnWidth": 80,
   "mypy-type-checker.args": [],
   "python.analysis.autoFormatStrings": false,
   "python.terminal.activateEnvInCurrentTerminal": true,
   "python.terminal.activateEnvironment": true,
   "python.testing.autoTestDiscoverOnSaveEnabled": false,
   "python.testing.pytestEnabled": true,
+  "ruff.format.args": [
+    "--config=.ruff.toml"
+  ],
+  "ruff.lint.args": [
+    "--config=.ruff.toml"
+  ],
   "terminal.integrated.environmentChangesRelaunch": true
 }

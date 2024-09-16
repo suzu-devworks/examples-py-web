@@ -2,11 +2,10 @@
     "recommendations": [
         "be5invis.toml",
         "EditorConfig.EditorConfig",
-        "ms-python.black-formatter",
-        "ms-python.flake8",
-        "ms-python.isort",
+        "charliermarsh.ruff",
         "ms-python.mypy-type-checker",
         "ms-python.python",
         "streetsidesoftware.code-spell-checker",
+        "tamasfe.even-better-toml"
     ]
 }

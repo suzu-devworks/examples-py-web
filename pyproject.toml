@@ -1,14 +1,28 @@
 [project]
-requires-python = ">=3.12"
-
-[tool.pdm.dev-dependencies]
-dev = [
-    "-e file:///${PROJECT_ROOT}/src/examples-flask-started#egg=examples-flask-started",
-    "-e file:///${PROJECT_ROOT}/src/examples-flask-media#egg=examples-flask-media",
-    "-e file:///${PROJECT_ROOT}/src/examples-playwright-started#egg=examples-playwright-started",
-    "-e file:///${PROJECT_ROOT}/src/examples-google-workspace#egg=examples-google-workspace",
-    "-e file:///${PROJECT_ROOT}/src/examples-websockets#egg=examples-websockets",
+authors = [
+    { name = "A.suzuki", email = "suzu.devworks@gmail.com" },
 ]
+dependencies = []
+description = "Add your description here"
+name = "examples-py-web"
+readme = "README.md"
+requires-python = ">= 3.12"
+version = "0.1.0"
 
-[tool.isort]
-known_first_party = ["examples_google_workspace"]
+[tool.rye]
+dev-dependencies = [
+    "ruff>=0.6.4",
+    "mypy>=1.11.2",
+    "pyclean>=3.0.0",
+]
+managed = true
+virtual = true
+
+[tool.rye.workspace]
+members = ["apps/*", "libs/*"]
+
+[tool.rye.scripts]
+# cannot use pipe.
+# "clean:dirs" = { cmd = "find . | grep -E \"(/__pycache__$|\\.pyc$|\\.pyo$|/build$|/dist$|\\.mypy_cache$)\" | xargs rm -rf" }
+"clean:pyclean" = "pyclean ."
+clean = { chain = ["clean:pyclean"] }

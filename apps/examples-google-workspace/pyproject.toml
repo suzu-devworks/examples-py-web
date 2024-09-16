@@ -1,0 +1,52 @@
+[project]
+name = "examples-google-workspace"
+description = "Add your description here"
+authors = [
+    { name = "A.suzuki", email = "suzu.devworks@gmail.com" },
+]
+dependencies = [
+    "google-api-python-client>=2.145.0",
+    "google-auth-httplib2>=0.2.0",
+    "google-auth-oauthlib>=1.2.1",
+    "google-apps-chat>=0.1.10",
+    "gspread>=6.1.2",
+    "pyyaml>=6.0.2",
+]
+readme = "README.md"
+requires-python = ">= 3.12"
+dynamic = ["version"]
+
+[project.scripts]
+examples-google-cli = "examples_google_workspace.console.command:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.rye]
+managed = true
+dev-dependencies = [
+    "pytest-cov>=5.0.0",
+    "types-pyyaml>=6.0.12.20240808",
+]
+
+[tool.hatch.metadata]
+allow-direct-references = true
+
+[tool.hatch.version]
+path = "src/examples_google_workspace/__init__.py"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/examples_google_workspace"]
+
+[[tool.mypy.overrides]]
+ignore_missing_imports = true
+module = ['google_auth_oauthlib.*', 'googleapiclient.*']
+
+[tool.pytest.ini_options]
+addopts = "--durations=0 --cov-branch --cov-report xml:.cov/coverage.xml --cov=src/"
+testpaths = ["tests"]
+
+[tool.coverage.run]
+branch = true
+source = ["src/"]
