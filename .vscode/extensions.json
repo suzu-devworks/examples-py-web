@@ -1,11 +1,10 @@
 {
-    "recommendations": [
-        "be5invis.toml",
-        "EditorConfig.EditorConfig",
-        "charliermarsh.ruff",
-        "ms-python.mypy-type-checker",
-        "ms-python.python",
-        "streetsidesoftware.code-spell-checker",
-        "tamasfe.even-better-toml"
-    ]
+  "recommendations": [
+    "EditorConfig.EditorConfig",
+    "charliermarsh.ruff",
+    "ms-python.mypy-type-checker",
+    "ms-python.python",
+    "streetsidesoftware.code-spell-checker",
+    "tamasfe.even-better-toml"
+  ]
 }
