@@ -8,6 +8,7 @@
     "decltypes",
     "executescript",
     "flaskr",
+    "markupsafe",
     "pyfile"
   ],
   "ignoreWords": [],
