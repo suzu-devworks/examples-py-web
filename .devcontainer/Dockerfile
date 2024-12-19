@@ -1,5 +1,4 @@
-ARG VARIANT="bookworm"
-FROM mcr.microsoft.com/devcontainers/base:${VARIANT} as dev-stage
+FROM mcr.microsoft.com/devcontainers/base:bookworm as dev-stage
 
 ## Configure apt and install packages
 RUN set -x \
