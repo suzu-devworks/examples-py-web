@@ -2,15 +2,6 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "name": "examples-google-wrokspace",
-      "type": "debugpy",
-      "request": "launch",
-      "program": "${workspaceFolder}/src/examples-google-workspace/src/examples_google_workspace/__main__.py",
-      "cwd": "${workspaceFolder}/src/examples-google-workspace",
-      "console": "integratedTerminal",
-      "args": "${command:pickArgs}"
-    },
-    {
       "name": "Flask - media",
       "type": "debugpy",
       "request": "launch",

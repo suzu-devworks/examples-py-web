@@ -15,15 +15,12 @@ However, please note that the code described here is based on my personal opinio
 
 may contain many inaccuracies.
 
-
 ## Examples projects
 
 - [examples-flask-started](./apps/examples-flask-started/README.md)
 - [examples-flask-media](./apps/examples-flask-media/README.md)
 - [examples-playwright-started](./apps/examples-playwright-started/README.md)
-- [examples-google-workspace](./apps/examples-google-workspace/README.md)
 - [examples-websockets](./apps/examples-websockets/README.md)
-
 
 ## More documentation
 
