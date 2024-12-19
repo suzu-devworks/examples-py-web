@@ -4,8 +4,6 @@ services:
       context: .
       dockerfile: Dockerfile
     tty: true
-    environment:
-      - DISPLAY:${DISPLAY}
     volumes:
       # Forwards the local Docker socket to the container.
       - /var/run/docker.sock:/var/run/docker-host.sock
