@@ -1,31 +1,28 @@
 [project]
-name = "examples-flask-media"
-description = "Add your description here"
 authors = [
-    { name = "A.suzuki", email = "suzu.devworks@gmail.com" },
+  { name = "A.suzuki", email = "suzu.devworks@gmail.com" },
 ]
 dependencies = [
-    "flask>=3.0.3",
-    "opencv-python>=4.10.0.84",
-    "flask-cors>=5.0.0",
+  "flask-cors>=5.0.0",
+  "flask>=3.0.3",
+  "opencv-python>=4.10.0.84",
 ]
+description = "Add your description here"
+dynamic = ["version"]
+name = "examples-flask-media"
 readme = "README.md"
 requires-python = ">= 3.12"
-dynamic = ["version"]
 
 [build-system]
-requires = ["hatchling"]
 build-backend = "hatchling.build"
+requires = ["hatchling"]
 
-[tool.rye]
-managed = true
-dev-dependencies = [
-    "pytest-cov>=5.0.0",
-    "types-flask-cors>=5.0.0.20240902",
+[dependency-groups]
+dev = [
+  "pytest-cov>=5.0.0",
+  "pytest>=8.3.4",
+  "types-flask-cors>=5.0.0.20240902",
 ]
-
-[tool.rye.scripts]
-dev = "flask --app src/app run --debug"
 
 [tool.hatch.version]
 path = "src/examples_flask_media/__version__.py"

@@ -2,7 +2,6 @@
 
 Flask web programming examples. The very basics.
 
-
 ## Table of Contents <!-- omit in toc -->
 
 - [examples-flask-started](#examples-flask-started)
@@ -13,7 +12,6 @@ Flask web programming examples. The very basics.
   - [Learn more](#learn-more)
   - [Development](#development)
     - [How the project was initialized](#how-the-project-was-initialized)
-
 
 ## Examples
 
@@ -28,7 +26,6 @@ Run the quickstart, for example:
 ```
 
 See [the code header](./src/quickstart/) for more examples.
-
 
 ### Tutorial (flaskr)
 
@@ -52,7 +49,6 @@ It will be hosted at the following URL:
 
 See [the code header](./src/flaskr/) for more examples.
 
-
 ### Blueprint example
 
 Let's see how it changes depending on the Blueprint's `static_folder` and `template_folder`.
@@ -71,11 +67,9 @@ It will be hosted at the following URL:
 
 See [the code header](./src/blueprints/) for more examples.
 
-
 ## Learn more
 
 - [Flask’s documentation](https://flask.palletsprojects.com/)
-
 
 ## Development
 

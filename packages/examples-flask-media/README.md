@@ -23,7 +23,6 @@ This project is an example of web media and streaming using Flask.
 
 - [Chunked streaming of video files](./src/examples/video/chunks/README.md)
 
-
 ## Development
 
 ### How the project was initialized

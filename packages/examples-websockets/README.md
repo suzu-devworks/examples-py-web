@@ -2,7 +2,6 @@
 
 This project is an example of Python WebSocket programming using [`websockets`](https://websockets.readthedocs.io/en/stable/index.html).
 
-
 ## Table of Contents <!-- omit in toc -->
 
 - [examples-websockets](#examples-websockets)
@@ -10,11 +9,9 @@ This project is an example of Python WebSocket programming using [`websockets`](
   - [Development](#development)
     - [How the project was initialized](#how-the-project-was-initialized)
 
-
 ## Examples
 
 - [Quickstart](./scripts/quickstart/README.md)
-
 
 ## Development
 
