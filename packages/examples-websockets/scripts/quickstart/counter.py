@@ -3,13 +3,12 @@
 import asyncio
 import json
 import logging
-from typing import Set
 
 from websockets.asyncio.server import ServerConnection, broadcast, serve
 
 logging.basicConfig()
 
-USERS: Set[ServerConnection] = set()
+USERS: set[ServerConnection] = set()
 
 VALUE = 0
 

@@ -1,7 +1,7 @@
 """About Responses.
 
 References:
-    - https://flask.palletsprojects.com/en/3.0.x/quickstart/#about-responses
+    - https://flask.palletsprojects.com/en/stable/quickstart/#about-responses
 
 Examples:
     Starting the server:
@@ -37,8 +37,8 @@ APIs with JSON
 """
 
 
-class User(object):
-    def __init__(self, username: str, theme: str, image: str):
+class User:
+    def __init__(self, username: str, theme: str, image: str) -> None:
         self.username = username
         self.theme = theme
         self.image = image

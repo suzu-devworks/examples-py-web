@@ -1,7 +1,7 @@
 """Logging.
 
 References:
-    - https://flask.palletsprojects.com/en/3.0.x/quickstart/#logging
+    - https://flask.palletsprojects.com/en/stable/quickstart/#logging
 
 Examples:
     Starting the server:

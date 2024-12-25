@@ -1,7 +1,7 @@
 """Static Files.
 
 References:
-    - https://flask.palletsprojects.com/en/3.0.x/quickstart/#static-files
+    - https://flask.palletsprojects.com/en/stable/quickstart/#static-files
 
 Examples:
     Request from client:

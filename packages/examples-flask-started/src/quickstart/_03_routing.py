@@ -1,7 +1,7 @@
 """Routing.
 
 References:
-    - https://flask.palletsprojects.com/en/3.0.x/quickstart/#routing
+    - https://flask.palletsprojects.com/en/stable/quickstart/#routing
 
 Examples:
     Starting the server:

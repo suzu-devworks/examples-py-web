@@ -1,5 +1,7 @@
 import os
-from typing import Any, Mapping
+from collections.abc import Mapping
+from contextlib import suppress
+from typing import Any
 
 from flask import Flask
 
@@ -22,10 +24,8 @@ def create_app(test_config: Mapping[str, Any] | None = None) -> Flask:
         app.config.from_mapping(test_config)
 
     # ensure the instance folder exists
-    try:
+    with suppress(OSError):
         os.makedirs(app.instance_path)
-    except OSError:
-        pass
 
     # Define and Access the Database
     from . import db

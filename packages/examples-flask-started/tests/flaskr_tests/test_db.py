@@ -19,7 +19,7 @@ def test_get_close_db(app: Flask) -> None:
 
 
 def test_init_db_command(runner: FlaskCliRunner, monkeypatch: pytest.MonkeyPatch) -> None:
-    class Recorder(object):
+    class Recorder:
         called = False
 
     def fake_init_db() -> None:

@@ -1,7 +1,7 @@
 """HTML Escaping.
 
 References:
-    - https://flask.palletsprojects.com/en/3.0.x/quickstart/#html-escaping
+    - https://flask.palletsprojects.com/en/stable/quickstart/#html-escaping
 
 Examples:
     Starting the server:

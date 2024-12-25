@@ -1,7 +1,7 @@
 """Redirects and Errors.
 
 References:
-    - https://flask.palletsprojects.com/en/3.0.x/quickstart/#redirects-and-errors
+    - https://flask.palletsprojects.com/en/stable/quickstart/#redirects-and-errors
 
 Examples:
     Starting the server:

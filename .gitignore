@@ -163,8 +163,7 @@ cython_debug/
 
 ##> Add
 .DS_Store
-.cov/
-.ruff_cache/
+.*_cache/
 .python-version
 .venv.*/
 [Ll]ogs/

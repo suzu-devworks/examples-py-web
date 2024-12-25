@@ -24,11 +24,14 @@ may contain many inaccuracies.
 - [examples-flask-started](./packages/examples-flask-started/README.md)
 - [examples-flask-media](./packages/examples-flask-media/README.md)
 
-### Others
+### http.server examples
 
 - [examples-websockets](./packages/examples-websockets/README.md)
+
+### Web Testing and Automation
+
 - [examples-playwright-started](./packages/examples-playwright-started/README.md)
 
 ## More documentation
 
-- [docs ...](./docs/README.md)
+- [See here ...](https://github.com/suzu-devworks/examples-py-web/wiki)

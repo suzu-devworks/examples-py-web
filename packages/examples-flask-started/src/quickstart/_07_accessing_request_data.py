@@ -1,7 +1,7 @@
 """Accessing Request Data.
 
 References:
-    - https://flask.palletsprojects.com/en/3.0.x/quickstart/#accessing-request-data
+    - https://flask.palletsprojects.com/en/stable/quickstart/#accessing-request-data
 
 Examples:
     Starting the server:

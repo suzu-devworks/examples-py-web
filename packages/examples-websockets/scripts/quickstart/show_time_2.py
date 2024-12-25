@@ -3,11 +3,10 @@
 import asyncio
 import datetime
 import random
-from typing import Set
 
 from websockets.asyncio.server import ServerConnection, broadcast, serve
 
-CONNECTIONS: Set[ServerConnection] = set()
+CONNECTIONS: set[ServerConnection] = set()
 
 
 async def register(websocket: ServerConnection) -> None:

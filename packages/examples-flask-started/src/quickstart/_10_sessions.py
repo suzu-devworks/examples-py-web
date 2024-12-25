@@ -1,7 +1,7 @@
 """Sessions.
 
 References:
-    - https://flask.palletsprojects.com/en/3.0.x/quickstart/#sessions
+    - https://flask.palletsprojects.com/en/stable/quickstart/#sessions
 
 Examples:
     Starting the server:

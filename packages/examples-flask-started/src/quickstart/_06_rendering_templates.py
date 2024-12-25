@@ -1,7 +1,7 @@
 """Rendering Templates.
 
 References:
-    - https://flask.palletsprojects.com/en/3.0.x/quickstart/#rendering-templates
+    - https://flask.palletsprojects.com/en/stable/quickstart/#rendering-templates
 
 Examples:
     Starting the server:

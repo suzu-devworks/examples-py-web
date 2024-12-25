@@ -1,7 +1,7 @@
 """A Minimal Application.
 
 References:
-    - https://flask.palletsprojects.com/en/3.0.x/quickstart/#a-minimal-application
+    - https://flask.palletsprojects.com/en/stable/quickstart/#a-minimal-application
 
 Examples:
     Starting the server:

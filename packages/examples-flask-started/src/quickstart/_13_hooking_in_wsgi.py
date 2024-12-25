@@ -1,7 +1,7 @@
 """Hooking in WSGI Middleware.
 
 References:
-    - https://flask.palletsprojects.com/en/3.0.x/quickstart/#hooking-in-wsgi-middleware
+    - https://flask.palletsprojects.com/en/stable/quickstart/#hooking-in-wsgi-middleware
 
 Examples:
     Starting the server:

@@ -1,6 +1,7 @@
 import os
 import tempfile
-from typing import Any, Generator
+from collections.abc import Generator
+from typing import Any
 
 import pytest
 from flask import Flask
@@ -45,8 +46,8 @@ def runner(app: Flask) -> FlaskCliRunner:
     return app.test_cli_runner()
 
 
-class AuthActions(object):
-    def __init__(self, client: FlaskClient):
+class AuthActions:
+    def __init__(self, client: FlaskClient) -> None:
         self._client = client
 
     def login(self, username: str = "test", password: str = "test") -> Response:

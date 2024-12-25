@@ -1,7 +1,7 @@
-"""open_resource with utf-8 encoding.
+"""`open_resource` with utf-8 encoding.
 
-The content retrieved by open_resource must be utf-8 encoded.
-s
+The content retrieved by `open_resource` must be utf-8 encoded.
+
 Examples:
     Starting the server:
     ```shell

@@ -1,7 +1,7 @@
 """URL Building.
 
 References:
-    - https://flask.palletsprojects.com/en/3.0.x/quickstart/#url-building
+    - https://flask.palletsprojects.com/en/stable/quickstart/#url-building
 
 Examples:
     Starting the server:

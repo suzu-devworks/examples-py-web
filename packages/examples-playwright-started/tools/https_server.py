@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Simple https server for testing."""
 
+import contextlib
 import http.server
 import socketserver
 import ssl
@@ -24,8 +25,6 @@ with socketserver.TCPServer((ADDRESS, PORT), Handler) as https:
     for cipher in ciphers:
         print("  enabled:", cipher["description"])
 
-    try:
+    with contextlib.suppress(KeyboardInterrupt):
         https.serve_forever()
-    except KeyboardInterrupt:
-        pass
     https.server_close()
