@@ -1,0 +1,5 @@
+/*  _04_resources/static/style.css */
+footer p::after {
+    content: "@/_04_resources/admin/static/style.css";
+    color: rgb(200 0 0);
+}

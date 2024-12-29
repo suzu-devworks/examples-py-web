@@ -3,21 +3,25 @@ from typing import Any
 
 from flask import Flask, render_template
 
+from ._02_registering import registering
+from ._03_nesting import parent
+from ._04_resources import resources
+from ._05_building_urls import bp as building_urls
+from .simple_page import simple_page
+
 
 def create_app(test_config: Mapping[str, Any] | None = None) -> Flask:
     app = Flask(__name__, instance_relative_config=True)
 
-    from .app1 import bp as app1
-    from .app2 import bp as app2
-    from .app3 import bp as app3
-    from .app4 import bp as app4
-    from .app5 import bp as app5
+    # app.register_blueprint(simple_page)
+    app.register_blueprint(simple_page, url_prefix="/pages")
 
-    app.register_blueprint(app1)
-    app.register_blueprint(app2, url_prefix="/app2-alias")
-    app.register_blueprint(app3, url_prefix="/app3")
-    app.register_blueprint(app4, url_prefix="/app4")
-    app.register_blueprint(app5, url_prefix="/app5")
+    app.register_blueprint(registering)
+    print("Registering Blueprints:\n", app.url_map)
+
+    app.register_blueprint(parent)
+    app.register_blueprint(resources)
+    app.register_blueprint(building_urls)
 
     @app.route("/")
     def index() -> str:

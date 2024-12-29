@@ -12,16 +12,18 @@
 
   <main>
     <section>
-      <h2>Home</h2>
+      <h2>Hello Flask!</h2>
+
       <ul>
-        <li><a href="{{ url_for('simple_page.show', page='hello')}}">hello</a></li>
-        <li><a href="{{ url_for('simple_page.show', page='not-found')}}">Not Found</a></li>
+        <li><a href="{{ url_for('simple_page.show', page='index')}}">Home</a></li>
       </ul>
+
     </section>
+
   </main>
 
   <footer>
-    <p>@/templates/pages/index.html</p>
+    <p>@/templates/pages/hello.html</p>
   </footer>
 </body>
 
