@@ -211,7 +211,7 @@ dev = [
 [[package]]
 name = "examples-py-web"
 version = "0.1.0"
-source = { virtual = "." }
+source = { editable = "." }
 dependencies = [
     { name = "flask" },
 ]

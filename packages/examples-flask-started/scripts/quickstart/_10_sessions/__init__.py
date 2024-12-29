@@ -5,21 +5,51 @@ References:
 
 Examples:
     Starting the server:
+
     ```shell
-    flask --app src.quickstart._10_sessions run --debug
+    flask --app scripts/quickstart/_10_sessions run --debug
     ```
 
-    Request from client:
+    When you are not logged in from client:
+
+    ```shell
+    curl -v http://localhost:5000/
+        # HTTP/1.1 401 UNAUTHORIZED
+    ```
+
+    Show login form:
+
     ```shell
     curl -v http://localhost:5000/login
-    curl -v http://localhost:5000/login -X POST -X POST --data-urlencode "username={your name}" -d "password={password}"
-                                            # HTTP/1.1 302 FOUND
-    curl -v http://localhost:5000/ -b "session={Cookie value included in login response};"
+        # HTTP/1.1 200 OK
+    ```
 
-    curl -v http://localhost:5000/logout -b "session={Cookie value included in login response};"
-                                            # HTTP/1.1 302 FOUND
+    Log in with your username and password:
+
+    ```shell
+    curl -v http://localhost:5000/login -X POST --data "username={your name}" -d "password={password}"
+        # HTTP/1.1 302 FOUND
+    ```
+
+    Resend using the session key. This is done automatically by the browser.
+
+    ```shell
     curl -v http://localhost:5000/ -b "session={Cookie value included in login response};"
-                                            # HTTP/1.1 401 UNAUTHORIZED
+        # HTTP/1.1 200 OK
+    ```
+
+    Log out:
+
+    ```shell
+    curl -v http://localhost:5000/logout -b "session={Cookie value included in login response};"
+        # HTTP/1.1 302 FOUND
+    ```
+
+    Session rejected after logout:
+
+    ```shell
+    curl -v http://localhost:5000/ -b "session={Cookie value included in login response};"
+        # HTTP/1.1 401 UNAUTHORIZED
     ```
 """  # noqa E501
 

@@ -5,11 +5,13 @@ References:
 
 Examples:
     Starting the server:
+
     ```shell
-    flask --app src.quickstart._13_hooking_in_wsgi run --debug
+    flask --app scripts/quickstart/_13_hooking_in_wsgi run --debug
     ```
 
     Request from client:
+
     ```shell
     curl -v http://localhost:5000/
     ```

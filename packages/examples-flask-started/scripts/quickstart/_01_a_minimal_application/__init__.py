@@ -5,11 +5,13 @@ References:
 
 Examples:
     Starting the server:
+
     ```shell
-    flask --app src.quickstart._01_hello run --debug
+    flask --app scripts/quickstart/_01_a_minimal_application run
     ```
 
     Request from client:
+
     ```shell
     curl -v http://localhost:5000/
     ```

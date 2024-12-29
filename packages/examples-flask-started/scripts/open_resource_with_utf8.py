@@ -4,11 +4,13 @@ The content retrieved by `open_resource` must be utf-8 encoded.
 
 Examples:
     Starting the server:
+
     ```shell
-    flask --app src.quickstart._a1_open_resource_with_utf8.py run --debug
+    flask --app scripts/open_resource_with_utf8.py run --debug
     ```
 
     Request from client:
+
     ```shell
     curl -v http://localhost:5000/
     curl -v http://localhost:5000/decode

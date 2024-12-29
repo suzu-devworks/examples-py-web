@@ -1,18 +1,17 @@
 """URL Building.
 
+To build a URL to a specific function, use the url_for() function.
+
 References:
     - https://flask.palletsprojects.com/en/stable/quickstart/#url-building
 
 Examples:
-    Starting the server:
+    Run the script:
+
     ```shell
-    flask --app src.quickstart._04_routing_url_building run --debug
+    python scripts/quickstart/_04_routing/_3_url_building_script.py
     ```
 
-    Request from client:
-    ```shell
-    python src/quickstart/_04_routing_url_building.py
-    ```
     ```console
     /
     /login
@@ -42,9 +41,8 @@ def profile(username: str) -> str:
     return f"{escape(username)}'s profile"
 
 
-if __name__ == "__main__":
-    with app.test_request_context():
-        print(url_for("index"))
-        print(url_for("login"))
-        print(url_for("login", next="/"))
-        print(url_for("profile", username="John Doe"))
+with app.test_request_context():
+    print(url_for("index"))
+    print(url_for("login"))
+    print(url_for("login", next="/"))
+    print(url_for("profile", username="John Doe"))

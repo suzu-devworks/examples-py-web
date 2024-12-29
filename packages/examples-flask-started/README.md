@@ -12,7 +12,7 @@ Flask web programming examples. Learn based on the Flask document.
 
 ## Examples
 
-- [Quickstart](./src/quickstart/README.md)
+- [Quickstart](./scripts/quickstart/README.md)
 - [Tutorial - flaskr](./src/flaskr/README.md)
 - [Modular Applications with Blueprints](./src/blueprints/README.md)
 
