@@ -1,28 +1,34 @@
 [project]
 authors = [
-    { name = "A.suzuki", email = "suzu.devworks@gmail.com" },
+  { name = "A.suzuki", email = "suzu.devworks@gmail.com" },
 ]
-dependencies = []
+dependencies = [
+  "flask>=3.1.0",
+]
 description = "Add your description here"
 name = "examples-py-web"
 readme = "README.md"
-requires-python = ">= 3.12"
+requires-python = ">=3.12"
 version = "0.1.0"
 
-[tool.rye]
-dev-dependencies = [
-    "ruff>=0.6.4",
-    "mypy>=1.11.2",
-    "pyclean>=3.0.0",
+[tool.uv.workspace]
+members = [
+  "packages/*",
 ]
-managed = true
-virtual = true
 
-[tool.rye.workspace]
-members = ["apps/*", "libs/*"]
+[build-system]
+build-backend = "hatchling.build"
+requires = ["hatchling"]
 
-[tool.rye.scripts]
-# cannot use pipe.
-# "clean:dirs" = { cmd = "find . | grep -E \"(/__pycache__$|\\.pyc$|\\.pyo$|/build$|/dist$|\\.mypy_cache$)\" | xargs rm -rf" }
-"clean:pyclean" = "pyclean ."
-clean = { chain = ["clean:pyclean"] }
+[dependency-groups]
+dev = [
+  "mypy>=1.13.0",
+  "pyclean>=3.0.0",
+  "pytest-asyncio>=0.24.0",
+  "pytest-cov>=6.0.0",
+  "pytest>=8.3.4",
+  "ruff>=0.8.2",
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/examples_py_web"]

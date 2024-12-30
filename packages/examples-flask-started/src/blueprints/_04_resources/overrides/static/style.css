@@ -1,0 +1,5 @@
+/*  _04_resources/overrides/static/style.css */
+footer p::after {
+    content: "@/_04_resources/overrides/static/style.css";
+    color: rgb(0 200 0);
+}

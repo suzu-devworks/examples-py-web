@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Building URLs - Modular Applications with Blueprints</title>
+</head>
+
+<body>
+  <header>
+    <h1>Building URLs</h1>
+  </header>
+
+  <main>
+    <section>
+      <h2>Use <code>url_for</code></h2>
+      <ul>
+        <li><a href="{{url_for('building_urls.admin.about')}}">Use <code>url_for("admin.about")</code></a></li>
+        <li><a href="{{url_for('.about')}}">Use <code>url_for(".about")</code></a></li>
+      </ul>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>@/_05_building_urls/admin/templates/building_urls/admin/index.html</p>
+  </footer>
+</body>
+
+</html>

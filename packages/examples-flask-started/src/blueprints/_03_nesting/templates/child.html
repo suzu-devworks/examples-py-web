@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Nesting Blueprints - Modular Applications with Blueprints</title>
+</head>
+
+<body>
+  <header>
+    <h1>Nesting Blueprints</h1>
+  </header>
+
+  <main>
+    <section>
+      <h2>Child page</h2>
+
+      <ul>
+        <li><a href="{{ url_for('parent.show_parent')}}">Parent page</a></li>
+      </ul>
+
+    </section>
+
+  </main>
+
+  <footer>
+    <p>@/_03_nesting/templates/child.html</p>
+  </footer>
+</body>
+
+</html>

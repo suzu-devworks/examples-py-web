@@ -162,14 +162,10 @@ cython_debug/
 #.idea/
 
 ##> Add
-[Tt]emp/
-.cov/
 .DS_Store
+.*_cache/
 .python-version
-.venv.*
-*.mp4
-*.webm
-*.zip
-credentials.json
-token.json
-token.*.json
+.venv.*/
+[Ll]ogs/
+[Tt]emp/
+trace.zip

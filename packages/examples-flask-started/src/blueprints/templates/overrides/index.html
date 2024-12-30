@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Blueprint Resources - Modular Applications with Blueprints</title>
+  <link rel="stylesheet" href="{{url_for('resources.static', filename='style.css')}}">
+  <link rel="stylesheet" href="{{url_for('resources.overrides.static', filename='style.css')}}">
+</head>
+
+<body>
+  <header>
+    <h1>Blueprint Resources</h1>
+  </header>
+
+  <main>
+    <section>
+      <h2>Overrides page (overridden)</h2>
+
+      <ul>
+        <li><a href="{{ url_for('resources.index')}}">Resources home</a></li>
+      </ul>
+
+    </section>
+
+  </main>
+
+  <footer>
+    <p>@/templates/overrides/index.html</p>
+  </footer>
+</body>
+
+</html>

@@ -1,0 +1,25 @@
+[project]
+authors = [
+  { name = "A.suzuki", email = "suzu.devworks@gmail.com" },
+]
+dependencies = [
+  "websockets>=13.0.1",
+]
+description = "Add your description here"
+name = "examples-websockets"
+readme = "README.md"
+requires-python = ">= 3.8"
+version = "0.2.0"
+
+[build-system]
+build-backend = "hatchling.build"
+requires = ["hatchling"]
+
+[dependency-groups]
+dev = []
+
+[tool.hatch.metadata]
+allow-direct-references = true
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/examples_websockets"]
