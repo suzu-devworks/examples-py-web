@@ -13,13 +13,13 @@ name: "CodeQL"
 
 on:
   push:
-    branches: [ "main" ]
+    branches: [ "main", "develop" ]
     paths:
-      - "src/**"
+      - "packages/**"
   pull_request:
     branches: [ "main" ]
     paths:
-      - "src/**"
+      - "packages/**"
   schedule:
     - cron: '24 6 * 2 6'
   workflow_dispatch:
