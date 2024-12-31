@@ -21,9 +21,15 @@ flask --app flaskr init-db
 Run the server:
 
 ```shell
-flask --app flaskr run --debug --port 5001
+flask --app flaskr run --debug
 ```
 
 It will be hosted at the following URL:
 
-- <http://127.0.0.1:5001/>
+- <http://127.0.0.1:5000/>
+
+Starting your app with uwsgi:
+
+```shell
+uwsgi --ini uwsgi.ini:flaskr
+```

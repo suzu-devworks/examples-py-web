@@ -10,7 +10,8 @@
     "flaskr",
     "jsonify",
     "markupsafe",
-    "pyfile"
+    "pyfile",
+    "uwsgi"
   ],
   "ignoreWords": [],
   "import": [

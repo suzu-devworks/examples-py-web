@@ -30,6 +30,7 @@ This project was initialized with the following command:
 uv init --package packages/examples-flask-started
 uv add --project packages/examples-flask-started --dev pytest pytest-cov
 uv add --project packages/examples-flask-started flask
+uv add --project packages/examples-flask-started uwsgi
 
 uv sync --all-packages
 ```
