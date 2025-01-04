@@ -8,7 +8,7 @@ services:
       - "8443:8443"
     restart: always
     volumes:
-      - .devcontainer/web/nginx.conf.d:/etc/nginx/conf.d:ro
+      - ./web/nginx.conf.d:/etc/nginx/conf.d:ro
       # Use SSL server certificate
       - ~/.vscode/ssl:/etc/ssl/local:ro
 

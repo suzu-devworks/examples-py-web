@@ -1,7 +1,7 @@
 {
   "name": "Python 3 with Dev Containers",
   "dockerComposeFile": [
-    "../compose.yaml",
+    "compose.yaml",
     "compose.devcontainer.yaml"
   ],
   "service": "dev",
