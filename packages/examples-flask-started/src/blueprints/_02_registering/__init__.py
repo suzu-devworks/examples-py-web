@@ -1,4 +1,4 @@
-from flask import Blueprint, request, escape
+from flask import Blueprint, escape, request
 
 registering = Blueprint("registering", __name__, url_prefix="/registering")
 
