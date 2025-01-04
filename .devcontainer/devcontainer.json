@@ -6,6 +6,9 @@
   ],
   "service": "dev",
   "workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
+  "remoteEnv": {
+    "UV_LINK_MODE": "copy"
+  },
   "postCreateCommand": "/bin/sh ./.devcontainer/postCreateCommand.sh",
   "remoteUser": "vscode"
 }
