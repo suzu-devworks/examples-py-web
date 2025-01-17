@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Blueprint Resource Encoding - examples of flask web application</title>
+  <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
+  <link rel="stylesheet" href="{{url_for('.static', filename='style.css')}}">
+</head>
+
+<body>
+  <header>
+    <h1>examples of flask web application</h1>
+  </header>
+
+  <main>
+    <h2>Blueprint Resource Encoding</h2>
+    <nav>
+      <ul>
+        <li><a href="/">go back home</a></li>
+        <li><a href="javascript:history.back();">go back</a></li>
+      </ul>
+    </nav>
+
+    <section>
+      <h3>utf-8 encoding resources</h3>
+      <ul>
+        <li>
+          <code>
+<pre>with bp.open_resource("resources/resource_utf8.txt") as f:
+    data = f.read()
+    raw = data if isinstance(data, bytes) else str(data).encode()</pre></code>
+          <div>{{ raw }}</div>
+        </li>
+        <li>
+          <code>
+<pre>with bp.open_resource("resources/resource_utf8.txt") as f:
+    data = f.read()
+    raw = data if isinstance(data, bytes) else str(data).encode()
+    decoded = raw.decode()</pre></code>
+          <div>{{ decoded }}</div>
+        </li>
+        <li>
+          <code>
+<pre>with bp.open_resource("resources/resource_utf8.txt", mode="r", encoding="utf-8") as f:
+    text = str(f.read())</pre></code>
+          <div>{{ text }}</div>
+      </ul>
+    </section>
+
+  </main>
+
+  <footer>
+    <span><code>template:@/blueprints/encodings/templates/encodings/index.html</code></span>
+  </footer>
+</body>
+
+</html>

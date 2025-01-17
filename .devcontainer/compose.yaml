@@ -1,0 +1,25 @@
+services:
+  web:
+    image: "nginx:alpine"
+    networks:
+      - interconnect
+    ports:
+      - "8080:80"
+      - "8443:8443"
+    restart: always
+    volumes:
+      - ./web/nginx.conf.d:/etc/nginx/conf.d:ro
+      - ./web/html:/var/www/html:ro
+      # Use SSL server certificate
+      - ~/.vscode/ssl:/etc/ssl/local:ro
+
+  app1:
+    build:
+      context: ../packages/examples-flask
+      dockerfile: Dockerfile
+    networks:
+      - interconnect
+
+networks:
+  interconnect:
+    driver: bridge
