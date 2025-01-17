@@ -22,7 +22,7 @@ may contain many inaccuracies.
 
 ### Flask examples
 
-- [examples-flask-started](./packages/examples-flask-started/README.md)
+- [examples-flask](./packages/examples-flask/README.md)
 - [examples-flask-media](./packages/examples-flask-media/README.md)
 
 ### http.server examples
