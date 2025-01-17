@@ -13,6 +13,13 @@ services:
       # Use SSL server certificate
       - ~/.vscode/ssl:/etc/ssl/local:ro
 
+  app1:
+    build:
+      context: ../packages/examples-flask
+      dockerfile: Dockerfile
+    networks:
+      - interconnect
+
 networks:
   interconnect:
     driver: bridge
