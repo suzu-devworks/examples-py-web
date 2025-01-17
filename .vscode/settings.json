@@ -33,7 +33,9 @@
     "!**/.git",
     "!**/.venv",
   ],
-  "mypy-type-checker.args": [],
+  "mypy-type-checker.args": [
+    "--config-file=.mypy.ini"
+  ],
   "python.analysis.autoFormatStrings": false,
   "python.terminal.activateEnvInCurrentTerminal": true,
   "python.terminal.activateEnvironment": true,
