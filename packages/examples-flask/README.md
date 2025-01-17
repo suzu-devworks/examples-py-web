@@ -49,7 +49,8 @@ uvx uwsgi --ini uwsgi.ini --venv $VIRTUAL_ENV
 ```
 
 > [!WARNING]
-> The uwsgi package will be rebuilt during installation, > so you will need to install gcc and python3-dev.
+> The uwsgi package will be rebuilt during installation,
+> so you will need to install gcc and python3-dev.
 
 For NGINX:
 
