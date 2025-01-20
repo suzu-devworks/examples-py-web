@@ -14,11 +14,13 @@
   "words": [
     "argparse",
     "asyncio",
+    "httpserver",
     "mypy",
     "pycache",
     "pyproject",
     "pytest",
-    "venv"
+    "venv",
+    "xdist"
   ],
   "ignoreWords": [],
   "import": [],

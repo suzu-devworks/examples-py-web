@@ -1,15 +1,3 @@
-"""Add Example Test.
-
-References:
-    - https://playwright.dev/python/docs/intro#add-example-test
-
-Run tests:
-
-    ```shell
-    pytest tests/getting_started/test_01_example.py
-    ```
-"""
-
 import re
 
 from playwright.sync_api import Page, expect
