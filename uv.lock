@@ -193,6 +193,7 @@ wheels = [
 
 [[package]]
 name = "examples-flask"
+version = "0.3.0"
 source = { editable = "packages/examples-flask" }
 dependencies = [
     { name = "flask" },
@@ -215,6 +216,7 @@ dev = [
 
 [[package]]
 name = "examples-flask-media"
+version = "0.2.0"
 source = { editable = "packages/examples-flask-media" }
 dependencies = [
     { name = "flask" },
