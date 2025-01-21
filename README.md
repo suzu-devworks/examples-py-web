@@ -29,9 +29,13 @@ may contain many inaccuracies.
 
 - [examples-websockets](./packages/examples-websockets/README.md)
 
-### Web Testing and Automation
+### End-to-end testing
 
-- [examples-playwright-started](./packages/examples-playwright-started/README.md)
+- [examples-playwright](./packages/examples-playwright/README.md)
+
+### Scripting
+
+- [examples-https](./scripts/examples-https/README.md)
 
 ## More documentation
 
