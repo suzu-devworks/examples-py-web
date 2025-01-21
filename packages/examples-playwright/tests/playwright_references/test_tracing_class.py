@@ -6,7 +6,7 @@ References:
 Run tests:
 
     ```shell
-    pytest tests/references/test_tracing.py
+    pytest tests/playwright_references/test_tracing_class.py
     ```
 
     Opening the trace:

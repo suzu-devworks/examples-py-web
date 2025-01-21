@@ -1,13 +1,7 @@
 """Test isolation.
 
 References:
-    - https://playwright.dev/python/docs/writing-tests#test-isolation
-
-Run tests:
-
-    ```shell
-    pytest tests/getting_started/test_03_using_fixtures.py
-    ```
+    - https://playwright.dev/python/docs/writing-tests#using-fixtures
 """
 
 from collections.abc import Generator

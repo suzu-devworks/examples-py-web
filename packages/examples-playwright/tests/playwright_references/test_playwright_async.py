@@ -6,13 +6,13 @@ References:
 Run tests:
 
     ```shell
-    pytest tests/references/test_playwright_async.py
+    pytest tests/playwright_references/test_playwright_async.py
     ```
 
 Run:
 
     ```shell
-    python tests/references/test_playwright_async.py
+    python tests/playwright_references/test_playwright_async.py
     ```
 """
 
