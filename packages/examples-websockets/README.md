@@ -7,7 +7,7 @@ This project is an example of Python WebSocket programming using websockets.
 - [examples-websockets](#examples-websockets)
   - [References](#references)
   - [Examples](#examples)
-    - [　Home](#home)
+    - [Home](#home)
   - [Development](#development)
     - [How the project was initialized](#how-the-project-was-initialized)
 
@@ -21,7 +21,7 @@ This project is an example of Python WebSocket programming using websockets.
 - How-to guides
   - [Quickstart](./quickstart/README.md)
 
-### 　Home
+### Home
 
 Here is an example echo server and a corresponding client, only demonstrating asyncio here.
 
