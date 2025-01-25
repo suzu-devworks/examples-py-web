@@ -1,13 +1,18 @@
 #!/usr/bin/env python
 
-from websockets.sync.client import connect
+"""Client using the asyncio API."""
+
+import asyncio
+
+from websockets.asyncio.client import connect
 
 
-def hello() -> None:
-    with connect("ws://localhost:8765") as websocket:
-        websocket.send("Hello world!")
-        message = websocket.recv()
+async def hello() -> None:
+    async with connect("ws://localhost:8765") as websocket:
+        await websocket.send("Hello world!")
+        message = await websocket.recv()
         print(f"Received: {str(message)}")
 
 
-hello()
+if __name__ == "__main__":
+    asyncio.run(hello())

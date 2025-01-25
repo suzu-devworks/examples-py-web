@@ -1,9 +1,7 @@
 [project]
-name = "examples-websockets"
-version = "0.1.0"
+dependencies = []
 description = "Add your description here"
+name = "examples-webserver"
 readme = "README.md"
 requires-python = ">=3.12"
-dependencies = [
-    "websockets>=14.2",
-]
+version = "0.1.0"
