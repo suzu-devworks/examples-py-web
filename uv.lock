@@ -311,17 +311,14 @@ source = { virtual = "packages/examples-webserver" }
 
 [[package]]
 name = "examples-websockets"
-version = "0.2.0"
-source = { editable = "packages/examples-websockets" }
+version = "0.1.0"
+source = { virtual = "packages/examples-websockets" }
 dependencies = [
     { name = "websockets" },
 ]
 
 [package.metadata]
-requires-dist = [{ name = "websockets", specifier = ">=13.0.1" }]
-
-[package.metadata.requires-dev]
-dev = []
+requires-dist = [{ name = "websockets", specifier = ">=14.2" }]
 
 [[package]]
 name = "execnet"

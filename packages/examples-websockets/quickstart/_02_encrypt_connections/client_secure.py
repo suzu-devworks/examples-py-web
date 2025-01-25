@@ -16,6 +16,8 @@ ssl_context.load_verify_locations(localhost_crt)
 async def hello() -> None:
     uri = "wss://localhost:8765"
     async with connect(uri, ssl=ssl_context) as websocket:
+        print(f"Connect to: {websocket.remote_address[0]}:{websocket.remote_address[1]}")
+
         name = input("What's your name? ")
 
         await websocket.send(name)

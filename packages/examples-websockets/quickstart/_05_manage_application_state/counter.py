@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 
 import asyncio
+import contextlib
 import json
 import logging
 
@@ -47,9 +48,12 @@ async def counter(websocket: ServerConnection) -> None:
 
 
 async def main() -> None:
-    async with serve(counter, "localhost", 6789):
+    async with serve(counter, "localhost", 6789) as server:
+        for sock in server.sockets:
+            print(f"Server started at {sock.getsockname()[0]}:{sock.getsockname()[1]}")
         await asyncio.get_running_loop().create_future()  # run forever
 
 
 if __name__ == "__main__":
-    asyncio.run(main())
+    with contextlib.suppress(KeyboardInterrupt):
+        asyncio.run(main())
