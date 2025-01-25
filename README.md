@@ -25,13 +25,14 @@ may contain many inaccuracies.
 - [examples-flask](./packages/examples-flask/README.md)
 - [examples-flask-media](./packages/examples-flask-media/README.md)
 
-### http.server examples
+### Other web examples
 
+- [examples-webserver](./packages/examples-webserver/README.md)
 - [examples-websockets](./packages/examples-websockets/README.md)
 
-### Web Testing and Automation
+### End-to-end testing
 
-- [examples-playwright-started](./packages/examples-playwright-started/README.md)
+- [examples-playwright](./packages/examples-playwright/README.md)
 
 ## More documentation
 
