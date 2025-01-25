@@ -23,7 +23,7 @@ def gen(get_frame: Callable[..., bytes | None]) -> Generator[bytes, None, None]:
         if frame is None:
             app.logger.debug("frame is none")
         else:
-            yield (b"--frame\r\n" b"Content-Type: image/jpeg\r\n\r\n" + frame + b"\r\n")
+            yield (b"--frame\r\nContent-Type: image/jpeg\r\n\r\n" + frame + b"\r\n")
 
         # This is also a cause of delay
         time.sleep((1 / 30) / 3)

@@ -19,7 +19,7 @@ This project is an example of Python WebSocket programming using websockets.
 
 - [Home](#home)
 - How-to guides
-  - [Quickstart](./quickstart/README.md)
+  - [Quickstart](./scripts/quickstart/README.md)
 
 ### Home
 
@@ -28,13 +28,13 @@ Here is an example echo server and a corresponding client, only demonstrating as
 start websocket server:
 
 ```shell
-uv run asyncio/server.py 
+uv run scripts/server.py 
 ```
 
 start client:
 
 ```shell
-uv run asyncio/client.py 
+uv run scripts/client.py 
 ```
 
 Also, websockets provides an interactive client:

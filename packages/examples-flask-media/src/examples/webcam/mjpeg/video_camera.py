@@ -76,7 +76,7 @@ class VideoCamera:
         image = self.image.copy()
 
         if self.timestamp is not None:
-            self._set_datetime(image, f"{(self.timestamp.strftime("%H:%M:%S"))}")
+            self._set_datetime(image, f"{(self.timestamp.strftime('%H:%M:%S'))}")
 
         _, jpeg = cv2.imencode(".jpg", image)
         return jpeg.tobytes()
@@ -90,7 +90,7 @@ class VideoCamera:
         gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
 
         if self.timestamp is not None:
-            self._set_datetime(gray, f"{(self.timestamp.strftime("%H:%M:%S"))}")
+            self._set_datetime(gray, f"{(self.timestamp.strftime('%H:%M:%S'))}")
 
         _, jpeg = cv2.imencode(".jpg", gray)
         return jpeg.tobytes()

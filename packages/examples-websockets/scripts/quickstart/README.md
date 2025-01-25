@@ -24,13 +24,13 @@ Tried the code from the quick start.
 Start the server:
 
 ```shell
-python quickstart/_01_say_hello_world/server.py
+python scripts/quickstart/_01_say_hello_world/server.py
 ```
 
 The client connects to the server and receives the response:
 
 ```shell
-python quickstart/_01_say_hello_world/client.py
+python scripts/quickstart/_01_say_hello_world/client.py
 ```
 
 ### Encrypt connections
@@ -43,13 +43,13 @@ We'll use the development TLS certificate here
 Start the server:
 
 ```shell
-python quickstart/_02_encrypt_connections/server_secure.py
+python scripts/quickstart/_02_encrypt_connections/server_secure.py
 ```
 
 The client connects to the server and receives the response:
 
 ```shell
-python quickstart/_02_encrypt_connections/client_secure.py
+python scripts/quickstart/_02_encrypt_connections/client_secure.py
 ```
 
 > [!CAUTION] Configure the TLS context securely
@@ -60,7 +60,7 @@ python quickstart/_02_encrypt_connections/client_secure.py
 Start the websockets server:
 
 ```shell
-python quickstart/_03_connect_from_a_browser/show_time.py
+python scripts/quickstart/_03_connect_from_a_browser/show_time.py
 ```
 
 Start the http server:
@@ -80,7 +80,7 @@ Search for `show_time.html` in the displayed directory view and display it.
 Start the websockets server:
 
 ```shell
-python quickstart/_04_broadcast_messages/show_time_2.py
+python scripts/quickstart/_04_broadcast_messages/show_time_2.py
 ```
 
 Start the http server:
@@ -100,7 +100,7 @@ Display the `show_time.html` page as in the previous example
 Start the server:
 
 ```shell
-python quickstart/_05_manage_application_state/counter.py
+python scripts/quickstart/_05_manage_application_state/counter.py
 ```
 
 Start the http server:
