@@ -25,6 +25,10 @@ may contain many inaccuracies.
 - [examples-flask](./packages/examples-flask/README.md)
 - [examples-flask-media](./packages/examples-flask-media/README.md)
 
+### FastAPI examples
+
+- [examples-fastapi](./packages/examples-fastapi/README.md)
+
 ### Other web examples
 
 - [examples-webserver](./packages/examples-webserver/README.md)
