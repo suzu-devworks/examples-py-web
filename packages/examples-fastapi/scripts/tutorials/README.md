@@ -7,6 +7,7 @@ I'll try some of the code from the official website tutorial.
 - [Tutorial - User Guide](#tutorial---user-guide)
   - [References](#references)
   - [Examples](#examples)
+    - [Security](#security)
     - [CORS (Cross-Origin Resource Sharing)](#cors-cross-origin-resource-sharing)
     - [Bigger Applications - Multiple Files](#bigger-applications---multiple-files)
 
@@ -16,11 +17,29 @@ I'll try some of the code from the official website tutorial.
 
 ## Examples
 
+### Security
+
+Learn how to implement simple authentication using oauth2's password flow.
+
+- [See code ...](./security/)
+
+Interactive API docs:
+
+- <http://127.0.0.1:8000/docs>
+
+Let's press the Authorize button.
+
 ### CORS (Cross-Origin Resource Sharing)
 
 You can configure it in your FastAPI application using the CORSMiddleware.
 
 - [See code ...](./cors/)
+
+Starting the server:
+
+```shell
+uv run fastapi dev ./scripts/tutorials/security/main.py
+```
 
 Starting the server:
 

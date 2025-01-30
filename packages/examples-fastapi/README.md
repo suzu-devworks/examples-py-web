@@ -28,4 +28,6 @@ This project was initialized with the following command:
 ```shell
 uv init --lib packages/examples-fastapi
 uv add --project packages/examples-fastapi "fastapi[standard]"
+uv add --project packages/examples-fastapi PyJWT "passlib[bcrypt]"
+uv add --project packages/examples-fastapi --dev types-passlib
 ```
