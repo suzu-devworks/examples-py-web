@@ -20,6 +20,7 @@ An example Python Web application using AIOHTTP.
 
 - Server
   - [Quickstart](./scripts/servers/quickstart/README.md)
+  - [Nested applications](./scripts/servers/nested_apps/README.md)
 
 ## Run development server
 

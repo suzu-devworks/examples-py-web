@@ -8,7 +8,8 @@
     "aiohttp",
     "enctype",
     "fernet",
-    "runserver"
+    "runserver",
+    "subapp"
   ],
   "ignoreWords": [],
   "import": [
