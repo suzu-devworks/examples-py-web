@@ -2,6 +2,7 @@
 
 References:
     - https://docs.aiohttp.org/en/stable/web_quickstart.html#websockets
+    - https://docs.aiohttp.org/en/stable/web_advanced.html#websocket-shutdown
 
 Examples:
     Starting the server:
@@ -15,7 +16,11 @@ Examples:
     - <http://127.0.0.1:8000/>
 """
 
-from aiohttp import WSMsgType, web
+import weakref
+
+from aiohttp import WSCloseCode, WSMsgType, web
+
+websockets = web.AppKey("websockets", weakref.WeakSet[web.WebSocketResponse])
 
 
 async def root(request: web.Request) -> web.StreamResponse:
@@ -48,23 +53,37 @@ async def websocket_handler(request: web.Request) -> web.WebSocketResponse:
     ws = web.WebSocketResponse()
     await ws.prepare(request)
 
-    async for msg in ws:
-        if msg.type == WSMsgType.TEXT:
-            if msg.data == "close":
-                await ws.close()
-            else:
-                await ws.send_str(msg.data + "/answer")
-        elif msg.type == WSMsgType.ERROR:
-            print(f"ws connection closed with exception {ws.exception()}")
+    request.app[websockets].add(ws)
 
     print("websocket connection closed")
+    try:
+        async for msg in ws:
+            if msg.type == WSMsgType.TEXT:
+                if msg.data == "close":
+                    await ws.close()
+                else:
+                    await ws.send_str(msg.data + "/answer")
+            elif msg.type == WSMsgType.ERROR:
+                print(f"ws connection closed with exception {ws.exception()}")
+
+    finally:
+        request.app[websockets].discard(ws)
 
     return ws
+
+
+async def on_shutdown(app: web.Application) -> None:
+    for ws in app[websockets]:
+        await ws.close(code=WSCloseCode.GOING_AWAY, message=b"Server shutdown")
 
 
 def create_app() -> web.Application:
     """default app-factory for aiohttp."""
     app = web.Application()
+
+    app[websockets] = weakref.WeakSet()
+    app.on_shutdown.append(on_shutdown)
+
     app.router.add_get("/", root)
     app.router.add_get("/ws", websocket_handler)  # registered as HTTP GET
     return app
