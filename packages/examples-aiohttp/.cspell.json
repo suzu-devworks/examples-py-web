@@ -1,0 +1,18 @@
+{
+  "version": "0.2",
+  "ignorePaths": [],
+  "dictionaryDefinitions": [],
+  "dictionaries": [],
+  "words": [
+    "adev",
+    "aiohttp",
+    "enctype",
+    "fernet",
+    "runserver",
+    "subapp"
+  ],
+  "ignoreWords": [],
+  "import": [
+    "../../.vscode/cspell.json"
+  ]
+}

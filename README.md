@@ -20,6 +20,14 @@ may contain many inaccuracies.
 
 ## Examples projects
 
+### FastAPI examples
+
+- [examples-fastapi](./packages/examples-fastapi/README.md)
+
+### AIOHTTP examples
+
+- [examples-aiohttp](./packages/examples-aiohttp/README.md)
+
 ### Flask examples
 
 - [examples-flask](./packages/examples-flask/README.md)

@@ -12,8 +12,10 @@
   "dictionaryDefinitions": [],
   "dictionaries": [],
   "words": [
+    "AIOHTTP",
     "argparse",
     "asyncio",
+    "fastapi",
     "httpserver",
     "mypy",
     "pycache",
