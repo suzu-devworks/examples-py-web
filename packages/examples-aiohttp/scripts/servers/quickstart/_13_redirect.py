@@ -44,7 +44,7 @@ async def login(request: web.Request) -> web.StreamResponse | dict[str, str]:
 
             location = request.app.router["index"].url_for()
             exc = web.HTTPFound(location=location)
-            exc.set_cookie("AUTH", "secret")
+            exc.set_cookie("AUTH", "secret", httponly=True, secure=True)
             raise exc
 
     return {}

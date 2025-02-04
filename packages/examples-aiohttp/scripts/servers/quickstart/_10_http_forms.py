@@ -47,7 +47,7 @@ async def do_login(request: web.Request) -> web.StreamResponse:
     print(f"User {str(login)} is logged in.")
 
     exc = web.HTTPFound(location="/")
-    exc.set_cookie("AUTH", "secret")
+    exc.set_cookie("AUTH", "secret", httponly=True, secure=True)
     raise exc
 
 
