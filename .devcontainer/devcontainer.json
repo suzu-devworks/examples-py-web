@@ -2,7 +2,7 @@
   "name": "Python 3 with Dev Containers",
   "dockerComposeFile": [
     "compose.yaml",
-    "compose.devcontainer.yaml"
+    "compose.develop.yaml"
   ],
   "service": "dev",
   "workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
