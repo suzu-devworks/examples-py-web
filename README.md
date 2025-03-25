@@ -9,11 +9,11 @@
 
 ## What is the purpose of this repository?
 
-This repository is the author's personal playground for learning web programming with Python and trying out its features. It may be useful for developers who have the same problem.
+This repository is the author's personal playground for learning web programming with Python and trying out its features
+
+The content here may be useful to other developers who have the same problem.
 
 However, please note that the code described here is based on my personal opinion and may contain many inaccuracies.
-
-It may contain many inaccuracies.
 
 ## Project Index
 
