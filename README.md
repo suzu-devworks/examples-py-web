@@ -1,7 +1,5 @@
 # examples-py-web
 
-A workspace for studying Python web programming.
-
 [![uv](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/uv/main/assets/badge/v0.json)](https://github.com/astral-sh/uv)
 [![Ruff](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/ruff/main/assets/badge/v2.json)](https://github.com/astral-sh/ruff)
 [![Checked with mypy](https://www.mypy-lang.org/static/mypy_badge.svg)](https://mypy-lang.org/)
@@ -9,39 +7,33 @@ A workspace for studying Python web programming.
 [![CI](https://github.com/suzu-devworks/examples-py-web/actions/workflows/ci.yaml/badge.svg)](https://github.com/suzu-devworks/examples-py-web/actions/workflows/ci.yaml)
 [![CodeQL](https://github.com/suzu-devworks/examples-py-web/actions/workflows/codeql.yml/badge.svg)](https://github.com/suzu-devworks/examples-py-web/actions/workflows/codeql.yml)
 
-## What is this repository for?
+## What is the purpose of this repository?
 
-This repository is the author's personal playground for learning Python web programming and experimenting with its features.
-It may be useful for developers who have the same problem.
+This repository is the author's personal playground for learning web programming with Python and trying out its features. It may be useful for developers who have the same problem.
 
 However, please note that the code described here is based on my personal opinion and may contain many inaccuracies.
 
-may contain many inaccuracies.
+It may contain many inaccuracies.
 
-## Examples projects
+## Project Index
 
-### FastAPI examples
+- FastAPI examples
+  - [examples-fastapi](./packages/examples-fastapi/README.md)
 
-- [examples-fastapi](./packages/examples-fastapi/README.md)
+- AIOHTTP examples
+  - [examples-aiohttp](./packages/examples-aiohttp/README.md)
 
-### AIOHTTP examples
+- Flask examples
+  - [examples-flask](./packages/examples-flask/README.md)
+  - [examples-flask-media](./packages/examples-flask-media/README.md)
 
-- [examples-aiohttp](./packages/examples-aiohttp/README.md)
+- Other web examples
+  - [examples-webserver](./packages/examples-webserver/README.md)
+  - [examples-websockets](./packages/examples-websockets/README.md)
 
-### Flask examples
+- End-to-end testing
+  - [examples-playwright](./packages/examples-playwright/README.md)
 
-- [examples-flask](./packages/examples-flask/README.md)
-- [examples-flask-media](./packages/examples-flask-media/README.md)
+## More documents
 
-### Other web examples
-
-- [examples-webserver](./packages/examples-webserver/README.md)
-- [examples-websockets](./packages/examples-websockets/README.md)
-
-### End-to-end testing
-
-- [examples-playwright](./packages/examples-playwright/README.md)
-
-## More documentation
-
-- [See here ...](https://github.com/suzu-devworks/examples-py-web/wiki)
+- [See here ...](./docs/README.md)
