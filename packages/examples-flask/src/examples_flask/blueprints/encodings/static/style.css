@@ -1,15 +1,15 @@
-footer span>code::after {
-    content: "style:@/blueprints/encodings/static/style.css";
+footer span > code::after {
+  content: "style:@/blueprints/encodings/static/style.css";
 }
 
-li>code>pre {
-    background-color: rgb(82, 82, 82);
-    color: rgb(250, 250, 240);
-    padding: 0.5rem;
-    overflow: auto;
-    border-radius: 3px;
+li > code > pre {
+  background-color: rgb(82, 82, 82);
+  color: rgb(250, 250, 240);
+  padding: 0.5rem;
+  overflow: auto;
+  border-radius: 3px;
 }
 
-li>div {
-    white-space: pre-line;
+li > div {
+  white-space: pre-line;
 }
