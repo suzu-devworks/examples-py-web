@@ -7,6 +7,7 @@
     "ms-python.python",
     "streetsidesoftware.code-spell-checker",
     "DavidAnson.vscode-markdownlint",
-    "tamasfe.even-better-toml"
+    "tamasfe.even-better-toml",
+    "esbenp.prettier-vscode"
   ]
 }

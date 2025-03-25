@@ -3,8 +3,8 @@
 
 <head>
   <title>Guest page - examples of flask web application</title>
-  <link rel="stylesheet" href="{{url_for('static',filename='style.css' )}}">
-  <link rel="stylesheet" href="{{url_for('.static', filename='style.css')}}">
+  <link rel="stylesheet" href="{{url_for('static',filename='style.css' )}}" />
+  <link rel="stylesheet" href="{{url_for('.static', filename='style.css')}}" />
 </head>
 
 <body>
@@ -48,15 +48,16 @@
     <section>
       <h3>Static folders</h3>
       <ul>
-        <li><code>url_for('static',filename='style.css')</code> to
+        <li>
+          <code>url_for('static',filename='style.css')</code> to
           <code>{{url_for('static',filename='style.css' )}}</code>
         </li>
-        <li><code>url_for('.static',filename='style.css')</code> to
+        <li>
+          <code>url_for('.static',filename='style.css')</code> to
           <code>{{url_for('.static',filename='style.css' )}}</code>
         </li>
       </ul>
     </section>
-
   </main>
 
   <footer>

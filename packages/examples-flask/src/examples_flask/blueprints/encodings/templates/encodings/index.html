@@ -3,8 +3,8 @@
 
 <head>
   <title>Blueprint Resource Encoding - examples of flask web application</title>
-  <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
-  <link rel="stylesheet" href="{{url_for('.static', filename='style.css')}}">
+  <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}" />
+  <link rel="stylesheet" href="{{url_for('.static', filename='style.css')}}" />
 </head>
 
 <body>
@@ -26,27 +26,36 @@
       <ul>
         <li>
           <code>
-<pre>with bp.open_resource("resources/resource_utf8.txt") as f:
+              <pre>
+with bp.open_resource("resources/resource_utf8.txt") as f:
     data = f.read()
-    raw = data if isinstance(data, bytes) else str(data).encode()</pre></code>
+    raw = data if isinstance(data, bytes) else str(data).encode()</pre
+              >
+            </code>
           <div>{{ raw }}</div>
         </li>
         <li>
           <code>
-<pre>with bp.open_resource("resources/resource_utf8.txt") as f:
+              <pre>
+with bp.open_resource("resources/resource_utf8.txt") as f:
     data = f.read()
     raw = data if isinstance(data, bytes) else str(data).encode()
-    decoded = raw.decode()</pre></code>
+    decoded = raw.decode()</pre
+              >
+            </code>
           <div>{{ decoded }}</div>
         </li>
         <li>
           <code>
-<pre>with bp.open_resource("resources/resource_utf8.txt", mode="r", encoding="utf-8") as f:
-    text = str(f.read())</pre></code>
+              <pre>
+with bp.open_resource("resources/resource_utf8.txt", mode="r", encoding="utf-8") as f:
+    text = str(f.read())</pre
+              >
+            </code>
           <div>{{ text }}</div>
+        </li>
       </ul>
     </section>
-
   </main>
 
   <footer>
