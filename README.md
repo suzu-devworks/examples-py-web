@@ -33,7 +33,3 @@ It may contain many inaccuracies.
 
 - End-to-end testing
   - [examples-playwright](./packages/examples-playwright/README.md)
-
-## More documents
-
-- [See here ...](./docs/README.md)
