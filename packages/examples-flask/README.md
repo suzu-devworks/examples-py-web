@@ -4,17 +4,12 @@ An examples of Python web application using Flask.
 
 ## Table of Contents <!-- omit in toc -->
 
-- [examples-flask](#examples-flask)
-  - [References](#references)
-  - [Examples](#examples)
-  - [Getting started](#getting-started)
-  - [Deploy](#deploy)
-  - [Development](#development)
-    - [How the project was initialized](#how-the-project-was-initialized)
-
-## References
-
-- [Flask’s documentation](https://flask.palletsprojects.com/)
+- [Examples](#examples)
+- [Getting started](#getting-started)
+- [Deploy](#deploy)
+- [Development](#development)
+  - [How the project was initialized](#how-the-project-was-initialized)
+- [References](#references)
 
 ## Examples
 
@@ -81,3 +76,7 @@ uv add --project packages/examples-flask flask
 
 uv sync --all-packages
 ```
+
+## References
+
+- [Flask’s documentation](https://flask.palletsprojects.com/)

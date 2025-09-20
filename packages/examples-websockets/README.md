@@ -4,16 +4,11 @@ This project is an example of Python WebSocket programming using websockets.
 
 ## Table of Contents <!-- omit in toc -->
 
-- [examples-websockets](#examples-websockets)
-  - [References](#references)
-  - [Examples](#examples)
-    - [Home](#home)
-  - [Development](#development)
-    - [How the project was initialized](#how-the-project-was-initialized)
-
-## References
-
-- <https://websockets.readthedocs.io/>
+- [Examples](#examples)
+  - [Home](#home)
+- [Development](#development)
+  - [How the project was initialized](#how-the-project-was-initialized)
+- [References](#references)
 
 ## Examples
 
@@ -55,3 +50,7 @@ uv add --project packages/examples-websockets websockets
 
 uv sync --all-packages
 ```
+
+## References
+
+- <https://websockets.readthedocs.io/>

@@ -4,13 +4,12 @@ This project is an example of web media and streaming using Flask.
 
 ## Table of Contents <!-- omit in toc -->
 
-- [examples-flask-media](#examples-flask-media)
-  - [Examples](#examples)
-    - [Live streaming webcam](#live-streaming-webcam)
-    - [Video streaming](#video-streaming)
-  - [Development](#development)
-    - [How the project was initialized](#how-the-project-was-initialized)
-    - [ImportError: libGL.so.1](#importerror-libglso1)
+- [Examples](#examples)
+  - [Live streaming webcam](#live-streaming-webcam)
+  - [Video streaming](#video-streaming)
+- [Development](#development)
+  - [How the project was initialized](#how-the-project-was-initialized)
+  - [ImportError: libGL.so.1](#importerror-libglso1)
 
 ## Examples
 

@@ -4,17 +4,11 @@ This project is an example of end-to-end testing using Playwright.
 
 ## Table of Contents <!-- omit in toc -->
 
-- [examples-playwright](#examples-playwright)
-  - [References](#references)
-  - [Install browsers](#install-browsers)
-  - [Examples](#examples)
-  - [Development](#development)
-    - [How the project was initialized](#how-the-project-was-initialized)
-
-## References
-
-- <https://playwright.dev/python>
-- <https://github.com/microsoft/playwright-python>
+- [Install browsers](#install-browsers)
+- [Examples](#examples)
+- [Development](#development)
+  - [How the project was initialized](#how-the-project-was-initialized)
+- [References](#references)
 
 ## Install browsers
 
@@ -43,3 +37,8 @@ uv add --project packages/examples-playwright --dev pytest-httpserver trustme
 
 uv sync --all-packages
 ```
+
+## References
+
+- <https://playwright.dev/python>
+- <https://github.com/microsoft/playwright-python>
