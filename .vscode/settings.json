@@ -1,21 +1,18 @@
 {
-  "[css]": {
+  "[css][scss]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[html]": {
     // Prettier doesn't seem to be good at Jinja2
     "editor.defaultFormatter": "vscode.html-language-features"
   },
-  "[javascript]": {
+  "[javascript][typescript]": {
     "editor.codeActionsOnSave": {
       "source.organizeImports": "explicit"
     },
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "[json]": {
-    "editor.defaultFormatter": "vscode.json-language-features"
-  },
-  "[jsonc]": {
+  "[json][jsonc]": {
     "editor.defaultFormatter": "vscode.json-language-features"
   },
   "[markdown]": {
@@ -31,17 +28,8 @@
     },
     "editor.defaultFormatter": "charliermarsh.ruff"
   },
-  "[scss]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
   "[toml]": {
     "editor.defaultFormatter": "tamasfe.even-better-toml"
-  },
-  "[typescript]": {
-    "editor.codeActionsOnSave": {
-      "source.organizeImports": "explicit"
-    },
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "editor.formatOnPaste": true,
   "editor.formatOnSave": true,
@@ -50,7 +38,6 @@
   "evenBetterToml.formatter.inlineTableExpand": true,
   "evenBetterToml.formatter.reorderArrays": true,
   "evenBetterToml.formatter.reorderKeys": true,
-  "markdown.extension.toc.levels": "2..6",
   "markdownlint.config": {},
   "markdownlint.lintWorkspaceGlobs": [
     "**/*.{md,mkd,mdwn,mdown,markdown,markdn,mdtxt,mdtext,workbook}",
