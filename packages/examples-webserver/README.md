@@ -2,8 +2,7 @@
 
 ## Table of Contents <!-- omit in toc -->
 
-- [examples-webserver](#examples-webserver)
-  - [References](#references)
+- [References](#references)
 
 ## References
 

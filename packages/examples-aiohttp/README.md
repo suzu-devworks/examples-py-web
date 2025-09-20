@@ -4,18 +4,12 @@ An example Python Web application using AIOHTTP.
 
 ## Table of Contents <!-- omit in toc -->
 
-- [examples-aiohttp](#examples-aiohttp)
-  - [References](#references)
-  - [Examples](#examples)
-  - [Run development server](#run-development-server)
-  - [Development](#development)
-    - [How the project was initialized](#how-the-project-was-initialized)
-    - [Third Party Libraries](#third-party-libraries)
-
-## References
-
-- [Welcome to AIOHTTP](https://docs.aiohttp.org/en/stable/index.html#)
-- [Third-Party libraries](https://docs.aiohttp.org/en/stable/third_party.html)
+- [Examples](#examples)
+- [Run development server](#run-development-server)
+- [Development](#development)
+  - [How the project was initialized](#how-the-project-was-initialized)
+  - [Third Party Libraries](#third-party-libraries)
+- [References](#references)
 
 ## Examples
 
@@ -56,3 +50,8 @@ The libraries I use in this project are:
 - [aiohttp-devtools](https://github.com/aio-libs/aiohttp-devtools)
 - [aiohttp-session](https://github.com/aio-libs/aiohttp-session)
 - [aiohttp-jinja2](https://github.com/aio-libs/aiohttp-jinja2)
+
+## References
+
+- [Welcome to AIOHTTP](https://docs.aiohttp.org/en/stable/index.html#)
+- [Third-Party libraries](https://docs.aiohttp.org/en/stable/third_party.html)

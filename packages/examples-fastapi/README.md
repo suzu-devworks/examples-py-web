@@ -4,15 +4,10 @@ An example Python Web API application using FastAPI.
 
 ## Table of Contents <!-- omit in toc -->
 
-- [examples-fastapi](#examples-fastapi)
-  - [References](#references)
-  - [Examples](#examples)
-  - [Development](#development)
-    - [How the project was initialized](#how-the-project-was-initialized)
-
-## References
-
-- [FastAPI framework](https://fastapi.tiangolo.com/)
+- [Examples](#examples)
+- [Development](#development)
+  - [How the project was initialized](#how-the-project-was-initialized)
+- [References](#references)
 
 ## Examples
 
@@ -31,3 +26,7 @@ uv add --project packages/examples-fastapi "fastapi[standard]"
 uv add --project packages/examples-fastapi PyJWT "passlib[bcrypt]"
 uv add --project packages/examples-fastapi --dev types-passlib
 ```
+
+## References
+
+- [FastAPI framework](https://fastapi.tiangolo.com/)
