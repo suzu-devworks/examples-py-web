@@ -4,9 +4,9 @@ services:
     networks:
       - interconnect
     ports:
-      - "8080:80"
-      - "8443:8443"
-    restart: always
+      - "8080-8089:80"
+      - "8443-8452:8443"
+    # restart: always
     volumes:
       - ./web/nginx.conf.d:/etc/nginx/conf.d:ro
       - ./web/html:/var/www/html:ro
