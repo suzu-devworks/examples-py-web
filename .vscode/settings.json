@@ -1,5 +1,8 @@
 {
-  "[css][scss]": {
+  "[css][scss][sass]": {
+    "editor.codeActionsOnSave": {
+      "source.fixAll.stylelint": "explicit"
+    },
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[html]": {
@@ -8,6 +11,7 @@
   },
   "[javascript][typescript]": {
     "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": "explicit",
       "source.organizeImports": "explicit"
     },
     "editor.defaultFormatter": "esbenp.prettier-vscode"
@@ -28,11 +32,18 @@
     },
     "editor.defaultFormatter": "charliermarsh.ruff"
   },
+  "[svg]": {
+    "editor.defaultFormatter": "jock.svg"
+  },
   "[toml]": {
     "editor.defaultFormatter": "tamasfe.even-better-toml"
   },
+  "[xml]": {
+    "editor.defaultFormatter": "DotJoshJohnson.xml"
+  },
   "editor.formatOnPaste": true,
   "editor.formatOnSave": true,
+  "eslint.format.enable": false,
   "evenBetterToml.formatter.arrayAutoCollapse": false,
   "evenBetterToml.formatter.columnWidth": 90,
   "evenBetterToml.formatter.inlineTableExpand": true,
