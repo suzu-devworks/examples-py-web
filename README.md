@@ -9,27 +9,23 @@
 
 ## What is the purpose of this repository?
 
-This repository is the author's personal playground for learning web programming with Python and trying out its features. It may be useful for developers who have the same problem.
+This repository serves as a personal practice space for the author to learn web programming with Python and experiment with its features.
+
+The content here may be useful to other developers who have the same problem.
 
 However, please note that the code described here is based on my personal opinion and may contain many inaccuracies.
 
-It may contain many inaccuracies.
-
-## Project Index
+## Examples
 
 - FastAPI examples
   - [examples-fastapi](./packages/examples-fastapi/README.md)
-
 - AIOHTTP examples
   - [examples-aiohttp](./packages/examples-aiohttp/README.md)
-
 - Flask examples
   - [examples-flask](./packages/examples-flask/README.md)
   - [examples-flask-media](./packages/examples-flask-media/README.md)
-
 - Other web examples
   - [examples-webserver](./packages/examples-webserver/README.md)
   - [examples-websockets](./packages/examples-websockets/README.md)
-
 - End-to-end testing
   - [examples-playwright](./packages/examples-playwright/README.md)
