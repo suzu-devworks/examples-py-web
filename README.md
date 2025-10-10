@@ -9,11 +9,11 @@
 
 ## What is the purpose of this repository?
 
-This repository serves as a personal practice space for the author to learn web programming with Python and experiment with its features.
+This repository is just my personal playground for learning web programming with Python.
 
-The content here may be useful to other developers who have the same problem.
+The content here might actually be helpful to other developers facing similar issues.
 
-However, please note that the code described here is based on my personal opinion and may contain many inaccuracies.
+However, please keep in mind that this code is based solely on my own perspective and probably has lots of inaccurate or questionable parts!
 
 ## Examples
 
