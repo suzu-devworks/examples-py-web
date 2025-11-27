@@ -5,10 +5,10 @@
 groups = ["default", "dev"]
 strategy = ["inherit_metadata"]
 lock_version = "4.5.0"
-content_hash = "sha256:cd85839a4fe2d21963c600b368e307e0b229daf7cf42bc3a47ce83bd8bff3f7e"
+content_hash = "sha256:785b9ace19327866e73c0b431c746153b789389a6b41bdba6c9aedb9beb20252"
 
 [[metadata.targets]]
-requires_python = ">=3.12"
+requires_python = "==3.12.*"
 
 [[package]]
 name = "black"
