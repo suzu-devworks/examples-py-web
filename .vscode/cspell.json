@@ -1,9 +1,27 @@
 {
-    "version": "0.2",
-    "ignorePaths": [],
-    "dictionaryDefinitions": [],
-    "dictionaries": [],
-    "words": [],
-    "ignoreWords": [],
-    "import": []
+  "version": "0.2",
+  "ignorePaths": [
+    ".git",
+    ".devcontainer",
+    ".config",
+    ".github",
+    ".vscode",
+    "*.lock",
+    ".*"
+  ],
+  "dictionaryDefinitions": [],
+  "dictionaries": [],
+  "words": [
+    "isort",
+    "markupsafe",
+    "mypy",
+    "pyclean",
+    "pyproject",
+    "pytest",
+    "pytz",
+    "venv",
+    "werkzeug"
+  ],
+  "ignoreWords": [],
+  "import": []
 }
