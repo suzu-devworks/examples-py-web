@@ -22,6 +22,7 @@ Examples:
 """
 
 from flask import Flask, url_for
+from markupsafe import escape
 
 app = Flask(__name__)
 
@@ -38,7 +39,7 @@ def login() -> str:
 
 @app.route("/user/<username>")
 def profile(username: str) -> str:
-    return f"{username}'s profile"
+    return f"{escape(username)}'s profile"
 
 
 if __name__ == "__main__":
