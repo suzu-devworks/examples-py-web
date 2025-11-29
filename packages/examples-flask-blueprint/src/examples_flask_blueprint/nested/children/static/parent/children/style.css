@@ -1,0 +1,10 @@
+h1 {
+    border-color: rgb(180, 100, 10);
+}
+
+.css-test::before {
+    content: "/nested/children/static/parent/children/style.css";
+    color: rgb(180, 100, 10);
+    font-size: 1.5rem;
+    margin-right: 0.5rem;
+}
