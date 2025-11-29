@@ -1,0 +1,10 @@
+h1 {
+    border-color: rgb(0 0 180);
+}
+
+.css-test::before {
+    content: "/static/references/not-specified/style.css";
+    color: rgb(0 0 180);
+    font-size: 1.5rem;
+    margin-right: 0.5rem;
+}

@@ -1,0 +1,50 @@
+"""URL Building.
+
+References:
+    - https://flask.palletsprojects.com/en/3.0.x/quickstart/#url-building
+
+Examples:
+    Starting the server::
+
+        $ flask --app examples_flask_quickstart._04_routing_url_building run --debug
+
+    Execute::
+
+        $ python src/examples_flask_quickstart/_04_routing_url_building.py
+
+    Output console::
+
+        /
+        /login
+        /login?next=/
+        /user/John%20Doe
+
+"""
+
+from flask import Flask, url_for
+from markupsafe import escape
+
+app = Flask(__name__)
+
+
+@app.route("/")
+def index() -> str:
+    return "index"
+
+
+@app.route("/login")
+def login() -> str:
+    return "login"
+
+
+@app.route("/user/<username>")
+def profile(username: str) -> str:
+    return f"{escape(username)}'s profile"
+
+
+if __name__ == "__main__":
+    with app.test_request_context():
+        print(url_for("index"))
+        print(url_for("login"))
+        print(url_for("login", next="/"))
+        print(url_for("profile", username="John Doe"))

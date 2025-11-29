@@ -7,9 +7,13 @@
     "editor.defaultFormatter": "ms-python.black-formatter",
     "editor.formatOnSave": true
   },
+  "[toml]": {
+    "editor.defaultFormatter": "tamasfe.even-better-toml",
+    "editor.formatOnSave": true,
+    "editor.formatOnPaste": true
+  },
   "black-formatter.args": [
-    "--line-length=119",
-    "--max-complexity=10"
+    "--line-length=119"
   ],
   "editor.formatOnPaste": true,
   "editor.formatOnSave": true,
