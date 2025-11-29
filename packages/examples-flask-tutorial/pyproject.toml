@@ -1,0 +1,20 @@
+[project]
+name = "examples-flask-tutorial"
+version = "0.1.0"
+description = "Default template for PDM package"
+authors = [{ name = "A.suzuki", email = "suzu.devworks@gmail.com" }]
+dependencies = ["flask>=3.1.2"]
+requires-python = ">=3.12"
+readme = "README.md"
+license = { text = "MIT" }
+
+[build-system]
+requires = ["pdm-backend"]
+build-backend = "pdm.backend"
+
+
+[tool.pdm]
+distribution = true
+
+[tool.pdm.scripts]
+test = "pytest --durations=0 --cov-branch --cov-report xml:cover/coverage.xml --cov=src/ tests/"

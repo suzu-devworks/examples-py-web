@@ -41,7 +41,7 @@ def string_resource() -> str:
 @app.route("/encoding")
 def string_encoding_resource() -> str:
     with app.open_resource("./resources/open_resource_japanese.txt", "r", encoding="utf-8") as f:
-        script: str = f.read()   # utf-8 encoded
+        script: str = f.read()  # utf-8 encoded
         executescript(script)
 
     return f"<code>{script}</code>"
@@ -51,7 +51,7 @@ def string_encoding_resource() -> str:
 def bytes_resource() -> str:
     with app.open_resource("./resources/open_resource_japanese.txt", "rb") as f:
         data: Any = f.read()
-        script = bytes(data).decode("utf-8")    # utf-8 encoded
+        script = bytes(data).decode("utf-8")  # utf-8 encoded
         executescript(script)
 
     return f"<code>{script}</code>"
