@@ -1,0 +1,54 @@
+<html>
+
+<head>
+  <title></title>
+  <link rel="stylesheet" href="{{url_for('static', filename='references/style.css')}}">
+  <link rel="stylesheet" href="{{url_for('static', filename='references/absolute/style.css')}}">
+  <link rel="stylesheet" href="{{url_for('reference_absolute.static', filename='references/absolute/style.css')}}">
+</head>
+
+<body>
+  <h1>/templates/references/absolute/index.html</h1>
+
+  <section>
+    <h2>Where does the template folder reference?</h2>
+    <p>If you specify it from the root, only the <code>/templates</code> will be referenced.</p>
+    <div>
+      <pre><code>bp = Blueprint("reference_absolute", __name__, template_folder="/templates")</code></pre>
+    </div>
+
+    <p><code>render_template()</code> references <code>/templates</code>.</p>
+    <ul>
+      <li><a
+          href="{{ url_for('reference_absolute.index')}}"><code>return render_template("references/absolute/index.html")</code></a>
+      </li>
+      <li><a
+          href="{{ url_for('reference_absolute.about')}}"><code>return render_template("references/absolute/about.html")</code>
+          (TemplateNotFound)</a>
+      </li>
+    </ul>
+
+  </section>
+
+  <section>
+    <h2>Where is static looking?</h2>
+    <p>If you specify it from the root, only the <code>/static</code> will be referenced.</p>
+    <div>
+      <pre><code>bp = Blueprint("reference_absolute", __name__, static_folder="/static")</code></pre>
+    </div>
+
+    <p>This specification does not result in an error, but it seems that it cannot be referenced.</p>
+    <ul>
+      <li><code>url_for('reference_absolute.static', filename='...')</code></li>
+    </ul>
+
+    <p>This code are valid:</p>
+    <ul>
+      <li><code>url_for('static', filename='...')</code></li>
+    </ul>
+
+    <div class="css-test">is applied.</div>
+  </section>
+</body>
+
+</html>

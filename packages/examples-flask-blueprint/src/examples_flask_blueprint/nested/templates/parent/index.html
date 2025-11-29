@@ -1,0 +1,25 @@
+<html>
+
+<head>
+  <title></title>
+  <link rel="stylesheet" href="{{url_for('parent.static', filename='parent/style.css')}}">
+</head>
+
+<body>
+  <h1>/nested/templates/parent/index.html</h1>
+  <section>
+    <h2>Where is the pages</h2>
+    <ul>
+      <li><a href="{{ url_for('parent.index')}}">index</a></li>
+      <li><a href="{{ url_for('parent.children.index')}}">children</a></li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Where does the static folder reference?</h2>
+    <div class="css-test">is applied.</div>
+  </section>
+
+</body>
+
+</html>

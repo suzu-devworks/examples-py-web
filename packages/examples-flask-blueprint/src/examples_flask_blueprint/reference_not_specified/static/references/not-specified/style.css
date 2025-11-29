@@ -1,0 +1,8 @@
+/* This file is not used */
+body {
+    color: crimson;
+}
+
+.css-test::before {
+    content: "/reference_not_specified/static/references/not-specified/style.css";
+}

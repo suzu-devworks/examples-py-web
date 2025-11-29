@@ -1,0 +1,54 @@
+<html>
+
+<head>
+  <title></title>
+  <link rel="stylesheet" href="{{url_for('static', filename='references/style.css')}}">
+  <link rel="stylesheet" href="{{url_for('static', filename='references/not-specified/style.css')}}">
+</head>
+
+<body>
+  <h1>/templates/references/not-specified/index.html</h1>
+
+  <section>
+    <h2>Where does the template folder reference?</h2>
+    <p>If not specified, only the <code>/templates</code> will be referenced.</p>
+    <div>
+      <pre><code>bp = Blueprint("reference_not_specified", __name_)</code></pre>
+    </div>
+
+    <p><code>render_template()</code> references <code>/templates</code>.</p>
+    <ul>
+      <li><a
+          href="{{ url_for('reference_not_specified.index')}}"><code>return render_template("references/not-specified/index.html")</code></a>
+      </li>
+      <li><a
+          href="{{ url_for('reference_not_specified.about')}}"><code>return render_template("references/not-specified/about.html")</code>
+          (TemplateNotFound)</a>
+      </li>
+    </ul>
+
+  </section>
+
+  <section>
+    <h2>Where does the static folder reference?</h2>
+    <p>If not specified, only the <code>/static</code> will be referenced.</p>
+    <div>
+      <pre><code>bp = Blueprint("reference_not_specified", __name__)</code></pre>
+    </div>
+
+    <p>The following cannot be specified because the endpoint will not be generated:</p>
+    <ul>
+      <li><code>url_for('reference_not_specified.static', filename='...')</code></li>
+    </ul>
+
+    <p>This code are valid:</p>
+    <ul>
+      <li><code>url_for('static', filename='...')</code></li>
+    </ul>
+
+    <div class="css-test">is applied.</div>
+  </section>
+
+</body>
+
+</html>
