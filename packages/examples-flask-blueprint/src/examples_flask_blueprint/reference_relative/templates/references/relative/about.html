@@ -1,0 +1,20 @@
+<html>
+
+<head>
+  <title></title>
+  <link rel="stylesheet" href="{{url_for('static', filename='references/style.css')}}">
+  <link rel="stylesheet" href="{{url_for('reference_relative.static', filename='references/relative/style.css')}}">
+</head>
+
+<body>
+  <h1>/reference_relative/templates/references/relative/about.html</h1>
+  <section>
+    <h2>This file is referenced from within the Blueprint.</h2>
+  </section>
+
+  <section>
+    <h2>Where does the static folder reference?</h2>
+    <div class="css-test">is applied.</div>
+</body>
+
+</html>

@@ -8,14 +8,6 @@ readme = "README.md"
 requires-python = "==3.12.*"
 version = "0.1.0"
 
-[tool.pdm]
-distribution = false
-
-[tool.pdm.dev-dependencies]
-dev = [
-    "-e file:///${PROJECT_ROOT}/packages/examples-flask-quickstart#egg=examples-flask-quickstart",
-]
-
 [dependency-groups]
 dev = [
     "flake8>=7.3.0",
@@ -32,6 +24,16 @@ line-length = 119
 [tool.isort]
 profile = "black"
 src_paths = ["packages/"]
+
+[tool.pdm]
+distribution = false
+
+[tool.pdm.dev-dependencies]
+dev = [
+    "-e file:///${PROJECT_ROOT}/packages/examples-flask-quickstart#egg=examples-flask-quickstart",
+    "-e file:///${PROJECT_ROOT}/packages/examples-flask-blueprint#egg=examples-flask-blueprint",
+    "-e file:///${PROJECT_ROOT}/packages/examples-flask-tutorial#egg=examples-flask-tutorial",
+]
 
 [tool.pdm.scripts]
 clean = "pyclean ."

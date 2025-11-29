@@ -6,12 +6,14 @@
     ".config",
     ".github",
     ".vscode",
-    "*.lock",
-    ".*"
+    ".gitignore",
+    "*.lock"
   ],
   "dictionaryDefinitions": [],
   "dictionaries": [],
   "words": [
+    "appcontext",
+    "executescript",
     "isort",
     "markupsafe",
     "mypy",

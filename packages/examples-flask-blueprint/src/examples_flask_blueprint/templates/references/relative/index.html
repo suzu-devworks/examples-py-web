@@ -1,0 +1,54 @@
+<html>
+
+<head>
+  <title></title>
+  <link rel="stylesheet" href="{{url_for('static', filename='references/style.css')}}">
+  <link rel="stylesheet" href="{{url_for('reference_relative.static', filename='references/relative/style.css')}}">
+  <link rel="stylesheet" href="{{url_for('static', filename='references/relative/style.css')}}">
+</head>
+
+<body>
+  <h1>/templates/references/relative/index.html</h1>
+
+  <section>
+    <h2>Where does the template folder reference?</h2>
+    <p>It references a folder relative to the folder where the blueprint is defined,
+      but can be overridden by any folder starting from the root.</p>
+    <div>
+      <pre><code>bp = Blueprint("reference_relative", __name__, template_folder="templates")</code></pre>
+    </div>
+
+    <p><code>render_template()</code> references <code>reference_relative/templates</code>.</p>
+    <p>However, if the same name exists in the <code>/templates</code> folder, that seems to take precedence.</p>
+    <ul>
+      <li><a
+          href="{{ url_for('reference_relative.index')}}"><code>return render_template("references/relative/index.html")</code></a>
+      </li>
+      <li><a
+          href="{{ url_for('reference_relative.about')}}"><code>return render_template("references/relative/about.html")</code></a>
+      </li>
+    </ul>
+    <p>Therefore, the official recommendation is to specify the folder using the blueprint name.</p>
+  </section>
+
+  <section>
+    <h2>Where does the static folder reference?</h2>
+    <p>In the case of static folders, overwriting is not possible.</p>
+    <div>
+      <pre><code>bp = Blueprint("reference_relative", __name__, static_folder="static")</code></pre>
+    </div>
+
+    <p>These codes are valid:</p>
+    <ul>
+      <li><code>url_for('static', filename='...')</code></li>
+      <li><code>url_for('reference_relative.static', filename='...')</code></li>
+    </ul>
+
+    <p>It seems impossible to override only css.
+      You can override the template and specify a file that does not exist in the blueprint.</p>
+
+    <div class="css-test">is applied.</div>
+  </section>
+</body>
+
+</html>
