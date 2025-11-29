@@ -95,5 +95,5 @@ def index() -> Response:
     # use cookies.get(key) instead of cookies[key] to not get a
     # KeyError if the cookie is missing.
     resp = make_response(render_template("hello.html", name=username))
-    resp.set_cookie("username", "the username")
+    resp.set_cookie("username", "the username", secure=True, httponly=True)
     return resp
