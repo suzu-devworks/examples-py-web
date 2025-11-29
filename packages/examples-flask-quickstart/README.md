@@ -1,5 +1,35 @@
 # examples-flask-quickstart
 
+## Table of Contents <!-- omit in toc -->
+
+- [Quickstart](#quickstart)
+  - [Install the dependencies](#install-the-dependencies)
+  - [Start the app in development mode](#start-the-app-in-development-mode)
+- [Development](#development)
+  - [How the project was initialized](#how-the-project-was-initialized)
+
+## Quickstart
+
+- [Quickstart - Flask](https://flask.palletsprojects.com/en/3.0.x/quickstart/)
+
+### Install the dependencies
+
+Run on the root (examples-py-web directory):
+
+```shell
+pdm venv create  
+pdm use
+pdm install 
+```
+
+### Start the app in development mode
+
+```shell
+flask --app examples_flask_quickstart._01_hello run --debug
+```
+
+See [the code header](./src/examples_flask_quickstart/) for more examples:
+
 ## Development
 
 ### How the project was initialized
@@ -22,7 +52,3 @@ cd ../../
 
 pdm add -d -e packages/examples-flask-quickstart
 ```
-
-## References
-
-- [クイックスタート &#8212; Flask Documentation (2.2.x)](https://msiz07-flask-docs-ja.readthedocs.io/ja/latest/quickstart.html)
