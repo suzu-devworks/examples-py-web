@@ -9,5 +9,20 @@
     "LOCAL_WORKSPACE_FOLDER": "${localWorkspaceFolder}"
   },
   "postCreateCommand": "curl -sSL https://pdm-project.org/install-pdm.py | python3 -",
-  "remoteUser": "vscode"
+  "remoteUser": "vscode",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "EditorConfig.EditorConfig",
+        "DavidAnson.vscode-markdownlint",
+        "streetsidesoftware.code-spell-checker",
+        "ms-python.python",
+        "ms-python.black-formatter",
+        "ms-python.flake8",
+        "ms-python.isort",
+        "ms-python.mypy-type-checker",
+        "tamasfe.even-better-toml"
+      ]
+    }
+  }
 }
