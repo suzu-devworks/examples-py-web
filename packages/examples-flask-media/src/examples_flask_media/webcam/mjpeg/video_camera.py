@@ -1,7 +1,7 @@
 from datetime import datetime
 from logging import getLogger
 
-import cv2  # type: ignore
+import cv2
 
 logger = getLogger(__name__)
 

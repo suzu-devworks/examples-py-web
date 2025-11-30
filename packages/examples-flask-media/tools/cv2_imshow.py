@@ -1,4 +1,4 @@
-import cv2  # type: ignore
+import cv2
 
 URL = "udp://127.0.0.1:5001?pkt_size=1316"
 
