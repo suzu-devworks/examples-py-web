@@ -1,0 +1,22 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Flask - media",
+      "type": "debugpy",
+      "request": "launch",
+      "module": "flask",
+      "env": {
+        "FLASK_APP": "${workspaceFolder}/src/examples-flask-media/src/app.py",
+        "FLASK_DEBUG": "1"
+      },
+      "args": [
+        "run",
+        "--debugger",
+        "--reload"
+      ],
+      "jinja": true,
+      "autoStartBrowser": false
+    },
+  ]
+}

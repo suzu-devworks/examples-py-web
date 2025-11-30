@@ -23,6 +23,7 @@
     "pyproject",
     "pytest",
     "pytz",
+    "setuptools",
     "subclassing",
     "venv",
     "werkzeug"
