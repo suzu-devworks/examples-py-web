@@ -24,19 +24,21 @@ line-length = 119
 [tool.isort]
 profile = "black"
 src_paths = ["packages/"]
+known_first_party = ["examples", "flaskr"]
 
-[tool.pdm]
-distribution = false
+[tool.setuptools.packages.find]
+exclude = ["packages"]
 
 [tool.pdm.dev-dependencies]
 dev = [
     "-e file:///${PROJECT_ROOT}/packages/examples-flask-quickstart#egg=examples-flask-quickstart",
     "-e file:///${PROJECT_ROOT}/packages/examples-flask-blueprint#egg=examples-flask-blueprint",
     "-e file:///${PROJECT_ROOT}/packages/examples-flask-tutorial#egg=examples-flask-tutorial",
+    "-e file:///${PROJECT_ROOT}/packages/examples-flask-media#egg=examples-flask-media",
 ]
 
 [tool.pdm.scripts]
 clean = "pyclean ."
 clean_all_dirs_ = { shell = "find . | grep -E \"(/__pycache__$|\\.pyc$|\\.pyo$|/build$|/dist$)\" | xargs rm -rf" }
-format = "black packages/"
-lint = "flake8"
+format = { composite = ["isort .", "black ."] }
+lint = { composite = ["flake8", "mypy ."] }

@@ -14,13 +14,17 @@
   "words": [
     "appcontext",
     "executescript",
+    "flaskr",
     "isort",
     "markupsafe",
     "mypy",
+    "pycache",
     "pyclean",
     "pyproject",
     "pytest",
     "pytz",
+    "setuptools",
+    "subclassing",
     "venv",
     "werkzeug"
   ],

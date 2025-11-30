@@ -4,8 +4,12 @@
   "dictionaryDefinitions": [],
   "dictionaries": [],
   "words": [
-    "DECLTYPES",
-    "flaskr"
+    "DGRAM",
+    "imencode",
+    "imshow",
+    "mjpeg",
+    "opencv",
+    "tobytes"
   ],
   "ignoreWords": [],
   "import": [
