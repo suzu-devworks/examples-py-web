@@ -1,6 +1,6 @@
 import os
 import time
-from typing import Generator
+from typing import Callable, Generator
 
 from flask import Blueprint, Response, current_app, render_template
 
@@ -11,12 +11,13 @@ bp.add_url_rule("/", endpoint="index")
 
 source_url = os.getenv("MJPEG_SRC", default="udp://0.0.0.0:5501")
 mimetype_multipart = "multipart/x-mixed-replace; boundary=frame"
+camera = VideoCamera(source_url)
 
 
-def gen(camera: VideoCamera) -> Generator[bytes, None, None]:
+def gen(get_frame: Callable[..., bytes | None]) -> Generator[bytes, None, None]:
     app = current_app
     while True:
-        frame = camera.get_frame()
+        frame = get_frame()
         if frame is None:
             app.logger.debug("frame is none")
         else:
@@ -28,10 +29,15 @@ def gen(camera: VideoCamera) -> Generator[bytes, None, None]:
 
 @bp.route("/")
 def index() -> str:
+    camera.start()
     return render_template("webcam/mjpeg/index.html")
 
 
 @bp.route("/video_feed")
 def video_feed() -> Response:
-    camera = VideoCamera(source_url)
-    return Response(gen(camera), mimetype=mimetype_multipart)
+    return Response(gen(lambda: camera.get_frame()), mimetype=mimetype_multipart)
+
+
+@bp.route("/video_gray_feed")
+def video_gray_feed() -> Response:
+    return Response(gen(lambda: camera.get_gray_frame()), mimetype=mimetype_multipart)
