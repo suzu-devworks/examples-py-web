@@ -24,9 +24,7 @@ line-length = 119
 [tool.isort]
 profile = "black"
 src_paths = ["packages/"]
-
-[tool.pdm]
-distribution = false
+known_first_party = ["examples", "flaskr"]
 
 [tool.pdm.dev-dependencies]
 dev = [
@@ -38,5 +36,5 @@ dev = [
 [tool.pdm.scripts]
 clean = "pyclean ."
 clean_all_dirs_ = { shell = "find . | grep -E \"(/__pycache__$|\\.pyc$|\\.pyo$|/build$|/dist$)\" | xargs rm -rf" }
-format = "black packages/"
-lint = "flake8"
+format = { composite = ["isort .", "black ."] }
+lint = { composite = ["flake8", "mypy ."] }
