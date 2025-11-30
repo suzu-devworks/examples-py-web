@@ -20,3 +20,8 @@ However, please keep in mind that this code is based solely on my own perspectiv
   - [examples-flask-quickstart](./packages/examples-flask-quickstart/README.md)
   - [examples-flask-tutorial](./packages/examples-flask-tutorial/README.md)
   - [examples-flask-blueprint](./packages/examples-flask-blueprint/README.md)
+  - [examples-flask-media](./packages/examples-flask-media/README.md)
+
+## More Information
+
+- [Documentation](./docs/README.md)
