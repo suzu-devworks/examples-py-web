@@ -47,7 +47,7 @@ def upload_file() -> Response | str:
             # return redirect(request.url)
 
         else:
-            file_name = secure_filename(file.filename)
+            file_name = secure_filename(file.filename) if file.filename is not None else ""
             file.save(os.path.join(app.config["UPLOAD_FOLDER"], file_name))
             return redirect(url_for("download_file", name=file_name))
 
