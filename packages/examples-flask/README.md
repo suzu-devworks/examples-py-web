@@ -72,8 +72,9 @@ This project was initialized with the following command:
 
 ```shell
 pdm new --no-git packages/examples-flask --python .venv/bin/python -n
-pdm add -d -e packages/examples-flask/
-pdm add -p packages/examples-flask/ flask
+pdm add --dev -e packages/examples-flask/
+pdm add --project packages/examples-flask/ flask
+pdm add --project packages/examples-flask/ pytest --dev pytest-cov
 
 # pdm.lock updates
 pdm install
