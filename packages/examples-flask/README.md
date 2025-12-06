@@ -7,6 +7,8 @@
   - [Setup](#setup)
   - [Run flaskr](#run-flaskr)
 - [Examples](#examples)
+  - [User’s Guide](#users-guide)
+  - [Others](#others)
 - [Development](#development)
   - [How the project was initialized](#how-the-project-was-initialized)
 
@@ -52,9 +54,15 @@ It will be hosted at the following URL:
 
 ## Examples
 
+### User’s Guide
+
 - [Quickstart](./examples/quickstart/README.md)
-- [Encodings](./examples/encodings/README.md)
 - [Tutorial - flaskr](./src/flaskr/README.md)
+- [Modular Applications with Blueprints](./examples/blueprints/README.md)
+
+### Others
+
+- [Encodings](./examples/encodings/README.md)
 
 ## Development
 
