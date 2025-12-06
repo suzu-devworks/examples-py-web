@@ -1,0 +1,26 @@
+{
+  "version": "0.2",
+  "ignorePaths": [
+    ".git",
+    ".devcontainer",
+    ".github",
+    ".vscode",
+    ".venv",
+    ".editorconfig",
+    ".gitignore",
+    "*.lock",
+    "*.toml",
+    ".flake8",
+    ".mypy.ini"
+  ],
+  "dictionaryDefinitions": [],
+  "dictionaries": [],
+  "words": [
+    "isort",
+    "mypy",
+    "pyclean",
+    "venv"
+  ],
+  "ignoreWords": [],
+  "import": []
+}
