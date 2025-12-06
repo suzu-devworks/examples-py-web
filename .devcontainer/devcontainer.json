@@ -20,6 +20,7 @@
         "ms-python.black-formatter",
         "ms-python.isort",
         "ms-python.flake8",
+        "esbenp.prettier-vscode",
         "ms-python.mypy-type-checker"
       ]
     }
