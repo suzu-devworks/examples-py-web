@@ -6,6 +6,7 @@
     "compose.develop.yaml"
   ],
   "service": "dev",
+  "postCreateCommand": "/bin/sh ./.devcontainer/postCreateCommand.sh",
   "workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
   "remoteUser": "vscode",
   "customizations": {
