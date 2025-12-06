@@ -4,6 +4,8 @@
 
 - [Overview](#overview)
 - [Get started](#get-started)
+  - [Setup](#setup)
+  - [Run flaskr](#run-flaskr)
 - [Examples](#examples)
 - [Development](#development)
   - [How the project was initialized](#how-the-project-was-initialized)
@@ -15,6 +17,8 @@ This project is an examples of Python web application using Flask.
 - [Flask’s documentation](https://flask.palletsprojects.com/)
 
 ## Get started
+
+### Setup
 
 Select the python interpreter to use:
 
@@ -28,10 +32,29 @@ Get the dependent packages:
 pdm sync
 ```
 
+### Run flaskr
+
+Create a database:
+
+```shell
+flask --app flaskr init-db
+```
+
+Run the server:
+
+```shell
+flask --app flaskr run 
+```
+
+It will be hosted at the following URL:
+
+- <http://127.0.0.1:5000/>
+
 ## Examples
 
 - [Quickstart](./examples/quickstart/README.md)
 - [Encodings](./examples/encodings/README.md)
+- [Tutorial - flaskr](./src/flaskr/README.md)
 
 ## Development
 
