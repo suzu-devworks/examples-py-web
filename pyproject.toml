@@ -26,6 +26,10 @@ clean = "pyclean ."
 format = { composite = ["black .", "isort ."] }
 lint = { composite = ["flake8", "mypy ."] }
 
+[tool.pdm.dev-dependencies]
+dev = [
+    "-e file:///${PROJECT_ROOT}/packages/examples-web#egg=examples-web",
+]
 [tool.black]
 line-length = 119
 
