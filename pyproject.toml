@@ -17,8 +17,15 @@ dev = [
     "pyclean>=3.4.0",
 ]
 
+
 [tool.pdm]
 distribution = false
+
+[tool.pdm.dev-dependencies]
+dev = [
+    "-e file:///${PROJECT_ROOT}/packages/examples-flask#egg=examples-flask",
+    "-e file:///${PROJECT_ROOT}/packages/examples-web#egg=examples-web",
+]
 
 [tool.pdm.scripts]
 _clean_dirs = { shell = "find . | grep -E \"(/__pycache__$|\\.pyc$|\\.pyo$|/build$|/dist$)\" | xargs rm -rf" }
@@ -26,10 +33,7 @@ clean = "pyclean ."
 format = { composite = ["black .", "isort ."] }
 lint = { composite = ["flake8", "mypy ."] }
 
-[tool.pdm.dev-dependencies]
-dev = [
-    "-e file:///${PROJECT_ROOT}/packages/examples-web#egg=examples-web",
-]
+
 [tool.black]
 line-length = 119
 
