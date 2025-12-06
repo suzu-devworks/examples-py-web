@@ -6,9 +6,11 @@
 - [Get started](#get-started)
   - [Setup](#setup)
   - [Run flaskr](#run-flaskr)
+  - [Run examples\_flask](#run-examples_flask)
 - [Examples](#examples)
   - [User’s Guide](#users-guide)
   - [Others](#others)
+  - [examples\_flask apps](#examples_flask-apps)
 - [Development](#development)
   - [How the project was initialized](#how-the-project-was-initialized)
 
@@ -52,6 +54,18 @@ It will be hosted at the following URL:
 
 - <http://127.0.0.1:5000/>
 
+### Run examples_flask
+
+Run the server:
+
+```shell
+flask --app examples_flask run 
+```
+
+It will be hosted at the following URL:
+
+- <http://127.0.0.1:5000/>
+
 ## Examples
 
 ### User’s Guide
@@ -63,6 +77,10 @@ It will be hosted at the following URL:
 ### Others
 
 - [Encodings](./examples/encodings/README.md)
+
+### examples_flask apps
+
+- [Overriding Blueprint Resources](./src/examples_flask/blueprints/overriding/)
 
 ## Development
 
