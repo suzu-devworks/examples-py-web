@@ -31,6 +31,7 @@ pdm sync
 ## Examples
 
 - [Quickstart](./examples/quickstart/README.md)
+- [Encodings](./examples/encodings/README.md)
 
 ## Development
 
