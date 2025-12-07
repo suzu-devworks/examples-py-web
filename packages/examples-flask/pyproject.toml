@@ -1,0 +1,38 @@
+[project]
+authors = [{ name = "A.suzuki", email = "suzu.devworks@gmail.com" }]
+description = "Default template for PDM package"
+dynamic = ["version"]
+license = { text = "MIT" }
+name = "examples-flask"
+readme = "README.md"
+requires-python = ">=3.12"
+
+dependencies = ["flask>=3.1.2"]
+
+[dependency-groups]
+dev = ["pytest-cov>=7.0.0", "pytest>=9.0.1"]
+
+[build-system]
+build-backend = "pdm.backend"
+requires = ["pdm-backend"]
+
+
+[tool.pdm]
+distribution = true
+
+[tool.pdm.version]
+path = "src/examples_flask/__version__.py"
+source = "file"
+
+[tool.pdm.scripts]
+dev = "flask --app flaskr run --debug"
+test = "pytest"
+
+
+[tool.pytest.ini_options]
+addopts = "--durations=0 --cov-branch --cov-report xml:cover/coverage.xml --cov=src/"
+testpaths = ["tests"]
+
+[tool.coverage.run]
+branch = true
+source = ["src/"]

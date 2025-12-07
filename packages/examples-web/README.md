@@ -2,6 +2,12 @@
 
 ## Table of Contents <!-- omit in toc -->
 
+- [Overview](#overview)
+- [Get started](#get-started)
+- [CommandLine HTTP servers](#commandline-http-servers)
+- [Development](#development)
+  - [How the project was initialized](#how-the-project-was-initialized)
+
 ## Overview
 
 This project is an example of web programming using Python.
@@ -18,6 +24,18 @@ Get the dependent packages:
 
 ```shell
 pdm sync
+```
+
+- HTTPS servers:
+  - `https_index_server.py` - Tiny HTTPS index server using `http.server`
+  - `https_custom_handler_server.py` - Tiny HTTPS custom handler server using `http.server`
+
+## CommandLine HTTP servers
+
+For development purposes, you can start a simple server with `http.server`.
+
+```shell
+python -m http.server 9000
 ```
 
 ## Development
