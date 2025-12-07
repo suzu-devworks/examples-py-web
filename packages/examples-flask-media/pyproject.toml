@@ -1,12 +1,13 @@
 [project]
 authors = [{ name = "A.suzuki", email = "suzu.devworks@gmail.com" }]
-dependencies = []
 description = "Default template for PDM package"
+dynamic = ["version"]
 license = { text = "MIT" }
 name = "examples-flask-media"
 readme = "README.md"
 requires-python = ">=3.12"
-version = "0.1.0"
+
+dependencies = ["flask>=3.1.2"]
 
 [build-system]
 build-backend = "pdm.backend"
@@ -15,3 +16,10 @@ requires = ["pdm-backend"]
 
 [tool.pdm]
 distribution = true
+
+[tool.pdm.version]
+path = "src/examples_flask_media/__version__.py"
+source = "file"
+
+[tool.pdm.scripts]
+dev = "flask --app examples_flask_media run --debug"
