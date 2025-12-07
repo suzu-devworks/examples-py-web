@@ -25,6 +25,7 @@ distribution = false
 dev = [
     "-e file:///${PROJECT_ROOT}/packages/examples-flask#egg=examples-flask",
     "-e file:///${PROJECT_ROOT}/packages/examples-web#egg=examples-web",
+    "-e file:///${PROJECT_ROOT}/packages/examples-flask-media#egg=examples-flask-media",
 ]
 
 [tool.pdm.scripts]
