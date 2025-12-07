@@ -7,8 +7,7 @@
   - [Run](#run)
 - [Development](#development)
   - [How the project was initialized](#how-the-project-was-initialized)
-- [Troubleshooting](#troubleshooting)
-  - [ImportError: libGL.so.1](#importerror-libglso1)
+  - [ImportError](#importerror)
 
 ## Overview
 
@@ -49,13 +48,11 @@ This project was initialized with the following command:
 ```shell
 pdm new --no-git packages/examples-flask-media --python .venv/bin/python -n
 pdm add --dev -e packages/examples-flask-media/
-pdm add --project packages/examples-flask-media/ flask
+pdm add --project packages/examples-flask-media/ flask opencv-python
 
 # pdm.lock updates
 pdm install
 ```
-
-## Troubleshooting
 
 ### ImportError
 
