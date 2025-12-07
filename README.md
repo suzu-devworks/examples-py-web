@@ -18,3 +18,6 @@ However, please keep in mind that this code is based solely on my own perspectiv
 
 - Flask examples
   - [examples-flask](./packages/examples-flask/README.md)
+
+- Others
+  - [examples-web](./packages/examples-web/README.md)

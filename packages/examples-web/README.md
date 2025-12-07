@@ -2,6 +2,12 @@
 
 ## Table of Contents <!-- omit in toc -->
 
+- [Overview](#overview)
+- [Get started](#get-started)
+- [CommandLine HTTP servers](#commandline-http-servers)
+- [Development](#development)
+  - [How the project was initialized](#how-the-project-was-initialized)
+
 ## Overview
 
 This project is an example of web programming using Python.
