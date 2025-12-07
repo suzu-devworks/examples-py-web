@@ -20,6 +20,18 @@ Get the dependent packages:
 pdm sync
 ```
 
+- HTTPS servers:
+  - `https_index_server.py` - Tiny HTTPS index server using `http.server`
+  - `https_custom_handler_server.py` - Tiny HTTPS custom handler server using `http.server`
+
+## CommandLine HTTP servers
+
+For development purposes, you can start a simple server with `http.server`.
+
+```shell
+python -m http.server 9000
+```
+
 ## Development
 
 ### How the project was initialized
