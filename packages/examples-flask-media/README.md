@@ -7,6 +7,8 @@
   - [Run](#run)
 - [Development](#development)
   - [How the project was initialized](#how-the-project-was-initialized)
+- [Troubleshooting](#troubleshooting)
+  - [ImportError: libGL.so.1](#importerror-libglso1)
 
 ## Overview
 
@@ -52,3 +54,21 @@ pdm add --project packages/examples-flask-media/ flask
 # pdm.lock updates
 pdm install
 ```
+
+## Troubleshooting
+
+### ImportError
+
+Here's what to do if you get these errors:
+
+```console
+ImportError: libGL.so.1: cannot open shared object file: No such file or directory
+ImportError: libgthread-2.0.so.0: cannot open shared object file: No such file or directory
+```
+
+For debian based systems:
+
+```shell
+apt install -y libgl1-mesa-dev libgthread
+```
+<!-- // spell-checker:words libgl1 libgthread -->
