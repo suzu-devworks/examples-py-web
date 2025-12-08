@@ -9,6 +9,7 @@
     "imencode",
     "imshow",
     "mjpeg",
+    "mpegurl",
     "opencv",
     "tobytes"
   ],

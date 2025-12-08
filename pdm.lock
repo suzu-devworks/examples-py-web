@@ -5,7 +5,7 @@
 groups = ["default", "dev"]
 strategy = ["inherit_metadata"]
 lock_version = "4.5.0"
-content_hash = "sha256:167e64802e355cc1de5a366de4ba887d5c4a889066d5a20cf664bae223aa983f"
+content_hash = "sha256:c5f9f51bca3889cd8eca8d1dafd8f045f5dc5a07906b1ccd068d78ae31db630b"
 
 [[metadata.targets]]
 requires_python = ">=3.12"
@@ -104,6 +104,7 @@ path = "./packages/examples-flask-media"
 summary = "Default template for PDM package"
 groups = ["dev"]
 dependencies = [
+    "flask-cors>=6.0.1",
     "flask>=3.1.2",
     "opencv-python>=4.12.0.88",
 ]
@@ -151,6 +152,21 @@ dependencies = [
 files = [
     {file = "flask-3.1.2-py3-none-any.whl", hash = "sha256:ca1d8112ec8a6158cc29ea4858963350011b5c846a414cdb7a954aa9e967d03c"},
     {file = "flask-3.1.2.tar.gz", hash = "sha256:bf656c15c80190ed628ad08cdfd3aaa35beb087855e2f494910aa3774cc4fd87"},
+]
+
+[[package]]
+name = "flask-cors"
+version = "6.0.1"
+requires_python = "<4.0,>=3.9"
+summary = "A Flask extension simplifying CORS support"
+groups = ["dev"]
+dependencies = [
+    "Werkzeug>=0.7",
+    "flask>=0.9",
+]
+files = [
+    {file = "flask_cors-6.0.1-py3-none-any.whl", hash = "sha256:c7b2cbfb1a31aa0d2e5341eea03a6805349f7a61647daee1a15c46bbe981494c"},
+    {file = "flask_cors-6.0.1.tar.gz", hash = "sha256:d81bcb31f07b0985be7f48406247e9243aced229b7747219160a0559edd678db"},
 ]
 
 [[package]]
