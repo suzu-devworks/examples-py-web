@@ -1,0 +1,28 @@
+[project]
+authors = [{ name = "A.suzuki", email = "suzu.devworks@gmail.com" }]
+description = "Default template for PDM package"
+dynamic = ["version"]
+license = { text = "MIT" }
+name = "examples-flask-media"
+readme = "README.md"
+requires-python = ">=3.12"
+
+dependencies = ["flask-cors>=6.0.1", "flask>=3.1.2", "opencv-python>=4.12.0.88"]
+
+[dependency-groups]
+dev = ["types-flask-cors>=6.0.0.20250809"]
+
+[build-system]
+build-backend = "pdm.backend"
+requires = ["pdm-backend"]
+
+
+[tool.pdm]
+distribution = true
+
+[tool.pdm.version]
+path = "src/examples_flask_media/__version__.py"
+source = "file"
+
+[tool.pdm.scripts]
+dev = "flask --app examples_flask_media run --debug"

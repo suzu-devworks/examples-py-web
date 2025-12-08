@@ -10,11 +10,11 @@ version = "0.1.0"
 
 [dependency-groups]
 dev = [
-    "black>=25.11.0",
-    "flake8>=7.3.0",
-    "isort>=7.0.0",
-    "mypy>=1.19.0",
-    "pyclean>=3.4.0",
+  "black>=25.11.0",
+  "flake8>=7.3.0",
+  "isort>=7.0.0",
+  "mypy>=1.19.0",
+  "pyclean>=3.4.0",
 ]
 
 
@@ -23,8 +23,9 @@ distribution = false
 
 [tool.pdm.dev-dependencies]
 dev = [
-    "-e file:///${PROJECT_ROOT}/packages/examples-flask#egg=examples-flask",
-    "-e file:///${PROJECT_ROOT}/packages/examples-web#egg=examples-web",
+  "-e file:///${PROJECT_ROOT}/packages/examples-flask#egg=examples-flask",
+  "-e file:///${PROJECT_ROOT}/packages/examples-flask-media#egg=examples-flask-media",
+  "-e file:///${PROJECT_ROOT}/packages/examples-web#egg=examples-web",
 ]
 
 [tool.pdm.scripts]
