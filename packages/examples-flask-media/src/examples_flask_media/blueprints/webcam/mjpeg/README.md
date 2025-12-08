@@ -51,6 +51,19 @@ Start your webcam:
 scripts/webcam_udp_.sh
 ```
 
+[optional]Set the environment variables as needed:
+
+```shell
+# When receiving ffmpeg images via UDP
+export MJPEG_SRC="udp://0.0.0.0:5501?overrun_nonfatal=1&fifo_size=50000000"
+
+# When receiving ffmpeg images via SRT
+export MJPEG_SRC_URL="srt://0.0.0.0:5501?mode=listener"
+
+# When receiving fixed video files
+export MJPEG_SRC_URL="/workspaces/examples-py-web/temp/input.mp4"
+```
+
 Run service:
 
 ```shell
