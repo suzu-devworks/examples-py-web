@@ -58,7 +58,8 @@
     "!**/node_modules",
     "!**/.git",
     "!**/vendor",
-    "!**/.venv"
+    "!**/.venv",
+    "!**/temp"
   ],
   "mypy-type-checker.args": [],
   "python.analysis.autoFormatStrings": false
